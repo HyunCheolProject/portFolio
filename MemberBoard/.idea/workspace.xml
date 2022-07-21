@@ -4,57 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_5_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemberTest2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aop-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aspects-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-beans-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-support-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-core-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-expression-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jdbc-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jms-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-messaging-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-orm-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-oxm-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-test-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-tx-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-web-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-webmvc-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/MemberController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/dto/BoardDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/dto/MemberDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/MemberRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/BoardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/MemberService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/memberMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -79,8 +40,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="1000" />
+      <workItem from="1658381647760" duration="679000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
