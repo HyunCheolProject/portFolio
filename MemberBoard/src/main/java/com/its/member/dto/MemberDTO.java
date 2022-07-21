@@ -8,5 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberDTO {
+    private String memberId;
+    private String memberPw;
+    private String memberName;
+    private int memberAge;
+    private String memberEmail;
+    private String memberMobile;
 
 }

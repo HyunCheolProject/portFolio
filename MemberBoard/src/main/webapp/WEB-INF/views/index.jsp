@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>index.jsp</title>
 </head>
 <body>
-
+    <a href="/member/save-form">회원가입</a>
 </body>
 </html>
