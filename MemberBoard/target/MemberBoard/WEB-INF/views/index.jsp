@@ -12,5 +12,6 @@
 </head>
 <body>
     <a href="/member/save-form">회원가입</a>
+    <a href="/member/login-form">로그인</a>
 </body>
 </html>

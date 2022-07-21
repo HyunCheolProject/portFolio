@@ -13,4 +13,8 @@ public class MemberRepository {
     public void save(MemberDTO memberDTO) {
         sqlSessionTemplate.insert("Member.save", memberDTO);
     }
+
+    public MemberDTO login(MemberDTO memberDTO) {
+        return sqlSessionTemplate.selectOne("Member.login", memberDTO);
+    }
 }

@@ -9,6 +9,10 @@
                         values (#{memberId}, #{memberPw}, #{memberName}, #{memberAge}, #{memberEmail}, #{memberMobile})
     </insert>
 
+    <select id="login" parameterType="member" resultType="member">
+        select * from members_table where memberId=#{memberId} and memberPw=#{memberPw}
+    </select>
+
 </mapper>
 
 
