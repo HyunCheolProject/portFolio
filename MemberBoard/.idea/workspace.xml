@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="" />
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="start" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CExeydvggOuzoDtIRsox4sqZpN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,8 +43,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="679000" />
+      <workItem from="1658381647760" duration="976000" />
     </task>
+    <task id="LOCAL-00001" summary="start">
+      <created>1658382402216</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658382402216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -57,5 +68,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start" />
+    <option name="LAST_COMMIT_MESSAGE" value="start" />
   </component>
 </project>
