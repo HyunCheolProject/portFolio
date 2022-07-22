@@ -21,6 +21,10 @@
         update members_table set memberPw=#{memberPw}, memberEmail=#{memberEmail}, memberMobile=#{memberMobile} where id=#{id}
     </update>
 
+    <select id="findAll" resultType="member">
+        select * from members_table
+    </select>
+
 </mapper>
 
 

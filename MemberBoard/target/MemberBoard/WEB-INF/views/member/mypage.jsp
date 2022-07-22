@@ -13,5 +13,6 @@
 <body>
     <a href="/member/update-form?id=" + id>정보수정</a>
     <a href="">글작성</a>
+    <a href="/member/admin-form">관리자페이지</a>
 </body>
 </html>

@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/member")
@@ -73,6 +74,43 @@ public class MemberController {
         model.addAttribute("member", memberDTO);
         return "member/memberDetail";
     }
+
+    // 관리자 페이지 화면 요청
+    @GetMapping("/admin-form")
+    public String adminForm() {
+        return "member/admin";
+    }
+
+    // 관리자페이지 회원목록 화면 요청
+    @GetMapping("/memberList-form")
+    public String memberListForm() {
+        return "redirect:/member/findAll";
+    }
+
+    // 회원목록
+    @GetMapping("/findAll")
+    public String findAll(Model model) {
+        List<MemberDTO> memberDTOList = memberService.findAll();
+        model.addAttribute("memberList", memberDTOList);
+        return "member/list";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
