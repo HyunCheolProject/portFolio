@@ -69,7 +69,7 @@ public class MemberController {
     @PostMapping("/update")
     public String update(@ModelAttribute MemberDTO memberDTO) {
         memberService.update(memberDTO);
-        return "member/detail";
+        return "redirect:/member/detail";
 
     }
 
@@ -81,7 +81,6 @@ public class MemberController {
         model.addAttribute("member", memberDTO);
         return "member/detail";
         }
-
 
 
     // 관리자 페이지 화면 요청
