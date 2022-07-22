@@ -32,7 +32,7 @@
                 <td>${member.memberAge}</td>
                 <td>${member.memberEmail}</td>
                 <td>${member.memberMobile}</td>
-                
+
             </tr>
         </c:forEach>
     </table>

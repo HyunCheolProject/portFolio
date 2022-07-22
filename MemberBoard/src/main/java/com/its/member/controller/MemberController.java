@@ -39,10 +39,10 @@ public class MemberController {
     @PostMapping("/login")
     public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session, Model model) {
         MemberDTO member = memberService.login(memberDTO);
-        if ( member != null) {
+        if (member != null) {
             session.setAttribute("id", member.getId());
             session.setAttribute("memberId", member.getMemberId());
-            model.addAttribute("member", memberDTO);
+            model.addAttribute("member", member);
             return "member/mypage";
         } else {
             return "member/login";
@@ -62,18 +62,20 @@ public class MemberController {
     @PostMapping("/update")
     public String update(@ModelAttribute MemberDTO memberDTO) {
         memberService.update(memberDTO);
-        return "member/updatesSuccess";
+        return "member/detail";
 
     }
 
-    // 회원정보 수정 완료 화면
-    @GetMapping("/detail")
-    public String findById(@RequestParam("id") Long id, Model model) {
-        System.out.println("id = " + id);
+    // 회원정보 상세보기
+    @GetMapping("/detail-form")
+    public String findById(HttpSession session, Model model) {
+        Long id = (Long) session.getAttribute("id");
         MemberDTO memberDTO = memberService.findById(id);
         model.addAttribute("member", memberDTO);
-        return "member/memberDetail";
-    }
+        return "member/detail";
+        }
+
+
 
     // 관리자 페이지 화면 요청
     @GetMapping("/admin-form")
@@ -94,6 +96,8 @@ public class MemberController {
         model.addAttribute("memberList", memberDTOList);
         return "member/list";
     }
+
+    //
 
 
 
