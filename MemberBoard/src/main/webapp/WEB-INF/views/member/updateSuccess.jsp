@@ -2,17 +2,16 @@
   Created by IntelliJ IDEA.
   User: khc_9
   Date: 2022-07-21
-  Time: 오후 4:04
+  Time: 오후 5:32
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>index.jsp</title>
+    <title>updateSuccess.jsp</title>
 </head>
 <body>
-    <a href="/member/save-form">회원가입</a>
-    <a href="/member/login-form">로그인</a>
-
+    <h2>회원정보수정 완료</h2>
+    <a href="/">Home으로 가기</a>
 </body>
 </html>

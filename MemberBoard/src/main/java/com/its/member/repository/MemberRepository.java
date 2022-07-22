@@ -17,4 +17,12 @@ public class MemberRepository {
     public MemberDTO login(MemberDTO memberDTO) {
         return sqlSessionTemplate.selectOne("Member.login", memberDTO);
     }
+
+    public MemberDTO findById(Long id) {
+        return sqlSessionTemplate.selectOne("Member.findById", id);
+    }
+
+    public void update(MemberDTO memberDTO) {
+        sqlSessionTemplate.update("Member.update", memberDTO);
+    }
 }

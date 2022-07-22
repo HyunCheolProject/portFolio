@@ -5,10 +5,7 @@ import com.its.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -49,7 +46,33 @@ public class MemberController {
         } else {
             return "member/login";
         }
+    }
+
+    // 회원정보 수정화면 요청
+    @GetMapping("/update-form")
+    public String updateForm(HttpSession session, Model model) {
+        Long updateId = (Long) session.getAttribute("id");
+        MemberDTO memberDTO = memberService.findById(updateId);
+        model.addAttribute("updateMember", memberDTO);
+        return "member/update";
+    }
+
+    // 회원정보 수정 처리
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO) {
+        memberService.update(memberDTO);
+        return "member/updatesSuccess";
 
     }
+
+    // 회원정보 수정 완료 화면
+    @GetMapping("/detail")
+    public String findById(@RequestParam("id") Long id, Model model) {
+        System.out.println("id = " + id);
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member", memberDTO);
+        return "member/memberDetail";
+    }
+
 
 }

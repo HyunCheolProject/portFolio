@@ -9,13 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="member 회원가입 성공.">
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="member 로그인 성공.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/mypage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/updateSuccess.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/dto/MemberDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/memberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/memberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/repository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/memberMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +77,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/KHC_development/project_portfolio/projectRecipe_framework/projectRecipe"
+    "last_opened_file_path": "C:/KHC_development/spring_framework-main/spring20220518_01"
   }
 }]]></component>
   <component name="RunManager">
@@ -166,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="6762000" />
+      <workItem from="1658381647760" duration="13360000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
@@ -210,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658390268161</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="member 로그인 성공.">
+      <created>1658391228399</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658391228399</updated>
+    </task>
+    <task id="LOCAL-00008" summary="member 로그인 성공.">
+      <created>1658391235648</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658391235648</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +257,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="member 기본 셋팅." />
     <MESSAGE value="member 회원가입 성공." />
-    <option name="LAST_COMMIT_MESSAGE" value="member 회원가입 성공." />
+    <MESSAGE value="member 로그인 성공." />
+    <option name="LAST_COMMIT_MESSAGE" value="member 로그인 성공." />
   </component>
 </project>

@@ -17,4 +17,12 @@ public class MemberService {
     public MemberDTO login(MemberDTO memberDTO) {
         return memberRepository.login(memberDTO);
     }
+
+    public MemberDTO findById(Long id) {
+        return memberRepository.findById(id);
+    }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepository.update(memberDTO);
+    }
 }

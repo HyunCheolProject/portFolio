@@ -13,6 +13,14 @@
         select * from members_table where memberId=#{memberId} and memberPw=#{memberPw}
     </select>
 
+    <select id="findById" parameterType="Long" resultType="member">
+        select * from members_table where id=#{id}
+    </select>
+
+    <update id="update" parameterType="member">
+        update members_table set memberPw=#{memberPw}, memberEmail=#{memberEmail}, memberMobile=#{memberMobile} where id=#{id}
+    </update>
+
 </mapper>
 
 
