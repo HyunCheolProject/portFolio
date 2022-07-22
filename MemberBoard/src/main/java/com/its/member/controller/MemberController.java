@@ -49,6 +49,13 @@ public class MemberController {
         }
     }
 
+    // 로그아웃
+    @RequestMapping(value = "/logout-form", method = RequestMethod.GET)
+    public String logout(HttpSession session) throws Exception {
+        session.invalidate();
+        return "redirect:/";
+    }
+
     // 회원정보 수정화면 요청
     @GetMapping("/update-form")
     public String updateForm(HttpSession session, Model model) {
@@ -67,7 +74,7 @@ public class MemberController {
     }
 
     // 회원정보 상세보기
-    @GetMapping("/detail-form")
+    @GetMapping("/detail")
     public String findById(HttpSession session, Model model) {
         Long id = (Long) session.getAttribute("id");
         MemberDTO memberDTO = memberService.findById(id);
@@ -97,7 +104,16 @@ public class MemberController {
         return "member/list";
     }
 
-    //
+    // 회원삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        boolean deleteResult = memberService.delete(id);
+        if (deleteResult) {
+            return "redirect:/member/findAll";
+        } else {
+            return "delete-fail";
+        }
+    }
 
 
 

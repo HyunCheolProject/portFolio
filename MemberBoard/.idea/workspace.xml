@@ -9,15 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="member 관리자페이지 회원목록 성공.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/detail.jsp" afterDir="false" />
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="member 로그인 후 회원정보 상세보기 성공.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/memberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/mypage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/memberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/member/mypage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/repository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/memberMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +79,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/KHC_development/qqq/MemberTest"
+    "last_opened_file_path": "C:/KHC_development/git_portFolio/MemberBoard/src/main/webapp"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\KHC_development\git_portFolio\MemberBoard\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -168,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="21672000" />
+      <workItem from="1658381647760" duration="24727000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
@@ -254,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658451013742</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="member 로그인 후 회원정보 상세보기 성공.">
+      <created>1658465168246</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658465168246</updated>
+    </task>
+    <task id="LOCAL-00014" summary="member 로그인 후 회원정보 상세보기 성공.">
+      <created>1658465178936</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658465178936</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +309,7 @@
     <MESSAGE value="member 로그인 성공." />
     <MESSAGE value="member 회원정보수정 성공." />
     <MESSAGE value="member 관리자페이지 회원목록 성공." />
-    <option name="LAST_COMMIT_MESSAGE" value="member 관리자페이지 회원목록 성공." />
+    <MESSAGE value="member 로그인 후 회원정보 상세보기 성공." />
+    <option name="LAST_COMMIT_MESSAGE" value="member 로그인 후 회원정보 상세보기 성공." />
   </component>
 </project>

@@ -7,6 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script src="/resources/js/jquery.js"></script>
+
 <html>
 <head>
     <title>list.jsp</title>
@@ -32,7 +34,8 @@
                 <td>${member.memberAge}</td>
                 <td>${member.memberEmail}</td>
                 <td>${member.memberMobile}</td>
-
+                <td><a href="/member/detail?id=${member.id}">조회</a></td>
+                <td><a href="/member/delete?id=${member.id}">삭제</a></td>
             </tr>
         </c:forEach>
     </table>

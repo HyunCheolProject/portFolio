@@ -11,8 +11,9 @@
     <title>mypage.jsp</title>
 </head>
 <body>
-    <a href="/member/detail-form">내 정보</a>
+    <a href="/member/detail">내 정보</a>
     <a href="">글작성</a>
     <a href="/member/admin-form">관리자페이지</a>
+    <a href="/member/logout-form">로그아웃</a>
 </body>
 </html>

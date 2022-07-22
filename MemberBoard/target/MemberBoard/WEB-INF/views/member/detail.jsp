@@ -21,7 +21,6 @@
     이메일: ${member.memberEmail}<br>
     전화번호: ${member.memberMobile}<br>
     <button onclick="updateForm(id)">정보수정</button>
-    <a href="/member/update-form?id=" + id>정보수정</a>
 </body>
 <script>
     const updateForm = (id) => {
