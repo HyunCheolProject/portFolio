@@ -20,11 +20,17 @@
     나이: ${member.memberAge}<br>
     이메일: ${member.memberEmail}<br>
     전화번호: ${member.memberMobile}<br>
-    <button onclick="updateForm(id)">정보수정</button>
+    <button onclick="updateForm(${member.id})">정보수정</button>
+    <button onclick="deleteForm(${member.id})">탈퇴</button>
+
 </body>
 <script>
     const updateForm = (id) => {
         location.href = "/member/update-form?id=" + id;
+    }
+
+    const deleteForm = (id) => {
+        location.href = "/member/delete-form?id=" + id;
     }
 </script>
 </html>

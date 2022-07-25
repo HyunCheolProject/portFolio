@@ -31,12 +31,16 @@ public class MemberRepository {
         sqlSessionTemplate.update("Member.update", memberDTO);
     }
 
+    public int delete(Long id) {
+        return sqlSessionTemplate.delete("Member.delete", id);
+    }
+    public int deleteForm(Long id) {
+        return sqlSessionTemplate.delete("Member.deleteForm", id);
+    }
+
     public List<MemberDTO> findAll() {
         return sqlSessionTemplate.selectList("Member.findAll");
     }
 
-    public int delete(Long id) {
-        return sqlSessionTemplate.delete("Member.delete", id);
-    }
 
 }

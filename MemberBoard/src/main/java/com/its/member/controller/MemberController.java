@@ -80,6 +80,26 @@ public class MemberController {
 
     }
 
+    // 회원삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        boolean deleteResult = memberService.delete(id);
+        if (deleteResult) {
+            return "redirect:/member/findAll";
+        } else {
+            return "delete-fail";
+        }
+    }
+    @GetMapping("/delete-form")
+    public String deleteForm(@RequestParam("id") Long id) {
+        boolean deleteResult = memberService.deleteForm(id);
+        if (deleteResult) {
+            return "index";
+        } else {
+            return "delete-fail";
+        }
+    }
+
     // 회원정보 상세보기
     @GetMapping("/detail")
     public String findById(HttpSession session, Model model) {
@@ -110,16 +130,6 @@ public class MemberController {
         return "member/list";
     }
 
-    // 회원삭제
-    @GetMapping("/delete")
-    public String delete(@RequestParam("id") Long id) {
-        boolean deleteResult = memberService.delete(id);
-        if (deleteResult) {
-            return "redirect:/member/findAll";
-        } else {
-            return "delete-fail";
-        }
-    }
 
 
 
