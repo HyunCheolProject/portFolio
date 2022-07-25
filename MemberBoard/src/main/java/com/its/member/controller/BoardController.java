@@ -58,9 +58,24 @@ public class BoardController {
 
     // 글 삭제 처리
     @GetMapping("/delete")
-    public String delete(@RequestParam("id") Long id) {
+    public String delete(@RequestParam Long id) {
         boardService.delete(id);
         return "redirect:/board/findAll";
+    }
+
+    // 글 수정 화면 요청
+    @GetMapping("/update-form")
+    public String updateForm(@RequestParam Long id, Model model) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("boardUpdate",boardDTO);
+        return "board/update";
+    }
+
+    // 글 수정처리
+    @PostMapping("/update")
+    public String update(@ModelAttribute BoardDTO boardDTO) {
+        boardService.update(boardDTO);
+        return "redirect:/board/detail?id="+boardDTO.getId();
     }
 
 

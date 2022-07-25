@@ -24,12 +24,16 @@
     <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
          alt="" height="100" width="100"><br>
 
+    <button onclick="boardUpdate()">수정</button>
     <button onclick="boardDelete()">삭제</button>
     <br>
     <a href="javascript:history.back()">뒤로가기</a>
 
 </body>
 <script>
+    const boardUpdate = () => {
+        location.href = "/board/update-form?id=${board.id}";
+    }
     const boardDelete = () => {
         location.href = "/board/pwCheck?id=${board.id}";
     }

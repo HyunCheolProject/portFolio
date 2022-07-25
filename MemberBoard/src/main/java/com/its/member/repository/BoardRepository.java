@@ -31,4 +31,8 @@ public class BoardRepository {
     public void delete(Long id) {
         sqlSessionTemplate.delete("Board.delete", id);
     }
+
+    public void update(BoardDTO boardDTO) {
+        sqlSessionTemplate.update("Board.update", boardDTO);
+    }
 }

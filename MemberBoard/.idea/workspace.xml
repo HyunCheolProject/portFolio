@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 글 상세페이지 성공.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/pwCheck.jsp" afterDir="false" />
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 비밀번호체크 후 글 삭제 성공.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/pwCheck2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" afterDir="false" />
@@ -185,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="45994000" />
+      <workItem from="1658381647760" duration="48378000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
@@ -376,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658727259742</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="board 비밀번호체크 후 글 삭제 성공.">
+      <created>1658732882552</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658732882552</updated>
+    </task>
+    <task id="LOCAL-00029" summary="board 비밀번호체크 후 글 삭제 성공.">
+      <created>1658732890296</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1658732890296</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +425,7 @@
     <MESSAGE value="board 파일첨부 글작성 성공." />
     <MESSAGE value="board 글목록 성공." />
     <MESSAGE value="board 글 상세페이지 성공." />
-    <option name="LAST_COMMIT_MESSAGE" value="board 글 상세페이지 성공." />
+    <MESSAGE value="board 비밀번호체크 후 글 삭제 성공." />
+    <option name="LAST_COMMIT_MESSAGE" value="board 비밀번호체크 후 글 삭제 성공." />
   </component>
 </project>
