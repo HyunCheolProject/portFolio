@@ -15,6 +15,14 @@ public class MemberService {
     public void save(MemberDTO memberDTO) {
         memberRepository.save(memberDTO);
     }
+    public String emailCheck(String memberId) {
+        String checkResult = memberRepository.emailCheck(memberId);
+        if (checkResult == null) {
+            return "ok";
+        } else {
+            return "no";
+        }
+    }
 
     public MemberDTO login(MemberDTO memberDTO) {
         return memberRepository.login(memberDTO);

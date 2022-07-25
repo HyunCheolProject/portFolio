@@ -16,6 +16,9 @@ public class MemberRepository {
         sqlSessionTemplate.insert("Member.save", memberDTO);
     }
 
+    public String emailCheck(String memberId) {
+        return sqlSessionTemplate.selectOne("Member.emailCheck", memberId);
+    }
     public MemberDTO login(MemberDTO memberDTO) {
         return sqlSessionTemplate.selectOne("Member.login", memberDTO);
     }
@@ -35,4 +38,5 @@ public class MemberRepository {
     public int delete(Long id) {
         return sqlSessionTemplate.delete("Member.delete", id);
     }
+
 }

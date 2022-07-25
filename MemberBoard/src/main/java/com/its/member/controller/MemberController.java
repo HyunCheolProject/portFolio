@@ -29,6 +29,13 @@ public class MemberController {
         return "member/login";
     }
 
+    // 아이디 중복 확인
+    @PostMapping("/email-check")
+    public @ResponseBody String emailCheck(@RequestParam("memberId") String memberId) {
+        String checkResult = memberService.emailCheck(memberId);
+        return checkResult;
+    }
+
     // 로그인 화면 요청
     @GetMapping("/login-form")
     public String loginForm() {
