@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class BoardService {
@@ -24,5 +25,9 @@ public class BoardService {
             boardFile.transferTo(new File(savePath));
         }
         boardRepository.save(boardDTO);
+    }
+
+    public List<BoardDTO> findAll() {
+        return boardRepository.findAll();
     }
 }

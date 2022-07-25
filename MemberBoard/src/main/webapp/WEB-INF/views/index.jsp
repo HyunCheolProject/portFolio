@@ -16,6 +16,7 @@
     <a href="/member/save-form">회원가입</a>
     <a href="/member/login-form">로그인</a>
     <a href="/board/save-form">글작성</a>
+    <a href="/board/findAll">글목록</a>
 
 </body>
 </html>
