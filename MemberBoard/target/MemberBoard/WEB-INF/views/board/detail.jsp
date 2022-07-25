@@ -23,7 +23,15 @@
     조회수: ${board.boardHits}<br>
     <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
          alt="" height="100" width="100"><br>
+
+    <button onclick="boardDelete()">삭제</button>
+    <br>
     <a href="javascript:history.back()">뒤로가기</a>
 
 </body>
+<script>
+    const boardDelete = () => {
+        location.href = "/board/pwCheck?id=${board.id}";
+    }
+</script>
 </html>

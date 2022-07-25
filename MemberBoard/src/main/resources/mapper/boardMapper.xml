@@ -21,6 +21,10 @@
         update boards_table set boardHits=boardHits+1 where id=#{id}
     </select>
 
+    <delete id="delete" parameterType="Long">
+        delete from boards_table where id=#{id}
+    </delete>
+
 
 </mapper>
 

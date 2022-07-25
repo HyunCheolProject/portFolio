@@ -27,4 +27,8 @@ public class BoardRepository {
     public void updateHits(Long id) {
         sqlSessionTemplate.update("Board.updateHits", id);
     }
+
+    public void delete(Long id) {
+        sqlSessionTemplate.delete("Board.delete", id);
+    }
 }

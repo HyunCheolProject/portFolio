@@ -46,11 +46,22 @@ public class BoardController {
         model.addAttribute("board", boardDTO);
         model.addAttribute("page", page);
         return "board/detail";
-
-
     }
 
+    // 비밀번호 체크페이지
+    @GetMapping("/pwCheck")
+    public String pwCheck(@RequestParam Long id, Model model) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("board", boardDTO);
+        return "board/pwCheck";
+    }
 
+    // 글 삭제 처리
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        boardService.delete(id);
+        return "redirect:/board/findAll";
+    }
 
 
 
