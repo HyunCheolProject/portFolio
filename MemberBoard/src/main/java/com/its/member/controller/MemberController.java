@@ -90,6 +90,8 @@ public class MemberController {
             return "delete-fail";
         }
     }
+    
+    // 회원 탈퇴
     @GetMapping("/delete-form")
     public String deleteForm(@RequestParam("id") Long id) {
         boolean deleteResult = memberService.deleteForm(id);

@@ -4,7 +4,10 @@
 
 
 <mapper namespace="Board">
-
+    <insert id="save" parameterType="board">
+        insert into boards_table (boardTitle, boardWriter, boardPw, boardContents, boardCreatedDate, boardFileName)
+            values (#{boardTitle}, #{boardWriter}, #{boardPw}, #{boardContents}, now(), #{boardFileName})
+    </insert>
 
 
 </mapper>
