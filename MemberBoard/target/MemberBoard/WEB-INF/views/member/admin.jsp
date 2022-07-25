@@ -12,5 +12,6 @@
 </head>
 <body>
     <a href="/member/memberList-form">회원목록</a>
+    <a href="javascript:history.back()">뒤로가기</a>
 </body>
 </html>

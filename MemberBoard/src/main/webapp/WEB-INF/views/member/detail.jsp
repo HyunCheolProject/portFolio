@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>detail.jsp</title>
+
 </head>
 <body>
     <h2>내 정보</h2>
@@ -22,6 +23,7 @@
     전화번호: ${member.memberMobile}<br>
     <button onclick="updateForm(${member.id})">정보수정</button>
     <button onclick="deleteForm(${member.id})">탈퇴</button>
+    <a href="javascript:history.back()">뒤로가기</a>
 
 </body>
 <script>

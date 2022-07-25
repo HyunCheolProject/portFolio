@@ -21,6 +21,7 @@
         이메일: <input type="text" name="memberEmail" value="${updateMember.memberEmail}"><br>
         전화번호: <input type="text" name="memberMobile" value="${updateMember.memberMobile}"><br>
         <input type="submit" value="수정">
+        <a href="javascript:history.back()">뒤로가기</a>
     </form>
 </body>
 </html>

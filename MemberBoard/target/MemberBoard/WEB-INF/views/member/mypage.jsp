@@ -37,6 +37,7 @@
                 <li><a href="/member/admin-form">관리자페이지</a></li>
                 <li><a href="/member/logout-form">로그아웃</a></li>
                 <li><a href="/member/detail">내 정보</a></li>
+                <a href="javascript:history.back()">뒤로가기</a>
             </c:when>
             <c:otherwise>
                 <span class="glyphicon glyphicon-heart-empty" style="color: white;" aria-hidden="true"></span>
@@ -45,6 +46,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <li><a href="/member/logout-form">로그아웃</a></li>
                 <li><a href="/member/detail">내 정보</a></li>
+                <a href="javascript:history.back()">뒤로가기</a>
             </c:otherwise>
         </c:choose>
         <%--        <li><a href="/board/paging">글목록</a></td>--%>
