@@ -19,4 +19,12 @@ public class BoardRepository {
     public List<BoardDTO> findAll() {
         return sqlSessionTemplate.selectList("Board.findAll");
     }
+
+    public BoardDTO findById(Long id) {
+        return sqlSessionTemplate.selectOne("Board.findById", id);
+    }
+
+    public void updateHits(Long id) {
+        sqlSessionTemplate.update("Board.updateHits", id);
+    }
 }

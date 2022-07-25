@@ -28,7 +28,7 @@
         <c:forEach items="${boardList}" var="board">
             <tr>
                 <td>${board.id}</td>
-                <td>${board.boardTitle}</td>
+                <td><a href="/board/detail?id=${board.id}">${board.boardTitle}</a></td>
                 <td>${board.boardWriter}</td>
                 <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate></td>
                 <td>${board.boardHits}</td>
@@ -36,5 +36,7 @@
         </c:forEach>
 
     </table>
+    <a href="javascript:history.back()">뒤로가기</a>
+
 </body>
 </html>

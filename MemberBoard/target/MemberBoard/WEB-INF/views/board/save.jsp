@@ -19,6 +19,8 @@
     내용: <textarea name="boardContents" id="" cols="10" rows="5"></textarea><br>
     첨부파일: <input type="file" name="boardFile"><br>
     <input type="submit" value="작성">
+    <a href="javascript:history.back()">뒤로가기</a>
+
 
   </form>
 </body>

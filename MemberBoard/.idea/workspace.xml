@@ -9,14 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 파일첨부 글작성 성공.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 글목록 성공.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/save.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/BoardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/boardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/save.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/repository/BoardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/boardMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +187,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="40843000" />
+      <workItem from="1658381647760" duration="42120000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
@@ -346,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658724473673</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="board 글목록 성공.">
+      <created>1658725525247</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658725525247</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +396,7 @@
     <MESSAGE value="member 뒤로가기 버튼 성공." />
     <MESSAGE value="board 셋팅 준비." />
     <MESSAGE value="board 파일첨부 글작성 성공." />
-    <option name="LAST_COMMIT_MESSAGE" value="board 파일첨부 글작성 성공." />
+    <MESSAGE value="board 글목록 성공." />
+    <option name="LAST_COMMIT_MESSAGE" value="board 글목록 성공." />
   </component>
 </project>
