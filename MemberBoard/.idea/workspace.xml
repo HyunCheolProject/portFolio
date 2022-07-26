@@ -9,22 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 페이징처리 성공.">
+    <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 페이징목록 검색기능 성공.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/member/dto/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/member/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/commentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/repository/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/member/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/member/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/pagingList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/pagingList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/repository/BoardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/com/its/member/service/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/pagingList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/pagingList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MemberBoard/WEB-INF/views/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/repository/BoardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/member/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/member/service/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/boardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +35,9 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Kotlin Class" />
-        <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -184,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
-      <workItem from="1658381647760" duration="53336000" />
+      <workItem from="1658381647760" duration="59954000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
@@ -431,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658795605968</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="board 페이징목록 검색기능 성공.">
+      <created>1658796191353</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1658796191353</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,6 +474,7 @@
     <MESSAGE value="board 비밀번호체크 후 글 삭제 성공." />
     <MESSAGE value="board 글 수정 성공." />
     <MESSAGE value="board 페이징처리 성공." />
-    <option name="LAST_COMMIT_MESSAGE" value="board 페이징처리 성공." />
+    <MESSAGE value="board 페이징목록 검색기능 성공." />
+    <option name="LAST_COMMIT_MESSAGE" value="board 페이징목록 검색기능 성공." />
   </component>
 </project>
