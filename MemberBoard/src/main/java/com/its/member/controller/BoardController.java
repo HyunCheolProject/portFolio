@@ -1,6 +1,7 @@
 package com.its.member.controller;
 
 import com.its.member.dto.BoardDTO;
+import com.its.member.dto.PageDTO;
 import com.its.member.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -76,6 +77,17 @@ public class BoardController {
     public String update(@ModelAttribute BoardDTO boardDTO) {
         boardService.update(boardDTO);
         return "redirect:/board/detail?id="+boardDTO.getId();
+    }
+
+    // 페이징 처리
+    @GetMapping("/paging")
+    public String paging(@RequestParam(value = "page", required = false, defaultValue = "1") int page, Model model) {
+        List<BoardDTO> boardList = boardService.pagingList(page);
+        PageDTO paging = boardService.paging(page);
+        model.addAttribute("boardList", boardList);
+        model.addAttribute("paging", paging);
+        return "board/pagingList";
+
     }
 
 

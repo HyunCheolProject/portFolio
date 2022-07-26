@@ -17,6 +17,8 @@
         <input type="text" id="pwConfirm"><br>
         <input type="button" value="삭제" onclick="pwCheck()">
     </form>
+    <a href="javascript:history.back()">뒤로가기</a>
+
 </body>
 <script>
     const pwCheck = () => {

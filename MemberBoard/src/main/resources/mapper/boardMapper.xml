@@ -29,6 +29,14 @@
         update boards_table set boardTitle=#{boardTitle}, boardContents=#{boardContents} where id=#{id}
     </update>
 
+    <select id="pagingList" parameterType="java.util.HashMap" resultType="board">
+        select * from boards_table order by id desc limit #{start}, #{limit}
+    </select>
+
+    <select id="count" resultType="int">
+        select count(id) from boards_table
+    </select>
+
 
 
 </mapper>
