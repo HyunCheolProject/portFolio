@@ -44,4 +44,8 @@ public class BoardRepository {
     public int boardCount() {
         return sqlSessionTemplate.selectOne("Board.count");
     }
+
+    public List<BoardDTO> search(Map<String, String> searchParam) {
+        return sqlSessionTemplate.selectList("Board.search", searchParam);
+    }
 }
