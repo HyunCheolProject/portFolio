@@ -32,7 +32,7 @@ public class BoardController {
     @PostMapping("/save")
     public String save(@ModelAttribute BoardDTO boardDTO) throws IOException {
         boardService.save(boardDTO);
-        return "redirect:/board/findAll";
+        return "redirect:/board/paging";
     }
 
     // 글목록 출력
@@ -41,6 +41,16 @@ public class BoardController {
         List<BoardDTO> boardDTOList = boardService.findAll();
         model.addAttribute("boardList", boardDTOList);
         return "board/list";
+    }
+
+    // 페이징 처리
+    @GetMapping("/paging")
+    public String paging(@RequestParam(value = "page", required = false, defaultValue = "1") int page, Model model) {
+        List<BoardDTO> boardList = boardService.pagingList(page);
+        PageDTO paging = boardService.paging(page);
+        model.addAttribute("boardList", boardList);
+        model.addAttribute("paging", paging);
+        return "board/pagingList";
     }
 
     // 상세조회
@@ -68,7 +78,7 @@ public class BoardController {
     @GetMapping("/delete")
     public String delete(@RequestParam Long id) {
         boardService.delete(id);
-        return "redirect:/board/findAll";
+        return "redirect:/board/paging";
     }
 
     // 글 수정 화면 요청
@@ -86,16 +96,6 @@ public class BoardController {
         return "redirect:/board/detail?id="+boardDTO.getId();
     }
 
-    // 페이징 처리
-    @GetMapping("/paging")
-    public String paging(@RequestParam(value = "page", required = false, defaultValue = "1") int page, Model model) {
-        List<BoardDTO> boardList = boardService.pagingList(page);
-        PageDTO paging = boardService.paging(page);
-        model.addAttribute("boardList", boardList);
-        model.addAttribute("paging", paging);
-        return "board/pagingList";
-
-    }
 
     // 검색처리
     @GetMapping("/search")

@@ -17,7 +17,7 @@ public class MemberController {
     private MemberService memberService;
 
     // 회원가입 화면 요청
-    @GetMapping("save-form")
+    @GetMapping("/save-form")
     public String saveForm() {
         return "member/save";
     }
@@ -91,6 +91,15 @@ public class MemberController {
         }
     }
     
+    // 회원정보 상세보기
+    @GetMapping("/detail")
+    public String findById(HttpSession session, Model model) {
+        Long id = (Long) session.getAttribute("id");
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member", memberDTO);
+        return "member/detail";
+        }
+
     // 회원 탈퇴
     @GetMapping("/delete-form")
     public String deleteForm(@RequestParam("id") Long id) {
@@ -102,14 +111,6 @@ public class MemberController {
         }
     }
 
-    // 회원정보 상세보기
-    @GetMapping("/detail")
-    public String findById(HttpSession session, Model model) {
-        Long id = (Long) session.getAttribute("id");
-        MemberDTO memberDTO = memberService.findById(id);
-        model.addAttribute("member", memberDTO);
-        return "member/detail";
-        }
 
 
     // 관리자 페이지 화면 요청
