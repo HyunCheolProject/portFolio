@@ -29,16 +29,16 @@
     <table class="table">
         <tr>
             <th>글번호</th>
-            <th>작성자</th>
             <th>제목</th>
+            <th>작성자</th>
             <th>작성일자</th>
             <th>조회수</th>
         </tr>
         <c:forEach items="${boardList}" var="board">
             <tr>
                 <td>${board.id}</td>
-                <td>${board.boardWriter}</td>
                 <td><a href="/board/detail?page=${paging.page}&id=${board.id}">${board.boardTitle}</a></td>
+                <td>${board.boardWriter}</td>
                 <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate></td>
                 <td>${board.boardHits}</td>
             </tr>

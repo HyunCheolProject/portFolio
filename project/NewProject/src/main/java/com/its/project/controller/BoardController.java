@@ -1,8 +1,10 @@
 package com.its.project.controller;
 
 import com.its.project.dto.BoardDTO;
+import com.its.project.dto.CommentDTO;
 import com.its.project.dto.PageDTO;
 import com.its.project.service.BoardService;
+import com.its.project.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,9 @@ import java.util.List;
 public class BoardController {
     @Autowired
     private BoardService boardService;
+
+    @Autowired
+    private CommentService commentService;
 
     // 글작성 (사진첨부) 화면 요청
     @GetMapping("/save-form")
@@ -48,6 +53,8 @@ public class BoardController {
         BoardDTO boardDTO = boardService.findById(id);
         model.addAttribute("board", boardDTO);
         model.addAttribute("page", page);
+        List<CommentDTO> commentList = commentService.findAll(id);
+        model.addAttribute("commentList", commentList);
         return "board/detail";
     }
 
