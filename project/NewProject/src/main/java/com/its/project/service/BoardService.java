@@ -71,4 +71,9 @@ public class BoardService {
         List<BoardDTO> searchList = boardRepository.search(searchParam);
         return searchList;
     }
+
+    public void update(BoardDTO boardDTO) {
+        boardRepository.update(boardDTO);
+
+    }
 }

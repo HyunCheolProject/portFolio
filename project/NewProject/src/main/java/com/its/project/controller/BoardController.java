@@ -60,6 +60,28 @@ public class BoardController {
         return "board/list";
     }
 
+    // 글 수정 화면 요청
+    @GetMapping("/update-form")
+    public String updateForm(@RequestParam Long id, Model model) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("boardUpdate",boardDTO);
+        return "board/update";
+    }
+
+    // 글 수정처리
+    @PostMapping("/update")
+    public String update(@ModelAttribute BoardDTO boardDTO) {
+        boardService.update(boardDTO);
+        return "redirect:/board/detail?id="+boardDTO.getId();
+    }
+
+    // 비밀번호 체크페이지
+    @GetMapping("/pwCheck")
+    public String pwCheck(@RequestParam Long id, Model model) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("board", boardDTO);
+        return "board/pwCheck";
+    }
 
 
 

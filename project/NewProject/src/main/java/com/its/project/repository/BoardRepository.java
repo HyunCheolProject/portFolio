@@ -40,4 +40,9 @@ public class BoardRepository {
         return sqlSessionTemplate.selectList("Board.search", searchParam);
 
     }
+
+    public void update(BoardDTO boardDTO) {
+        sqlSessionTemplate.update("Board.update", boardDTO);
+
+    }
 }

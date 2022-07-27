@@ -25,7 +25,7 @@
     <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
          alt="" height="100" width="100"><br>
 
-
+    <button onclick="boardUpdate()">수정</button>
     <button onblur="paging()">페이징목록</button>
     <br>
 </div>
@@ -35,6 +35,9 @@
 <script>
     const paging = () => {
         location.href = "/board/paging?page=${page}";
+    }
+    const boardUpdate = () => {
+        location.href = "/board/update-form?id=${board.id}";
     }
 </script>
 </html>
