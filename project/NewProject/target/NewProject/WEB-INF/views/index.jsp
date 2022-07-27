@@ -35,6 +35,7 @@
             <li><a href="/member/login-form">로그인</a></li>
             <li><a href="#second">지역별 식재료</a></li>
             <li><a href="/board/save-form">글작성</a></li>
+            <li><a href="/board/paging">글목록</a></li>
         </ul>
     </nav>
 
