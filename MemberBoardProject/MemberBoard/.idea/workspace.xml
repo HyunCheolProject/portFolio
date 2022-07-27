@@ -21,6 +21,10 @@
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/NewProject.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/dto/MemberDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/MemberService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/memberMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
@@ -187,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
       <workItem from="1658381647760" duration="65277000" />
-      <workItem from="1658819050176" duration="2243000" />
+      <workItem from="1658819050176" duration="2635000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
