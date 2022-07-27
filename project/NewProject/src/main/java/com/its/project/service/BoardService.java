@@ -63,4 +63,12 @@ public class BoardService {
         boardRepository.updateHits(id);
         return boardRepository.findById(id);
     }
+
+    public List<BoardDTO> search(String searchType, String q) {
+        Map<String, String> searchParam = new HashMap<>();
+        searchParam.put("type", searchType);
+        searchParam.put("q", q);
+        List<BoardDTO> searchList = boardRepository.search(searchParam);
+        return searchList;
+    }
 }

@@ -36,8 +36,8 @@ public class BoardRepository {
     }
 
 
+    public List<BoardDTO> search(Map<String, String> searchParam) {
+        return sqlSessionTemplate.selectList("Board.search", searchParam);
 
-
-
-
+    }
 }
