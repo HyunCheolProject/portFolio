@@ -1,5 +1,6 @@
 package com.its.project.service;
 
+import com.its.project.dto.MemberDTO;
 import com.its.project.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,5 +11,7 @@ public class MemberService {
     private MemberRepository memberRepository;
 
 
-
+    public void save(MemberDTO memberDTO) {
+        memberRepository.save(memberDTO);
+    }
 }

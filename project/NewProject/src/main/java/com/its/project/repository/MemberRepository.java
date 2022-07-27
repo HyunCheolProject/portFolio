@@ -1,5 +1,6 @@
 package com.its.project.repository;
 
+import com.its.project.dto.MemberDTO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,12 +11,7 @@ public class MemberRepository {
     private SqlSessionTemplate sqlSessionTemplate;
 
 
-
-
-
-
-
-
-
-
+    public void save(MemberDTO memberDTO) {
+        sqlSessionTemplate.insert("Member.save", memberDTO);
+    }
 }
