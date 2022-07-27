@@ -10,21 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="MemberBoard 수정">
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/pwCheck.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/dto/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/commentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/BoardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/BoardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/boardMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
       <workItem from="1658381647760" duration="65277000" />
-      <workItem from="1658819050176" duration="11776000" />
+      <workItem from="1658819050176" duration="12397000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
