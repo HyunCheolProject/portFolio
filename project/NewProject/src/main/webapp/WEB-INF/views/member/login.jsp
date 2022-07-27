@@ -11,11 +11,13 @@
     <title>login.jsp</title>
 </head>
 <body>
-    <h2>로그인</h2>
-    <form action="/member/login" method="post">
-        아이디: <input type="text" name="memberId"><br>
-        비밀번호: <input type="password" name="memberPw"><br>
-        <input type="submit" value="로그인">
-    </form>
+<h2>로그인</h2>
+<form action="/member/login" method="post">
+    아이디: <input type="text" name="memberId"><br>
+    비밀번호: <input type="password" name="memberPw"><br>
+    <input type="submit" value="로그인">
+</form>
+<a href="javascript:history.back()">뒤로가기</a>
+
 </body>
 </html>

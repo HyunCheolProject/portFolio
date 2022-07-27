@@ -11,32 +11,34 @@
     <title>save.jsp</title>
 </head>
 <body>
-    <h2>회원가입</h2>
-    <form action="/member/save" method="post">
-        아이디: <input type="text" onblur="memberIdCheck()" id="memberId" name="memberId"><br>
-        <span id="memberIdCheck-result"></span><br>
-        비밀번호: <input type="password" name="memberPw"><br>
-        이름: <input type="text" name="memberName"><br>
-        나이: <input type="text" name="memberAge"><br>
-        이메일: <input type="text" name="memberEmail"><br>
-        전화번호: <input type="text" name="memberMobile"><br>
-        <input type="submit" value="가입">
-    </form>
+<h2>회원가입</h2>
+<form action="/member/save" method="post">
+    아이디: <input type="text" onblur="memberIdCheck()" id="memberId" name="memberId"><br>
+    <span id="memberIdCheck-result"></span><br>
+    비밀번호: <input type="password" name="memberPw"><br>
+    이름: <input type="text" name="memberName"><br>
+    나이: <input type="text" name="memberAge"><br>
+    이메일: <input type="text" name="memberEmail"><br>
+    전화번호: <input type="text" name="memberMobile"><br>
+    <input type="submit" value="가입">
+</form>
+<a href="javascript:history.back()">뒤로가기</a>
 
-    <script src="/resources/js/jquery.js"></script>
+
+<script src="/resources/js/jquery.js"></script>
 
 </body>
 <script>
     const memberIdCheck = () => {
         const memberId = document.getElementById("memberId").value;
         const emailCheckResult = document.getElementById("memberIdCheck-result");
-        $.ajax ({
+        $.ajax({
             type: "post",
             url: "/member/memberId-check",
             data: {"memberId": memberId},
             dataType: "text",
             success: function (result) {
-                if ( result == "ok") {
+                if (result == "ok") {
                     emailCheckResult.innerHTML = "사용가능한 아이디 입니다.";
                     emailCheckResult.style.color = "#2183d3";
                 } else {

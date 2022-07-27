@@ -29,6 +29,9 @@
         delete from member_table where id=#{id}
     </delete>
 
+    <select id="findAll" resultType="member">
+        select * from member_table
+    </select>
 
 </mapper>
 
