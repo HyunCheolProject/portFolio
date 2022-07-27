@@ -10,140 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="MemberBoard 수정">
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/dto/BoardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/BoardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/BoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/save.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/save.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/css/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/breakpoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/browser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/js/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/base/_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/base/_reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/base/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_actions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_box.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_features.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_mini-posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_section.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/components/_table.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_banner.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_menu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/layout/_wrapper.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_html-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/libs/_vendor.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/sass/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/resources/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/MemberRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/MemberService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/memberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/save.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/css/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/breakpoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/browser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/js/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/base/_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/base/_reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/base/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_actions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_box.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_features.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_mini-posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_section.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/components/_table.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_banner.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_menu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/layout/_wrapper.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_html-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/libs/_vendor.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/sass/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/MemberRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/MemberService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/memberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/dto/PageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/BoardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/boardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/resources/files/1658900567352-git 계정변경2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/BoardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/BoardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/boardMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
       <workItem from="1658381647760" duration="65277000" />
-      <workItem from="1658819050176" duration="10405000" />
+      <workItem from="1658819050176" duration="10968000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
