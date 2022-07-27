@@ -13,7 +13,7 @@
 <body>
     <h2>회원정보 수정</h2>
     <form action="/member/update" method="post">
-        회원번호: <input type="hidden" name="id" value="${updateMember.id}"><br>
+        회원번호: <input type="text" name="id" value="${updateMember.id}" readonly><br>
         아이디: <input type="text" name="memberId" value="${updateMember.memberId}" readonly><br>
         비밀번호: <input type="password" name="memberPw" value="${updateMember.memberPw}"><br>
         이름: <input type="text" name="memberName" value="${updateMember.memberName}" readonly><br>

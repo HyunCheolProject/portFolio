@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BoardDTO {
-    private String id;
+    private Long id;
     private String boardTitle;
     private String boardWriter;
     private String boardPw;

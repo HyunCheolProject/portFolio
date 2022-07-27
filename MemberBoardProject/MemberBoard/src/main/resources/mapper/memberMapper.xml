@@ -25,6 +25,10 @@
         update members_table set memberPw=#{memberPw}, memberEmail=#{memberEmail}, memberMobile=#{memberMobile} where id=#{id}
     </update>
 
+    <delete id="delete" parameterType="Long">
+        delete from members_table where id=#{id}
+    </delete>
+
     <delete id="deleteForm" parameterType="Long">
         delete from members_table where id=#{id}
     </delete>
