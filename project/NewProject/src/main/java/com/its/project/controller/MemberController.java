@@ -119,4 +119,15 @@ public class MemberController {
         return "member/list";
     }
 
+    // 회원삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        boolean deleteResult = memberService.delete(id);
+        if (deleteResult) {
+            return "redirect:/member/findAll";
+        } else {
+            return "delete-fail";
+        }
+    }
+
 }

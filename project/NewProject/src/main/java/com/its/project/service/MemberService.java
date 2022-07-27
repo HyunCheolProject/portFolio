@@ -50,4 +50,13 @@ public class MemberService {
     public List<MemberDTO> findAll() {
         return memberRepository.findAll();
     }
+
+    public boolean delete(Long id) {
+        int deleteResult = memberRepository.delete(id);
+        if (deleteResult > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
