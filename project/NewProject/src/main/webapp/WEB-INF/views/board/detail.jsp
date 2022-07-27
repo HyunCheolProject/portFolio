@@ -26,6 +26,7 @@
          alt="" height="100" width="100"><br>
 
     <button onclick="boardUpdate()">수정</button>
+    <button onclick="boardDelete()">삭제</button>
     <button onblur="paging()">페이징목록</button>
     <br>
 </div>
@@ -38,6 +39,9 @@
     }
     const boardUpdate = () => {
         location.href = "/board/update-form?id=${board.id}";
+    }
+    const boardDelete = () => {
+        location.href = "/board/pwCheck?id=${board.id}";
     }
 </script>
 </html>

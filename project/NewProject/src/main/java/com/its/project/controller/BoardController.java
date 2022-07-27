@@ -83,6 +83,12 @@ public class BoardController {
         return "board/pwCheck";
     }
 
+    // 글 삭제 처리
+    @GetMapping("/delete")
+    public String delete(@RequestParam Long id) {
+        boardService.delete(id);
+        return "redirect:/board/paging";
+    }
 
 
 }
