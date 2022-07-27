@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="board 댓글 성공.">
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/memberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/mypage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
       <workItem from="1658381647760" duration="65277000" />
-      <workItem from="1658819050176" duration="4574000" />
+      <workItem from="1658819050176" duration="5575000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
