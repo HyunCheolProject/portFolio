@@ -62,5 +62,30 @@ public class MemberController {
         return "redirect:/";
     }
 
+    // 회원정보 상세보기
+    @GetMapping("/detail")
+    public String findById(HttpSession session, Model model) {
+        Long id = (Long) session.getAttribute("id");
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member", memberDTO);
+        return "member/detail";
+    }
+
+    // 회원정보 수정화면 요청
+    @GetMapping("/update-form")
+    public String updateForm(HttpSession session, Model model) {
+        Long updateId = (Long) session.getAttribute("id");
+        MemberDTO memberDTO = memberService.findById(updateId);
+        model.addAttribute("updateMember", memberDTO);
+        return "member/update";
+    }
+
+    // 회원정보 수정 처리
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO) {
+        memberService.update(memberDTO);
+        return "redirect:/member/detail";
+    }
+
 
 }

@@ -22,4 +22,12 @@ public class MemberRepository {
     public String memberIdCheck(String memberId) {
         return sqlSessionTemplate.selectOne("Member.memberIdCheck", memberId);
     }
+
+    public void update(MemberDTO memberDTO) {
+        sqlSessionTemplate.update("Member.update", memberDTO);
+    }
+
+    public MemberDTO finById(Long updateId) {
+        return sqlSessionTemplate.selectOne("Member.findById", updateId);
+    }
 }

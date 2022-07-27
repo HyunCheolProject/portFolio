@@ -27,4 +27,13 @@ public class MemberService {
             return "no";
         }
     }
+
+    public MemberDTO findById(Long updateId) {
+        return memberRepository.finById(updateId);
+    }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepository.update(memberDTO);
+    }
+
 }
