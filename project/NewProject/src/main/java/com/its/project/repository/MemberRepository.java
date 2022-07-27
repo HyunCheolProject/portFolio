@@ -30,4 +30,9 @@ public class MemberRepository {
     public MemberDTO finById(Long updateId) {
         return sqlSessionTemplate.selectOne("Member.findById", updateId);
     }
+
+    public int deleteForm(Long id) {
+        return sqlSessionTemplate.delete("Member.deleteForm", id);
+
+    }
 }

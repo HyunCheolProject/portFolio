@@ -87,5 +87,16 @@ public class MemberController {
         return "redirect:/member/detail";
     }
 
+    // 회원 탈퇴
+    @GetMapping("/delete-form")
+    public String deleteForm(@RequestParam("id") Long id) {
+        boolean deleteResult = memberService.deleteForm(id);
+        if (deleteResult) {
+            return "index";
+        } else {
+            return "delete-fail";
+        }
+    }
+
 
 }

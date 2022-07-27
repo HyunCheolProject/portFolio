@@ -28,5 +28,8 @@
     const updateForm = (id) => {
         location.href = "/member/update-form?id" + id;
     }
+    const deleteForm = (id) => {
+        location.href = "/member/delete-form?id=" + id;
+    }
 </script>
 </html>

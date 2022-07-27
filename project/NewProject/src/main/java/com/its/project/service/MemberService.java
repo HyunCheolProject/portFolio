@@ -36,4 +36,12 @@ public class MemberService {
         memberRepository.update(memberDTO);
     }
 
+    public boolean deleteForm(Long id) {
+        int deleteResult = memberRepository.deleteForm(id);
+        if (deleteResult > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
