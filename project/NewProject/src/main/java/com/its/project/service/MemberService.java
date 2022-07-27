@@ -18,4 +18,13 @@ public class MemberService {
     public MemberDTO login(MemberDTO memberDTO) {
         return memberRepository.login(memberDTO);
     }
+
+    public String memberIdCheck(String memberId) {
+        String checkResult = memberRepository.memberIdCheck(memberId);
+        if (checkResult == null) {
+            return "ok";
+        } else {
+            return "no";
+        }
+    }
 }

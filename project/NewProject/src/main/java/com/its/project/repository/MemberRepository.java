@@ -18,4 +18,8 @@ public class MemberRepository {
     public MemberDTO login(MemberDTO memberDTO) {
         return sqlSessionTemplate.selectOne("Member.login", memberDTO);
     }
+
+    public String memberIdCheck(String memberId) {
+        return sqlSessionTemplate.selectOne("Member.memberIdCheck", memberId);
+    }
 }

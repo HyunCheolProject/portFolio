@@ -5,10 +5,7 @@ import com.its.project.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -37,6 +34,13 @@ public class MemberController {
         return "member/login";
     }
 
+    // 아이디 중복 확인
+    @PostMapping("/memberId-check")
+    public @ResponseBody String memberIdCheck(@RequestParam String memberId) {
+        String checkResult = memberService.memberIdCheck(memberId);
+        return checkResult;
+    }
+
     // 로그인 처리
     @PostMapping("/login")
     public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session, Model model) {
@@ -50,5 +54,7 @@ public class MemberController {
             return "member/login";
         }
     }
+
+
 
 }
