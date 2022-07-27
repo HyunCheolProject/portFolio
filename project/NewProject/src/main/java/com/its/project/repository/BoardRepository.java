@@ -27,6 +27,15 @@ public class BoardRepository {
     }
 
 
+    public BoardDTO findById(Long id) {
+        return sqlSessionTemplate.selectOne("Board.findById", id);
+    }
+
+    public void updateHits(Long id) {
+        sqlSessionTemplate.update("Board.updateHits", id);
+    }
+
+
 
 
 

@@ -40,6 +40,17 @@ public class BoardController {
         return "board/list";
     }
 
+    // 상세조회
+    @GetMapping("/detail")
+    public String findById(@RequestParam Long id, Model model,
+                           @RequestParam(value = "page", required = false,
+                                   defaultValue = "1") int page) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("board", boardDTO);
+        model.addAttribute("page", page);
+        return "board/detail";
+    }
+
 
 
 

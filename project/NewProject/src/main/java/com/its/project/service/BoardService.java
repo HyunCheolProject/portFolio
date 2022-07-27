@@ -59,8 +59,8 @@ public class BoardService {
     }
 
 
-
-
-
-
+    public BoardDTO findById(Long id) {
+        boardRepository.updateHits(id);
+        return boardRepository.findById(id);
+    }
 }
