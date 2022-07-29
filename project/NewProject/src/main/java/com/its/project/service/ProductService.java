@@ -16,7 +16,7 @@ public class ProductService {
     private ProductRepository productRepository;
 
 
-    public void save(ProductDTO productDTO) throws IOException {
+    public void insert(ProductDTO productDTO) throws IOException {
         MultipartFile productFile = productDTO.getProductFile();
         String productFileName = productFile.getOriginalFilename();
         productFileName = System.currentTimeMillis() + "-" + productFileName;
@@ -25,7 +25,7 @@ public class ProductService {
         if (!productFile.isEmpty()) {
             productFile.transferTo(new File(savePath));
         }
-        productRepository.save(productDTO);
+        productRepository.insert(productDTO);
     }
 
     public List<ProductDTO> findAll() {

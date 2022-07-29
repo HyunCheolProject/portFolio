@@ -4,7 +4,7 @@
 
 
 <mapper namespace="Product">
-    <insert id="save" parameterType="product">
+    <insert id="insert" parameterType="product">
         insert into products_table (productName, productWriter, productPw, productContents, productPrice, productCreatedDate, productFileName)
         values (#{productName}, #{productWriter}, #{productPw}, #{productContents}, #{productPrice}, now(), #{productFileName})
     </insert>

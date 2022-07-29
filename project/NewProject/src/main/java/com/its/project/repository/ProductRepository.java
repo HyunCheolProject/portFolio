@@ -13,8 +13,8 @@ public class ProductRepository {
     private SqlSessionTemplate sqlSessionTemplate;
 
 
-    public void save(ProductDTO productDTO) {
-        sqlSessionTemplate.insert("Product.save", productDTO);
+    public void insert(ProductDTO productDTO) {
+        sqlSessionTemplate.insert("Product.insert", productDTO);
     }
 
     public List<ProductDTO> findAll() {
