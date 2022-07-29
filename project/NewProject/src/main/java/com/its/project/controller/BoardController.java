@@ -98,4 +98,17 @@ public class BoardController {
     }
 
 
+    // test
+    @GetMapping("/test")
+    public String test() {
+        return "board/test";
+    }
+
+    @GetMapping("/test-form")
+    public String testForm() {
+        return "board/testForm";
+    }
+
+
+
 }

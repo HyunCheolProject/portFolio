@@ -9,10 +9,12 @@
 <html>
 <head>
     <title>index.jsp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
     <link rel="stylesheet" href="\resources\assets\css/main.css"/>
-    <noscript><link rel="stylesheet" href="\resources\assets\css/noscript.css"/></noscript>
+    <noscript>
+        <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
+    </noscript>
 </head>
 
 <body class="is-preload">
@@ -22,121 +24,83 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-        <span class="logo"><img src="\resources\images/logo.svg" alt="" /></span>
+        <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
-        <p>식재료 주문은 쿸팡에서!<br />
+        <p>식재료 주문은 쿸팡에서!<br/>
             <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->
     <nav id="nav">
         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/board/paging">식재료</a></li>
+            <li><a href="/board/test">ㅇㅇㅇ</a></li>
+            <li><a href="/board/paging">목록</a></li>
             <li><a href="/member/save-form" class="active">회원가입</a></li>
             <li><a href="/member/login-form">로그인</a></li>
-            <li><a href="#second">지역별 식재료</a></li>
             <li><a href="/board/save-form">글작성</a></li>
-            <li><a href="/board/paging">글목록</a></li>
+            <li><a href="/board/test-form">test2</a></li>
+            <li><a href="/product/insert-form">상품등록</a></li>
+            <li><a href="/product/findAll">상품리스트</a></li>
         </ul>
     </nav>
 
     <!-- Main -->
     <div id="main">
 
-        <!-- Introduction -->
-        <section id="intro" class="main">
-            <div class="spotlight">
-                <div class="content">
-                    <header class="major">
-                        <h2>Ipsum sed adipiscing</h2>
-                    </header>
-                    <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-                        adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-                        Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-                    <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn More</a></li>
-                    </ul>
-                </div>
-                <span class="image"><img src="\resources\images/pic01.jpg" alt="" /></span>
-            </div>
-        </section>
-
         <!-- First Section -->
         <section id="first" class="main special">
             <header class="major">
-                <h2>Magna veroeros</h2>
+                <h2>이번 주 인기 상품</h2>
             </header>
             <ul class="features">
                 <li>
-                    <span class="icon solid major style1 fa-code"></span>
-                    <h3>Ipsum consequat</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                    <span class="image"><img src="\resources\images/b1.jpg" height="300" width="300" alt=""/></span>
+                    <!-- 상품가격 -->
+                    <div class="item__price">
+
+                        <!-- 원가 -->
+                        <strong class="item__price--strike"><em>8,000</em>원</strong>
+                        <!-- 할인율 -->
+                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+
+                        <!-- 판매가 -->
+                        <strong class="item__price--current"><em>5,000</em>원</strong>
+                    </div>
                 </li>
                 <li>
-                    <span class="icon major style3 fa-copy"></span>
-                    <h3>Amed sed feugiat</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                    <span class="image"><img src="\resources\images/b2.jpg" height="300" width="300" alt=""/></span>
+                    <!-- 상품가격 -->
+                    <div class="item__price">
+
+                        <!-- 원가 -->
+                        <strong class="item__price--strike"><em>8,000</em>원</strong>
+                        <!-- 할인율 -->
+                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+
+                        <!-- 판매가 -->
+                        <strong class="item__price--current"><em>5,000</em>원</strong>
+                    </div>
                 </li>
                 <li>
-                    <span class="icon major style5 fa-gem"></span>
-                    <h3>Dolor nullam</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                    <span class="image"><img src="\resources\images/b3.jpg" height="300" width="300" alt=""/></span>
+                    <!-- 상품가격 -->
+                    <div class="item__price">
+
+                        <!-- 원가 -->
+                        <strong class="item__price--strike"><em>8,000</em>원</strong>
+                        <!-- 할인율 -->
+                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+
+                        <!-- 판매가 -->
+                        <strong class="item__price--current"><em>5,000</em>원</strong>
+                    </div>
                 </li>
             </ul>
             <footer class="major">
                 <ul class="actions special">
-                    <li><a href="generic.html" class="button">Learn More</a></li>
-                </ul>
-            </footer>
-        </section>
-
-        <!-- Second Section -->
-        <section id="second" class="main special">
-            <header class="major">
-                <h2>Ipsum consequat</h2>
-                <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                    posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-            </header>
-            <ul class="statistics">
-                <li class="style1">
-                    <span class="icon solid fa-code-branch"></span>
-                    <strong>5,120</strong> Etiam
-                </li>
-                <li class="style2">
-                    <span class="icon fa-folder-open"></span>
-                    <strong>8,192</strong> Magna
-                </li>
-                <li class="style3">
-                    <span class="icon solid fa-signal"></span>
-                    <strong>2,048</strong> Tempus
-                </li>
-                <li class="style4">
-                    <span class="icon solid fa-laptop"></span>
-                    <strong>4,096</strong> Aliquam
-                </li>
-                <li class="style5">
-                    <span class="icon fa-gem"></span>
-                    <strong>1,024</strong> Nullam
-                </li>
-            </ul>
-            <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-            <footer class="major">
-                <ul class="actions special">
-                    <li><a href="generic.html" class="button">Learn More</a></li>
-                </ul>
-            </footer>
-        </section>
-
-        <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
-                <h2>Congue imperdiet</h2>
-                <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                    posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-            </header>
-            <footer class="major">
-                <ul class="actions special">
-                    <li><a href="generic.html" class="button primary">Get Started</a></li>
-                    <li><a href="generic.html" class="button">Learn More</a></li>
+                    <li><a href="/board/test" class="button">More</a></li>
                 </ul>
             </footer>
         </section>
@@ -147,7 +111,9 @@
     <footer id="footer">
         <section>
             <h2>Aliquam sed mauris</h2>
-            <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+            <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore
+                veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit,
+                vitae tincidunt odio.</p>
             <ul class="actions">
                 <li><a href="generic.html" class="button">Learn More</a></li>
             </ul>
