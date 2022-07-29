@@ -22,8 +22,6 @@
     내용: ${board.boardContents}<br>
     작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate><br>
     조회수: ${board.boardHits}<br>
-    <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
-         alt="" height="100" width="100"><br>
 
     <button onclick="boardUpdate()">수정</button>
     <button onclick="boardDelete()">삭제</button>

@@ -5,115 +5,210 @@
   Time: 오전 10:57
   To change this template use File | Settings | File Templates.
 --%>
+<%--
+  Created by IntelliJ IDEA.
+  User: khc_9
+  Date: 2022-07-28
+  Time: 오전 9:12
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>index.jsp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <link rel="stylesheet" href="\resources\assets\css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
+    </noscript>
 </head>
-<body>
-<div class="main">
-    <section class="module bg-dark-60 shop-page-header" data-background="assets/images/shop/product-page-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">Shop Products</h2>
-                    <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="module-small">
-        <div class="container">
+<body class="is-preload">
 
-            <div class="col-sm-12 mb-sm-20" style="text-align:center; font-size:20px;">
-                <c:if test="${cri.catesub=='outer' or cri.catesub=='jamper' or cri.catesub=='coat'or cri.catesub=='jacket'or cri.catesub=='padding'}">
+<!-- Wrapper -->
+<div id="wrapper">
 
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=jamper&sort=">JAMPER</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=coat&sort=">COAT</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=jacket&sort=">JACKET</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=padding&sort=">PADDING</a>
-                </c:if>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
+        <h1>쿸팡</h1>
+        <p>식재료 주문은 쿸팡에서!<br/>
+            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+    </header>
 
-                <c:if test="${cri.catesub=='top' or cri.catesub=='long' or cri.catesub=='knit' or cri.catesub=='halftee'or cri.catesub=='shirts'or cri.catesub=='blank'}">
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/board/paging">식재료</a></li>
+            <li><a href="/board/test">ㅇㅇㅇ</a></li>
+            <li><a href="/board/paging">목록</a></li>
+            <li><a href="/member/save-form" class="active">회원가입</a></li>
+            <li><a href="/member/login-form">로그인</a></li>
+            <li><a href="/board/save-form">글작성</a></li>
+            <li><a href="/board/test-form">test2</a></li>
+        </ul>
+    </nav>
 
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=long&sort=">LONG</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=knit&sort=">KNIT</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=halftee&sort=">1/2 TEE</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=shirts&sort=">SHIRTS</a>
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=blank&sort=">BLANK</a>
-                </c:if>
+    <!-- Main -->
+    <div id="main">
 
-                <c:if test="${cri.catesub=='bottom' or cri.catesub=='denim' or cri.catesub=='halfpants' or cri.catesub=='jogger'or cri.catesub=='sult'}">
+        <!-- First Section -->
+        <section id="first" class="main special">
+            <header class="major">
+                <h2>상품</h2>
+            </header>
 
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=bottom&sort=">BOTTOM</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=denim&sort=">DENIM</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=halfpants&sort=">1/2PANTS</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=jogger'or&sort=">Jogger</a>
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=sult&sort=">sult</a>
-                </c:if>
+            <section>
+                <header class="fb__main__header">
+                    <%--                <div class="fb__main__header__wrap">--%>
+                    <%--                    <h3 class="fb__title">이달의 특가</h3>--%>
+                    <%--                </div>--%>
+                    <nav class="fb__main__nav">
+                        <a href="#goodsWhatsNew" data-group_code="1"
+                           class="active devWhatsNewTab">쌀</a>
+                        <a href="#goodsWhatsNew" data-group_code="2"
+                           class=" devWhatsNewTab">육류</a>
+                        <a href="#goodsWhatsNew" data-group_code="3"
+                           class=" devWhatsNewTab">생선</a>
+                        <a href="#goodsWhatsNew" data-group_code="4"
+                           class=" devWhatsNewTab">채소</a>
+                        <a href="#goodsWhatsNew" data-group_code="5"
+                           class=" devWhatsNewTab">조미료</a>
+                    </nav>
+                </header>
 
-                <c:if test="${cri.catesub=='shoes' or cri.catesub=='sneakers' or cri.catesub=='boots' or cri.catesub=='walker' or cri.catesub=='derby' or cri.catesub=='sandal'}">
+                <div>
+                    <div data-group_code="1">
+                        <ul class="fb__items listType4">
+                            <div>
+                                <div class="item__info">
+                                    <c:forEach items="${boardList}" var="board">
+                                        <li style="display: flex; display: inline-block;margin-right: 100px;">
+                                            <div class="board-id-wrap">
+                                                <span class="board-id">${board.id}</span>
+                                            </div>
+                                            <div class="bord-id-wrap">
+                                                <a href="/board/detail?page=${paging.page}&id=${board.id}">${board.boardTitle}</a>
+                                            </div>
+                                            <div class="board-id-wrap">
+                                                    ${board.boardWriter}
+                                            </div>
+                                            <div class="board-id-wrap">
+                                                <fmt:formatDate pattern="yyyy-MM-dd"
+                                                                value="${board.boardCreatedDate}"></fmt:formatDate>
+                                            </div>
+                                            <div class="board-id-wrap">
+                                                    ${board.boardHits}
+                                            </div>
 
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=sneakers&sort=">SNEAKERS</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=boots&sort=">BOOTS</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=walker&sort=">WALKER</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=derby&sort=">DERBY</a> &nbsp;&nbsp;&nbsp;
-                    <a href="/main/itemView?page=1&perPageNum=8&catemain=item&catesub=sandal&sort=">SANDAL</a>
-                </c:if>
-            </div>
+                                        </li>
+                                    </c:forEach>
+                                </div>
 
-        </div>
-    </section>
-    <hr class="divider-w">
-    <section class="module-small">
-        <div class="container">
-            <div class="row multi-columns-row">
-                <form>
-                    <c:forEach items="${itemList}" var="itemList">
-                        <div class="col-sm-6 col-md-3 col-lg-3 mt-60 mb-40">
+                                <div class="container align-center">
+                                    <ul class="pagination justify-content-center">
+                                        <%-- c:choose c:when 등을 쓰려면 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 태그를 써야함 --%>
+                                        <c:choose> <%-- else if문과 같음 --%>
+                                            <%-- 현재 페이지가 1페이지면 이전 글자만 보여줌 --%>
+                                            <c:when test="${paging.page<=1}">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link">[이전]</a>
+                                                </li>
+                                            </c:when>
+                                            <%-- 1페이지가 아닌 경우에는 [이전]을 클릭하면 현재페이지보다 1 작은 페이지 요청 --%>
+                                            <c:otherwise>
+                                                <li class="page-item">
+                                                    <a class="page-link"
+                                                       href="/board/paging?page=${paging.page-1}">[이전]</a>
+                                                </li>
+                                            </c:otherwise>
+                                        </c:choose>
 
-                            <div class="shop-item">
-                                <a href="/main/itemContent?item_no=${itemList.item_no}&page=${cri.page}&perPageNum=${cri.perPageNum}&catemain=${cri.catemain}&catesub=${cri.catesub}&sort=${cri.sort}">
-                                    <div class="shop-item-image"><img width="10%" src="/img/${itemList.item_imgmain}" alt="Accessories Pack"/>
-                                        <div class="shop-item-detail"><img src="/img/${itemList.item_imgsub}" alt="Accessories Pack"/></div>
-                                    </div>
-                                    <h4 class="shop-item-title font-alt">${itemList.item_name}</h4>
-                                    ₩ <fmt:formatNumber pattern="###,###,###" value="${itemList.item_price}"/>
-                                </a>
+                                        <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="i" step="1">
+                                            <c:choose>
+                                                <c:when test="${i eq paging.page}">
+                                                    <li class="page-item active">
+                                                        <a class="page-link">${i}</a>
+                                                    </li>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="/board/paging?page=${i}">${i}</a>
+                                                    </li>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </c:forEach>
+                                        <c:choose>
+                                            <c:when test="${paging.page>=paging.maxPage}">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link">[다음]</a>
+                                                </li>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <li class="page-item">
+                                                    <a class="page-link"
+                                                       href="/board/paging?page=${paging.page+1}">[다음]</a>
+                                                </li>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </ul>
+                                </div>
                             </div>
-
-                        </div>
-                    </c:forEach>
-                </form>
-
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12" style="text-align:center;">
-                    <div class="pagination font-alt">
-
-                        <c:if test="${pageMaker.prev}">
-                            <a href="/main/itemView${pageMaker.makeQuery(pageMaker.startPage - 1)}"><i class="fa fa-angle-left"></i></a>
-                        </c:if>
-
-                        <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="idx">
-                            <a class="active" href="/main/itemView${pageMaker.makeQuery(idx)}">${idx}</a>
-                        </c:forEach>
-
-                        <c:if test="${pageMaker.next && pageMaker.endPage > 0}">
-                            <a href="/main/itemView${pageMaker.makeQuery(pageMaker.endPage + 1)}"><i class="fa fa-angle-right"></i></a>
-                        </c:if>
-
+                        </ul>
                     </div>
+
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>Aliquam sed mauris</h2>
+            <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore
+                veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit,
+                vitae tincidunt odio.</p>
+            <ul class="actions">
+                <li><a href="generic.html" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Etiam feugiat</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                <dt>Phone</dt>
+                <dd>(000) 000-0000 x 0000</dd>
+                <dt>Email</dt>
+                <dd><a href="#">information@untitled.tld</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+            </ul>
+        </section>
+        <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
+
 </div>
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Scripts -->
+<script src="/resources/js/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollex.min.js"></script>
+<script src="/resources/js/jquery.scrolly.min.js"></script>
+<script src="/resources/js/browser.min.js"></script>
+<script src="/resources/js/breakpoints.min.js"></script>
+<script src="/resources/js/util.js"></script>
+<script src="/resources/js/main.js"></script>
 
 </body>
+
 </html>

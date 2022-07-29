@@ -27,6 +27,7 @@ public class ProductController {
     // 상품등록 (사진첨부) 처리
     @PostMapping("/insert")
     public String insert(@ModelAttribute ProductDTO productDTO) throws IOException {
+        System.out.println("productDTO = " + productDTO);
         productService.insert(productDTO);
         return "redirect:/product/findAll";
     }

@@ -5,8 +5,8 @@
 
 <mapper namespace="Board">
     <insert id="save" parameterType="board">
-        insert into board_table (boardTitle, boardWriter, boardPw, boardContents, boardCreatedDate, boardFileName)
-        values (#{boardTitle}, #{boardWriter}, #{boardPw}, #{boardContents}, now(), #{boardFileName})
+        insert into board_table (boardTitle, boardWriter, boardPw, boardContents, boardCreatedDate)
+        values (#{boardTitle}, #{boardWriter}, #{boardPw}, #{boardContents}, now())
     </insert>
 
     <select id="pagingList" parameterType="java.util.HashMap" resultType="board">

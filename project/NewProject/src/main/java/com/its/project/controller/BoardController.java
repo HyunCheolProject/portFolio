@@ -22,15 +22,15 @@ public class BoardController {
     @Autowired
     private CommentService commentService;
 
-    // 글작성 (사진첨부) 화면 요청
+    // 문의하기 글 작성 화면 요청
     @GetMapping("/save-form")
     public String saveForm() {
         return "board/save";
     }
 
-    // 글작성 (사진첨부) 처리
+    // 문의하기 글 작성 처리
     @PostMapping("/save")
-    public String save(@ModelAttribute BoardDTO boardDTO) throws IOException {
+    public String save(@ModelAttribute BoardDTO boardDTO) {
         boardService.save(boardDTO);
         return "redirect:/board/paging";
     }

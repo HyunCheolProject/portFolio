@@ -16,7 +16,7 @@
   상품명: <input type="text" name="productName"><br>
   작성자: <input type="text" name="productWriter"><br>
   비밀번호: <input type="password" name="productPw"><br>
-  내용: <textarea name="productContents" id="" cols="100" rows="100"></textarea><br>
+  내용: <textarea name="productContents" id="" cols="40" rows="30"></textarea><br>
   가격: <input type="text" name="productPrice"><br>
   첨부파일: <input type="file" name="productFile"><br>
   <input type="submit" value="작성">

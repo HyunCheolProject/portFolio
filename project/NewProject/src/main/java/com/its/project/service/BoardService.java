@@ -19,15 +19,7 @@ public class BoardService {
     private BoardRepository boardRepository;
 
 
-    public void save(BoardDTO boardDTO) throws IOException {
-        MultipartFile boardFile = boardDTO.getBoardFile();
-        String boardFileName = boardFile.getOriginalFilename();
-        boardFileName = System.currentTimeMillis() + "-" + boardFileName;
-        boardDTO.setBoardFileName(boardFileName);
-        String savePath = "C:\\KHC_development\\git_portFolio\\project\\NewProject\\src\\main\\webapp\\resources\\files\\" + boardFileName;
-        if (!boardFile.isEmpty()) {
-            boardFile.transferTo(new File(savePath));
-        }
+    public void save(BoardDTO boardDTO) {
         boardRepository.save(boardDTO);
     }
 

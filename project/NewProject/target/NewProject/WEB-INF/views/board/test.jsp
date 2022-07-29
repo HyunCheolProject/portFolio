@@ -36,7 +36,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/board/paging">식재료</a></li>
             <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/paging">목록</a></li>
+            <li><a href="/board/paging">문의하기</a></li>
             <li><a href="/member/save-form" class="active">회원가입</a></li>
             <li><a href="/member/login-form">로그인</a></li>
             <li><a href="/board/save-form">글작성</a></li>
