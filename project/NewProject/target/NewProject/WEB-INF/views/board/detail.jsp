@@ -17,6 +17,15 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+    <style>
+        .card {
+            max-width: 800px;
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -34,15 +43,44 @@
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/product/findAll">식재료</a></li>
-            <li><a href="/board/paging">고객센터</a></li>
-            <li><a href="/product/insert-form">상품등록</a></li>
-            <li><a href="/member/save-form" class="active">회원가입</a></li>
-            <li><a href="/member/login-form">로그인</a></li>
-            <li><a href="/board/save-form">글작성</a></li>
-            <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/test-form">test2</a></li>
+            <c:choose>
+                <c:when test="${sessionScope.id == null}">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                    <li><a href="/member/save-form" class="active">회원가입</a></li>
+                    <li><a href="/member/login-form">로그인</a></li>
+
+
+                </c:when>
+                <c:when test="${sessionScope.memberId == 'khc4572'}">
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/admin-form">관리자페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:when>
+                <c:otherwise>
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:otherwise>
+            </c:choose>
         </ul>
     </nav>
 
@@ -55,33 +93,32 @@
                 <h2>상세페이지</h2>
             </header>
 
-            <div class="container">
-                <h2>상세페이지</h2>
-                글번호: ${board.id}<br>
+            <div class="container" style="line-height: 170%">
                 제목: ${board.boardTitle}<br>
                 작성자: ${board.boardWriter}<br>
                 비밀번호: ${board.boardPw}<br>
                 내용: ${board.boardContents}<br>
-                작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate><br>
+                작성일자: <fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate><br>
                 조회수: ${board.boardHits}<br>
 
                 <button onclick="boardUpdate()">수정</button>
                 <button onclick="boardDelete()">삭제</button>
-                <button onblur="paging()">페이징목록</button>
-                <br>
             </div>
-            <div class="container mb-5">
+            <br>
+            <div class="container mb-5 card">
                 <div id="comment-write" class="input-group mb-3">
-                    <div class="form-floating">
+                    <div class="form-floating" style="text-align: left">
+                        &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
                         <input type="text" id="commentWriter" class="form-control" placeholder="작성자">
-                        <label for="commentWriter">작성자</label>
                     </div>
-                    <div class="form-floating">
+                    <div class="form-floating" style="text-align: left">
+                        &nbsp;&nbsp;<strong for="commentContents">내용</strong>
                         <input type="text" id="commentContents" class="form-control" placeholder="내용">
-                        <label for="commentContents">내용</label><br>
                     </div>
+                    <br>
                     <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
                 </div>
+                <br>
 
                 <div id="comment-list">
                     <table class="table">
@@ -96,7 +133,9 @@
                                 <td><strong>${comment.id}</strong></td>
                                 <td><strong>${comment.commentWriter}</strong></td>
                                 <td><strong>${comment.commentContents}</strong></td>
-                                <td><strong><fmt:formatDate pattern="yyyy-MM-dd" value="${comment.commentCreatedDate}"></fmt:formatDate></strong></td>
+                                <td><strong><fmt:formatDate pattern="yyyy-MM-dd"
+                                                            value="${comment.commentCreatedDate}"></fmt:formatDate></strong>
+                                </td>
                             </tr>
                         </c:forEach>
                     </table>
@@ -172,7 +211,7 @@
         location.href = "/board/pwCheck?id=${board.id}";
     }
 
-    $("#comment-write-btn").click(function (){
+    $("#comment-write-btn").click(function () {
 
         const commentWriter = document.getElementById("commentWriter").value;
         const commentContents = $("#commentContents").val();
@@ -193,18 +232,18 @@
                 output += "<th>작성자</th>";
                 output += "<th>내용</th>";
                 output += "<th>작성시간</th></tr>";
-                for(let i in result){
+                for (let i in result) {
                     output += "<tr>";
-                    output += "<td>"+result[i].id+"</td>";
-                    output += "<td>"+result[i].commentWriter+"</td>";
-                    output += "<td>"+result[i].commentContents+"</td>";
-                    output += "<td>"+moment(result[i].commentCreatedDate).format("YYYY-MM-DD")+"</td>";
+                    output += "<td>" + result[i].id + "</td>";
+                    output += "<td>" + result[i].commentWriter + "</td>";
+                    output += "<td>" + result[i].commentContents + "</td>";
+                    output += "<td>" + moment(result[i].commentCreatedDate).format("YYYY-MM-DD") + "</td>";
                     output += "</tr>";
                 }
                 output += "</table>";
                 document.getElementById('comment-list').innerHTML = output;
-                document.getElementById('commentWriter').value='';
-                document.getElementById('commentContents').value='';
+                document.getElementById('commentWriter').value = '';
+                document.getElementById('commentContents').value = '';
             },
             // error: function (result) {
             //     alert("어디가 틀렸을까");
