@@ -43,13 +43,13 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/product/findAll">식재료</a></li>
-            <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/paging">문의하기</a></li>
+            <li><a href="/board/paging">고객센터</a></li>
+            <li><a href="/product/insert-form">상품등록</a></li>
             <li><a href="/member/save-form" class="active">회원가입</a></li>
             <li><a href="/member/login-form">로그인</a></li>
             <li><a href="/board/save-form">글작성</a></li>
+            <li><a href="/board/test">ㅇㅇㅇ</a></li>
             <li><a href="/board/test-form">test2</a></li>
-            <li><a href="/product/insert-form">상품등록</a></li>
         </ul>
     </nav>
 
@@ -64,21 +64,7 @@
 
             <section>
                 <header class="fb__main__header">
-                    <%--                <div class="fb__main__header__wrap">--%>
-                    <%--                    <h3 class="fb__title">이달의 특가</h3>--%>
-                    <%--                </div>--%>
-                    <%--                    <nav class="fb__main__nav">--%>
-                    <%--                        <a href="#goodsWhatsNew" data-group_code="1"--%>
-                    <%--                           class="active devWhatsNewTab">쌀</a>--%>
-                    <%--                        <a href="#goodsWhatsNew" data-group_code="2"--%>
-                    <%--                           class=" devWhatsNewTab">육류</a>--%>
-                    <%--                        <a href="#goodsWhatsNew" data-group_code="3"--%>
-                    <%--                           class=" devWhatsNewTab">생선</a>--%>
-                    <%--                        <a href="#goodsWhatsNew" data-group_code="4"--%>
-                    <%--                           class=" devWhatsNewTab">채소</a>--%>
-                    <%--                        <a href="#goodsWhatsNew" data-group_code="5"--%>
-                    <%--                           class=" devWhatsNewTab">조미료</a>--%>
-                    <%--                    </nav>--%>
+
                 </header>
 
                 <div>

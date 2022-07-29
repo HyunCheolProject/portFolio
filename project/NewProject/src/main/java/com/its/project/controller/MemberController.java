@@ -50,10 +50,16 @@ public class MemberController {
             session.setAttribute("id", member.getId());
             session.setAttribute("memberId", member.getMemberId());
             model.addAttribute("member", member);
-            return "member/mypage";
+            return "member/myPage";
         } else {
             return "member/login";
         }
+    }
+
+    // 마이페이지 화면 요청
+    @GetMapping("/myPage")
+    public String myPage() {
+        return "member/myPage";
     }
 
     // 로그아웃 처리

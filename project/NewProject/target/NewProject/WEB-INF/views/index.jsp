@@ -35,13 +35,14 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/product/findAll">식재료</a></li>
-            <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/paging">문의하기</a></li>
+            <li><a href="/board/paging">고객센터</a></li>
+            <li><a href="/product/insert-form">상품등록</a></li>
             <li><a href="/member/save-form" class="active">회원가입</a></li>
             <li><a href="/member/login-form">로그인</a></li>
+            <li><a href="/member/myPage">마이페이지</a></li>
             <li><a href="/board/save-form">글작성</a></li>
+            <li><a href="/board/test">ㅇㅇㅇ</a></li>
             <li><a href="/board/test-form">test2</a></li>
-            <li><a href="/product/insert-form">상품등록</a></li>
         </ul>
     </nav>
 
@@ -99,7 +100,7 @@
             </ul>
             <footer class="major">
                 <ul class="actions special">
-                    <li><a href="/board/test" class="button">More</a></li>
+                    <li><a href="/product/findAll" class="button">More</a></li>
                 </ul>
             </footer>
         </section>
@@ -141,13 +142,13 @@
 </div>
 
 <!-- Scripts -->
-<script src="/resources/js/jquery.min.js"></script>
-<script src="/resources/js/jquery.scrollex.min.js"></script>
-<script src="/resources/js/jquery.scrolly.min.js"></script>
-<script src="/resources/js/browser.min.js"></script>
-<script src="/resources/js/breakpoints.min.js"></script>
-<script src="/resources/js/util.js"></script>
-<script src="/resources/js/main.js"></script>
+<script src="/resources/assets/js/jquery.min.js"></script>
+<script src="/resources/assets/js/jquery.scrollex.min.js"></script>
+<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+<script src="/resources/assets/js/browser.min.js"></script>
+<script src="/resources/assets/js/breakpoints.min.js"></script>
+<script src="/resources/assets/js/util.js"></script>
+<script src="/resources/assets/js/main.js"></script>
 
 </body>
 
