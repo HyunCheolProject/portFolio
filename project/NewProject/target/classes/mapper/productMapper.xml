@@ -17,6 +17,10 @@
         select * from products_table where id=#{id}
     </select>
 
+    <select id="updateHits" parameterType="Long">
+        update products_table set productHits=productHits+1 where id=#{id}
+    </select>
+
 </mapper>
 
 

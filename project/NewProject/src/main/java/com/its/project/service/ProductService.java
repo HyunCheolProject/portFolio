@@ -33,7 +33,7 @@ public class ProductService {
     }
 
     public ProductDTO findById(Long id) {
-//        productRepository.updateHits(id);
+        productRepository.updateHits(id);
         return productRepository.findById(id);
     }
 }

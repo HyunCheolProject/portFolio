@@ -24,4 +24,9 @@ public class ProductRepository {
     public ProductDTO findById(Long id) {
         return sqlSessionTemplate.selectOne("Product.findById", id);
     }
+
+    public void updateHits(Long id) {
+        sqlSessionTemplate.update("Product.updateHits", id);
+
+    }
 }
