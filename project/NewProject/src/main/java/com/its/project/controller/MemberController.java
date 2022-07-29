@@ -50,7 +50,7 @@ public class MemberController {
             session.setAttribute("id", member.getId());
             session.setAttribute("memberId", member.getMemberId());
             model.addAttribute("member", member);
-            return "member/myPage";
+            return "index";
         } else {
             return "member/login";
         }

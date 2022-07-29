@@ -37,19 +37,49 @@
         <p>식재료 주문은 쿸팡에서!<br/>
             <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
     </header>
-
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/product/findAll">식재료</a></li>
-            <li><a href="/board/paging">고객센터</a></li>
-            <li><a href="/product/insert-form">상품등록</a></li>
-            <li><a href="/member/save-form" class="active">회원가입</a></li>
-            <li><a href="/member/login-form">로그인</a></li>
-            <li><a href="/board/save-form">글작성</a></li>
-            <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/test-form">test2</a></li>
+            <c:choose>
+                <c:when test="${sessionScope.id == null}">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                    <li><a href="/member/save-form" class="active">회원가입</a></li>
+                    <li><a href="/member/login-form">로그인</a></li>
+
+
+                </c:when>
+                <c:when test="${sessionScope.memberId == 'khc4572'}">
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/admin-form">관리자페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:when>
+                <c:otherwise>
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:otherwise>
+            </c:choose>
         </ul>
     </nav>
 
@@ -59,7 +89,7 @@
         <!-- First Section -->
         <section id="first" class="main special">
             <header class="major">
-                <h2>문의하기</h2>
+                <h2>고객센터</h2>
             </header>
 
             <section>
@@ -69,81 +99,109 @@
 
                 <div>
                     <div data-group_code="1">
-                        <table class="table">
-                            <tr>
-                                <th>번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>작성일자</th>
-                                <th>조회수</th>
+                        <div class="container mt-3">
 
-                            </tr>
-
-                            <c:forEach items="${boardList}" var="board">
+                            <table class="table">
                                 <tr>
-                                    <td><strong>${board.id}</strong></td>
-                                    <td>
-                                        <strong><a href="/board/detail?page=${paging.page}&id=${board.id}">${board.boardTitle}</a></strong>
-                                    </td>
-                                    <td><strong>${board.boardWriter}</strong></td>
-                                    <td><strong><fmt:formatDate pattern="yyyy-MM-dd"
-                                                                value="${board.boardCreatedDate}"></fmt:formatDate></strong></td>
-                                    <td><strong>${board.boardHits}</strong></td>
-                                </tr>
-                            </c:forEach>
-                        </table>
+                                    <th>
+                                        <table>
+                                            <tr>
+                                                <form action="/board/search" size="10" method="get">
+                                                    <th>
+                                                    <td><select name="searchType">
+                                                        <option value="boardTitle">제목</option>
+                                                        <option value="boardWriter">작성자</option>
+                                                        <option value="boardCategory">카테고리</option>
+                                                    </select></td>
+                                                    <td><input type="text" name="q" placeholder="검색어입력.."></td>
+                                                    <td><input type="submit" value="검색"></td>
+                                                    </th>
+                                                </form>
+                                                </th>
+                                                <th></th>
+                                                <th><c:if test="${sessionScope.memberId!=null}">
+                                                    <button class="btn btn-primary" onclick="writeForm()">문의하기</button>
+                                                </c:if></th>
+                                            </tr>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>제목</th>
+                                                <th>작성자</th>
+                                                <th>작성일자</th>
+                                                <th>조회수</th>
+                                            </tr>
+
+                                            <c:forEach items="${boardList}" var="board">
+                                                <tr>
+                                                    <td><strong>${board.id}</strong></td>
+                                                    <td>
+                                                        <strong><a
+                                                                href="/board/detail?page=${paging.page}&id=${board.id}">${board.boardTitle}</a></strong>
+                                                    </td>
+                                                    <td><strong>${board.boardWriter}</strong></td>
+                                                    <td><strong><fmt:formatDate pattern="yyyy-MM-dd"
+                                                                                value="${board.boardCreatedDate}"></fmt:formatDate></strong>
+                                                    </td>
+                                                    <td><strong>${board.boardHits}</strong></td>
+                                                </tr>
+                                            </c:forEach>
+                                        </table>
 
 
-                        <ul>
-                            <div class="container align-center">
-                                <ul class="pagination justify-content-center">
-                                    <%-- c:choose c:when 등을 쓰려면 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 태그를 써야함 --%>
-                                    <c:choose> <%-- else if문과 같음 --%>
-                                        <%-- 현재 페이지가 1페이지면 이전 글자만 보여줌 --%>
-                                        <c:when test="${paging.page<=1}">
-                                            <li class="page-item disabled">
-                                                <a class="page-link">[이전]</a>
-                                            </li>
-                                        </c:when>
-                                        <%-- 1페이지가 아닌 경우에는 [이전]을 클릭하면 현재페이지보다 1 작은 페이지 요청 --%>
-                                        <c:otherwise>
-                                            <li class="page-item">
-                                                <a class="page-link"
-                                                   href="/board/paging?page=${paging.page-1}">[이전]</a>
-                                            </li>
-                                        </c:otherwise>
-                                    </c:choose>
+                                        <ul>
+                                            <div class="container align-center">
+                                                <ul class="pagination justify-content-center">
+                                                    <%-- c:choose c:when 등을 쓰려면 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 태그를 써야함 --%>
+                                                    <c:choose> <%-- else if문과 같음 --%>
+                                                        <%-- 현재 페이지가 1페이지면 이전 글자만 보여줌 --%>
+                                                        <c:when test="${paging.page<=1}">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link">[이전]</a>
+                                                            </li>
+                                                        </c:when>
+                                                        <%-- 1페이지가 아닌 경우에는 [이전]을 클릭하면 현재페이지보다 1 작은 페이지 요청 --%>
+                                                        <c:otherwise>
+                                                            <li class="page-item">
+                                                                <a class="page-link"
+                                                                   href="/board/paging?page=${paging.page-1}">[이전]</a>
+                                                            </li>
+                                                        </c:otherwise>
+                                                    </c:choose>
 
-                                    <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="i" step="1">
-                                        <c:choose>
-                                            <c:when test="${i eq paging.page}">
-                                                <li class="page-item active">
-                                                    <a class="page-link">${i}</a>
-                                                </li>
-                                            </c:when>
-                                            <c:otherwise>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="/board/paging?page=${i}">${i}</a>
-                                                </li>
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </c:forEach>
-                                    <c:choose>
-                                        <c:when test="${paging.page>=paging.maxPage}">
-                                            <li class="page-item disabled">
-                                                <a class="page-link">[다음]</a>
-                                            </li>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <li class="page-item">
-                                                <a class="page-link"
-                                                   href="/board/paging?page=${paging.page+1}">[다음]</a>
-                                            </li>
-                                        </c:otherwise>
-                                    </c:choose>
-                                </ul>
-                            </div>
-                        </ul>
+                                                    <c:forEach begin="${paging.startPage}" end="${paging.endPage}"
+                                                               var="i" step="1">
+                                                        <c:choose>
+                                                            <c:when test="${i eq paging.page}">
+                                                                <li class="page-item active">
+                                                                    <a class="page-link">${i}</a>
+                                                                </li>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <li class="page-item">
+                                                                    <a class="page-link"
+                                                                       href="/board/paging?page=${i}">${i}</a>
+                                                                </li>
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </c:forEach>
+                                                    <c:choose>
+                                                        <c:when test="${paging.page>=paging.maxPage}">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link">[다음]</a>
+                                                            </li>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <li class="page-item">
+                                                                <a class="page-link"
+                                                                   href="/board/paging?page=${paging.page+1}">[다음]</a>
+                                                            </li>
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </ul>
+                                            </div>
+                                        </ul>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -202,6 +260,11 @@
 <script src="/resources/js/main.js"></script>
 
 </body>
+<script>
+    const writeForm = () => {
+        location.href = "/board/save-form";
+    }
+</script>
 
 </html>
 

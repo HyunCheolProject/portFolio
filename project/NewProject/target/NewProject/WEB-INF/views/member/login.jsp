@@ -50,15 +50,44 @@
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/product/findAll">식재료</a></li>
-            <li><a href="/board/paging">고객센터</a></li>
-            <li><a href="/product/insert-form">상품등록</a></li>
-            <li><a href="/member/save-form" class="active">회원가입</a></li>
-            <li><a href="/member/login-form">로그인</a></li>
-            <li><a href="/board/save-form">글작성</a></li>
-            <li><a href="/board/test">ㅇㅇㅇ</a></li>
-            <li><a href="/board/test-form">test2</a></li>
+            <c:choose>
+                <c:when test="${sessionScope.id == null}">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                    <li><a href="/member/save-form" class="active">회원가입</a></li>
+                    <li><a href="/member/login-form">로그인</a></li>
+
+
+                </c:when>
+                <c:when test="${sessionScope.memberId == 'khc4572'}">
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/admin-form">관리자페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:when>
+                <c:otherwise>
+                                <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                                      aria-hidden="true"></span>
+                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <li><a href="/member/myPage">마이페이지</a></li>
+                    <li><a href="/member/logout-form">로그아웃</a></li>
+                    <br>
+                    <span class="glyphicon glyphicon-heart-empty" style="color: white;"
+                          aria-hidden="true"></span>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/findAll">식재료</a></li>
+                    <li><a href="/board/paging">고객센터</a></li>
+                </c:otherwise>
+            </c:choose>
         </ul>
     </nav>
 
@@ -78,7 +107,6 @@
                             아이디 <input type="text" name="memberId"><br>
                             비밀번호 <input type="password" name="memberPw"><br>
                             <td><input type="submit" value="로그인"></td>
-                            <td><a href="/member/save-form" class="button big">회원가입</a></td>
                         </form>
                         <a href="javascript:history.back()">뒤로가기</a>
 
