@@ -20,4 +20,8 @@ public class ProductRepository {
     public List<ProductDTO> findAll() {
         return sqlSessionTemplate.selectList("Product.findAll");
     }
+
+    public ProductDTO findById(Long id) {
+        return sqlSessionTemplate.selectOne("Product.findById", id);
+    }
 }

@@ -28,7 +28,7 @@
   <c:forEach items="${productList}" var="product">
     <tr>
       <td>${product.id}</td>
-      <td><a href="/product/detail?id=${board.id}">${product.productName}</a></td>
+      <td><a href="/product/detail?id=${product.id}">${product.productName}</a></td>
       <td>${product.productWriter}</td>
       <td><fmt:formatDate pattern="yyyy-MM-dd" value="${product.productCreatedDate}"></fmt:formatDate></td>
       <td>${product.productHits}</td>

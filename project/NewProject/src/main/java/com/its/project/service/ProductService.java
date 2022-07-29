@@ -31,4 +31,9 @@ public class ProductService {
     public List<ProductDTO> findAll() {
         return productRepository.findAll();
     }
+
+    public ProductDTO findById(Long id) {
+//        productRepository.updateHits(id);
+        return productRepository.findById(id);
+    }
 }

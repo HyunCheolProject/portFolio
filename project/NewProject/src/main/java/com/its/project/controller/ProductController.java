@@ -1,15 +1,13 @@
 package com.its.project.controller;
 
 import com.its.project.dto.BoardDTO;
+import com.its.project.dto.CommentDTO;
 import com.its.project.dto.ProductDTO;
 import com.its.project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -39,6 +37,19 @@ public class ProductController {
         List<ProductDTO> productDTOList = productService.findAll();
         model.addAttribute("productList", productDTOList);
         return "product/list";
+    }
+
+    // 상세조회
+    @GetMapping("/detail")
+    public String findById(@RequestParam Long id, Model model,
+                           @RequestParam(value = "page", required = false,
+                                   defaultValue = "1") int page) {
+        ProductDTO productDTO = productService.findById(id);
+        model.addAttribute("product", productDTO);
+        model.addAttribute("page", page);
+//        List<CommentDTO> commentList = commentService.findAll(id);
+//        model.addAttribute("commentList", commentList);
+        return "product/detail";
     }
 
 
