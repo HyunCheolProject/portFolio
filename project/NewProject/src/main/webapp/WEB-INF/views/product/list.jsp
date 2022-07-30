@@ -29,10 +29,12 @@
             width: 400px;
             margin: auto;
         }
+
         .submitType {
             width: 150px;
             margin: auto;
         }
+
         .searchType {
             width: 200px;
         }
@@ -48,7 +50,7 @@
         <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
         <p>식재료 주문은 쿸팡에서!<br/>
-            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+            <a href="/product/findAll">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->
@@ -114,22 +116,11 @@
                                 <option value="productName">상품이름</option>
                                 <option value="productCategory">상품종류</option>
                             </select>
-                            <input class="form-control" type="text" name="q" placeholder="검색어입력.." style="display: inline">
+                            <input class="form-control" type="text" name="q" placeholder="검색어입력.."
+                                   style="display: inline">
                             <input class="form-control submitType" type="submit" value="검색" style="display: inline">
                         </div>
                     </form>
-<%--                    <nav class="fb__main__nav">--%>
-<%--                        <a href="#goodsWhatsNew" data-group_code="1"--%>
-<%--                           class="active devWhatsNewTab">쌀</a>--%>
-<%--                        <a href="#goodsWhatsNew" data-group_code="2"--%>
-<%--                           class=" devWhatsNewTab">육류</a>--%>
-<%--                        <a href="#goodsWhatsNew" data-group_code="3"--%>
-<%--                           class=" devWhatsNewTab">생선</a>--%>
-<%--                        <a href="#goodsWhatsNew" data-group_code="4"--%>
-<%--                           class=" devWhatsNewTab">채소</a>--%>
-<%--                        <a href="#goodsWhatsNew" data-group_code="5"--%>
-<%--                           class=" devWhatsNewTab">조미료</a>--%>
-<%--                    </nav>--%>
                 </header>
 
                 <div>
@@ -140,25 +131,16 @@
                                     <c:forEach items="${productList}" var="product">
                                         <li style="display: flex; display: inline-block;margin-right: 100px;">
                                             <div>
-                                                <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
-                                                     alt="" height="250" width="250">
-                                            </div>
-                                            <div>
-                                                <strong type="hidden">${product.productCategory}</strong>
+                                                <a href="/product/detail?page=${paging.page}&id=${product.id}"><img
+                                                        src="${pageContext.request.contextPath}/upload/${product.productFileName}"
+                                                        alt="" height="250" width="250"></a>
                                             </div>
                                             <div class="product-id-wrap">
                                                 <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
                                             </div>
                                             <div class="product-id-wrap">
-                                                <strong>${product.productPrice}</strong>&nbsp;원
+                                                <a href="/product/detail?page=${paging.page}&id=${product.id}"><strong>${product.productPrice}</strong>&nbsp;원</a>
                                             </div>
-                                                <%--                                            <div class="product-id-wrap">--%>
-                                                <%--                                                <fmt:formatDate pattern="yyyy-MM-dd"--%>
-                                                <%--                                                                value="${product.productCreatedDate}"></fmt:formatDate>--%>
-                                                <%--                                            </div>--%>
-                                                <%--                                            <div class="product-id-wrap">--%>
-                                                <%--                                                    ${product.productHits}--%>
-                                                <%--                                            </div>--%>
                                         </li>
                                     </c:forEach>
                                 </div>

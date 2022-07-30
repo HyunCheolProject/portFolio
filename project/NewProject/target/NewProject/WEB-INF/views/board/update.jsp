@@ -49,7 +49,7 @@
         <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
         <p>식재료 주문은 쿸팡에서!<br/>
-            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+            <a href="/product/findAll">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->
@@ -116,7 +116,7 @@
                         &nbsp;&nbsp;제목 <input type="text" name="boardTitle" value="${boardUpdate.boardTitle}"><br>
                         &nbsp;&nbsp;작성자 <input type="text" name="boardWriter" value="${boardUpdate.boardWriter}" readonly><br>
                         &nbsp;&nbsp;비밀번호 <input type="password" name="boardPw" id="pwConfirm" value="${boardUpdate.boardPw}"><br>
-                        &nbsp;&nbsp;내용 <textarea name="boardContents" id="" cols="40" rows="10">${boardUpdate.boardContents}</textarea><br>
+                        &nbsp;&nbsp;내용 <textarea name="boardContents" cols="40" rows="10">${boardUpdate.boardContents}</textarea><br>
                         </div>
                         <input type="button" onclick="boardUpdated()" value="수정">
                     </form>

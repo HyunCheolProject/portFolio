@@ -43,4 +43,8 @@ public class ProductRepository {
     public void delete(Long id) {
         sqlSessionTemplate.delete("Product.delete", id);
     }
+
+    public List<ProductDTO> popular() {
+        return sqlSessionTemplate.selectList("Product.popular");
+    }
 }

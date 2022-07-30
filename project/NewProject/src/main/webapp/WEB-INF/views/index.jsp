@@ -29,7 +29,7 @@
         <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
         <p>식재료 주문은 쿸팡에서!<br/>
-            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+            <a href="/product/findAll">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->
@@ -85,50 +85,66 @@
                 <h2>이번 주 인기 상품</h2>
             </header>
 
-            <ul class="features">
-                <li>
-                    <span class="image"><img src="\resources\images/b1.jpg" height="300" width="300" alt=""/></span>
-                    <!-- 상품가격 -->
-                    <div class="item__price">
+            <div class="item__info">
+                <c:forEach items="${productList}" var="product">
+                    <li style="display: flex; display: inline-block;margin-right: 100px;">
+                        <div>
+                            <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
+                                 alt="" height="250" width="250">
+                        </div>
+                        <div class="product-id-wrap">
+                            <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
+                        </div>
+                        <div class="product-id-wrap">
+                            <strong>${product.productPrice}</strong>&nbsp;원
+                        </div>
+                    </li>
+                </c:forEach>
+            </div>
+<%--            <ul class="features">--%>
+<%--                <li>--%>
+<%--                    <span class="image"><img src="\resources\images/b1.jpg" height="300" width="300" alt=""/></span>--%>
+<%--                    <!-- 상품가격 -->--%>
+<%--                    <div class="item__price">--%>
 
-                        <!-- 원가 -->
-                        <strong class="item__price--strike"><em>8,000</em>원</strong>
-                        <!-- 할인율 -->
-                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+<%--                        <!-- 원가 -->--%>
+<%--                        <strong class="item__price--strike"><em>8,000</em>원</strong>--%>
+<%--                        <!-- 할인율 -->--%>
+<%--                        <strong class="item__price--perc"><em>38</em>%</strong><br>--%>
 
-                        <!-- 판매가 -->
-                        <strong class="item__price--current"><em>5,000</em>원</strong>
-                    </div>
-                </li>
-                <li>
-                    <span class="image"><img src="\resources\images/b2.jpg" height="300" width="300" alt=""/></span>
-                    <!-- 상품가격 -->
-                    <div class="item__price">
+<%--                        <!-- 판매가 -->--%>
+<%--                        <strong class="item__price--current"><em>5,000</em>원</strong>--%>
+<%--                    </div>--%>
+<%--                </li>--%>
+<%--                <li>--%>
+<%--                    <span class="image"><img src="\resources\images/b2.jpg" height="300" width="300" alt=""/></span>--%>
+<%--                    <!-- 상품가격 -->--%>
+<%--                    <div class="item__price">--%>
 
-                        <!-- 원가 -->
-                        <strong class="item__price--strike"><em>8,000</em>원</strong>
-                        <!-- 할인율 -->
-                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+<%--                        <!-- 원가 -->--%>
+<%--                        <strong class="item__price--strike"><em>8,000</em>원</strong>--%>
+<%--                        <!-- 할인율 -->--%>
+<%--                        <strong class="item__price--perc"><em>38</em>%</strong><br>--%>
 
-                        <!-- 판매가 -->
-                        <strong class="item__price--current"><em>5,000</em>원</strong>
-                    </div>
-                </li>
-                <li>
-                    <span class="image"><img src="\resources\images/b3.jpg" height="300" width="300" alt=""/></span>
-                    <!-- 상품가격 -->
-                    <div class="item__price">
+<%--                        <!-- 판매가 -->--%>
+<%--                        <strong class="item__price--current"><em>5,000</em>원</strong>--%>
+<%--                    </div>--%>
+<%--                </li>--%>
+<%--                <li>--%>
+<%--                    <span class="image"><img src="\resources\images/b3.jpg" height="300" width="300" alt=""/></span>--%>
+<%--                    <!-- 상품가격 -->--%>
+<%--                    <div class="item__price">--%>
 
-                        <!-- 원가 -->
-                        <strong class="item__price--strike"><em>8,000</em>원</strong>
-                        <!-- 할인율 -->
-                        <strong class="item__price--perc"><em>38</em>%</strong><br>
+<%--                        <!-- 원가 -->--%>
+<%--                        <strong class="item__price--strike"><em>8,000</em>원</strong>--%>
+<%--                        <!-- 할인율 -->--%>
+<%--                        <strong class="item__price--perc"><em>38</em>%</strong><br>--%>
 
-                        <!-- 판매가 -->
-                        <strong class="item__price--current"><em>5,000</em>원</strong>
-                    </div>
-                </li>
-            </ul>
+<%--                        <!-- 판매가 -->--%>
+<%--                        <strong class="item__price--current"><em>5,000</em>원</strong>--%>
+<%--                    </div>--%>
+<%--                </li>--%>
+<%--            </ul>--%>
             <footer class="major">
                 <ul class="actions special">
                     <li><a href="/product/findAll" class="button">More</a></li>

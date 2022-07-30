@@ -28,7 +28,7 @@
     <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
     <h1>쿸팡</h1>
     <p>식재료 주문은 쿸팡에서!<br/>
-      <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+      <a href="/product/findAll">지금 바로 구경하세요!</a></p>
   </header>
 
   <!-- Nav -->
@@ -91,11 +91,14 @@
           <form action="/product/update" method="post" id="updateForm">
             <br>
             <div style="text-align: left">
-              &nbsp;&nbsp;글번호 <input type="text" name="id" value="${productUpdate.id}" readonly><br>
+              &nbsp;&nbsp;상품번호 <input type="text" name="id" value="${productUpdate.id}" readonly><br>
               &nbsp;&nbsp;상품명 <input type="text" name="productName" value="${productUpdate.productName}"><br>
+                가격 <input type="text" name="productPrice" value="${productUpdate.productPrice}"><br>
+                카테고리 <input type="text" name="productCategory" value="${productUpdate.productCategory}"><br>
               &nbsp;&nbsp;작성자 <input type="text" name="productWriter" value="${productUpdate.productWriter}" readonly><br>
-              &nbsp;&nbsp;내용 <textarea name="productContents" id="" cols="40" rows="10">${productUpdate.productContents}</textarea><br>
               &nbsp;&nbsp;비밀번호 <input type="password" name="productPw" id="pwConfirm" value="${productUpdate.productPw}"><br>
+              &nbsp;&nbsp;내용 <textarea name="productContents" cols="40" rows="10">${productUpdate.productContents}</textarea><br>
+                첨부파일 <input type="file" name="productFile" ${productUpdate.productFile}><br>
             </div>
             <input type="submit" value="수정">
           </form>

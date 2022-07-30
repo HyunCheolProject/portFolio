@@ -35,7 +35,7 @@
         <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
         <p>식재료 주문은 쿸팡에서!<br/>
-            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
+            <a href="/product/findAll">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->

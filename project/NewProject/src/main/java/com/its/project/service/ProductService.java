@@ -55,4 +55,8 @@ public class ProductService {
     public void delete(Long id) {
         productRepository.delete(id);
     }
+
+    public List<ProductDTO> popular() {
+        return productRepository.popular();
+    }
 }

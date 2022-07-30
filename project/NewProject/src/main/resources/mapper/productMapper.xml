@@ -34,6 +34,10 @@
         delete from products_table where id=#{id}
     </delete>
 
+    <select id="popular" resultType="product">
+        select * from products_table order by productHits desc limit 0, 3
+    </select>
+
 </mapper>
 
 
