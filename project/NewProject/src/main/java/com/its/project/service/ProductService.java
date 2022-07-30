@@ -47,4 +47,8 @@ public class ProductService {
         List<ProductDTO> searchList = productRepository.search(searchParam);
         return searchList;
     }
+
+    public void update(ProductDTO productDTO) {
+        productRepository.update(productDTO);
+    }
 }

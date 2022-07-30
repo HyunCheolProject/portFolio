@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -60,6 +61,21 @@ public class ProductController {
         List<ProductDTO> searchList = productService.search(searchType, q);
         model.addAttribute("productList", searchList);
         return "product/list";
+    }
+
+    // 상품 수정 화면 요청
+    @GetMapping("/update-form")
+    public String updateForm(@RequestParam Long id, Model model) {
+        ProductDTO productDTO = productService.findById(id);
+        model.addAttribute("productUpdate",productDTO);
+        return "product/update";
+    }
+
+    // 상품 수정처리
+    @PostMapping("/update")
+    public String update(@ModelAttribute ProductDTO productDTO) {
+        productService.update(productDTO);
+        return "redirect:/product/detail?id="+productDTO.getId();
     }
 
 

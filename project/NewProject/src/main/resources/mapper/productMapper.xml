@@ -26,6 +26,10 @@
                                             like concat('%', #{q}, '%') order by id desc;
     </select>
 
+    <update id="update" parameterType="product">
+        update products_table set productName=#{productName}, productContents=#{productContents} where id=#{id}
+    </update>
+
 </mapper>
 
 

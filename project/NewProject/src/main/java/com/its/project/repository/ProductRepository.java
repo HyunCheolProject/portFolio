@@ -35,4 +35,8 @@ public class ProductRepository {
         return sqlSessionTemplate.selectList("Product.search", searchParam);
 
     }
+
+    public void update(ProductDTO productDTO) {
+        sqlSessionTemplate.update("Product.update", productDTO);
+    }
 }
