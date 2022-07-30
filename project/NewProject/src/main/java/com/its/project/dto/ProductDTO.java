@@ -21,5 +21,5 @@ public class ProductDTO {
     private Timestamp productCreatedDate;
     private MultipartFile productFile;
     private String productFileName;
-
+    private String productCategory;
 }

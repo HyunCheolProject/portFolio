@@ -53,5 +53,14 @@ public class ProductController {
         return "product/detail";
     }
 
+    // 검색처리
+    @GetMapping("/search")
+    public String search(@RequestParam("searchType") String searchType,
+                         @RequestParam("q") String q, Model model) {
+        List<ProductDTO> searchList = productService.search(searchType, q);
+        model.addAttribute("productList", searchList);
+        return "product/list";
+    }
+
 
 }

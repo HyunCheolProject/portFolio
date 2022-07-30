@@ -81,7 +81,7 @@
         <!-- First Section -->
         <section id="first" class="main special">
             <header class="major">
-                <h2>내 정보</h2>
+                <h2>정보</h2>
             </header>
 
             <section>
@@ -90,10 +90,11 @@
                 이름: ${member.memberName}<br>
                 나이: ${member.memberAge}<br>
                 이메일: ${member.memberEmail}<br>
-                전화번호: ${member.memberMobile}<br>
-                <button onclick="updateForm(${member.id})">정보수정</button>
+                전화번호: ${member.memberMobile}<br><br>
+                <c:if test="${sessionScope.memberId eq member.memberId}"><button class="button big" onclick="updateForm()">정보수정</button></c:if>&nbsp;
                 <button onclick="deleteForm(${member.id})">탈퇴</button>
             </section>
+            <br>
             <a href="javascript:history.back()">뒤로가기</a>
 
         </section>

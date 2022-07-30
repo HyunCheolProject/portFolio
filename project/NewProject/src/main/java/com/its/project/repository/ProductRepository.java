@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class ProductRepository {
@@ -27,6 +28,11 @@ public class ProductRepository {
 
     public void updateHits(Long id) {
         sqlSessionTemplate.update("Product.updateHits", id);
+
+    }
+
+    public List<ProductDTO> search(Map<String, String> searchParam) {
+        return sqlSessionTemplate.selectList("Product.search", searchParam);
 
     }
 }

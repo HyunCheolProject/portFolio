@@ -5,8 +5,8 @@
 
 <mapper namespace="Product">
     <insert id="insert" parameterType="product">
-        insert into products_table (productName, productWriter, productPw, productContents, productPrice, productCreatedDate, productFileName)
-        values (#{productName}, #{productWriter}, #{productPw}, #{productContents}, #{productPrice}, now(), #{productFileName})
+        insert into products_table (productCategory, productName, productWriter, productPw, productContents, productPrice, productCreatedDate, productFileName)
+        values (#{productCategory}, #{productName}, #{productWriter}, #{productPw}, #{productContents}, #{productPrice}, now(), #{productFileName})
     </insert>
 
     <select id="findAll" resultType="product">
@@ -19,6 +19,11 @@
 
     <select id="updateHits" parameterType="Long">
         update products_table set productHits=productHits+1 where id=#{id}
+    </select>
+
+    <select id="search" parameterType="java.util.HashMap" resultType="product">
+        select * from products_table where ${type}
+                                            like concat('%', #{q}, '%') order by id desc;
     </select>
 
 </mapper>

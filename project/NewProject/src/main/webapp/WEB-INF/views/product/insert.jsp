@@ -99,7 +99,8 @@
           <div class="card">
             <form action="/product/insert" method="post" enctype="multipart/form-data">
               상품명: <input type="text" name="productName"><br>
-              작성자: <input type="text" name="productWriter"><br>
+              카테고리: <input type="text" name="productCategory"><br>
+              작성자: <input type="text" name="productWriter" value="${sessionScope.memberId}" readonly><br>
               비밀번호: <input type="password" name="productPw"><br>
               내용: <textarea name="productContents" id="" style="height: 200px; width: 600px;"></textarea><br>
               가격: <input type="text" name="productPrice"><br>

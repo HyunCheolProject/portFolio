@@ -25,6 +25,16 @@
             margin-bottom: 10px; /* Added */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
+        input[type=text] {
+            width: 700px;
+            margin: auto;
+        }
+
+        textarea {
+            margin: auto;
+            width: 700px;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -56,7 +66,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -70,7 +81,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>
@@ -101,26 +113,14 @@
                 작성일자: <fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate><br>
                 조회수: ${board.boardHits}<br>
 
-                <button onclick="boardUpdate()">수정</button>
-                <button onclick="boardDelete()">삭제</button>
+                <c:if test="${sessionScope.memberId eq board.boardWriter}"><button class="button big" onclick="boardUpdate()">수정</button></c:if>&nbsp;
+                <c:if test="${sessionScope.memberId eq board.boardWriter or sessionScope.memberId == 'khc4572'}"><button class="button big" onclick="boardDelete()">삭제</button></c:if>&nbsp;
+
             </div>
             <br>
-            <div class="container mb-5 card">
-                <div id="comment-write" class="input-group mb-3">
-                    <div class="form-floating" style="text-align: left">
-                        &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
-                        <input type="text" id="commentWriter" class="form-control" placeholder="작성자">
-                    </div>
-                    <div class="form-floating" style="text-align: left">
-                        &nbsp;&nbsp;<strong for="commentContents">내용</strong>
-                        <input type="text" id="commentContents" class="form-control" placeholder="내용">
-                    </div>
-                    <br>
-                    <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
-                </div>
-                <br>
+            <div class="container mb-5">
 
-                <div id="comment-list">
+                <div class="input-group mb-3 card" id="comment-list">
                     <table class="table">
                         <tr>
                             <th>댓글번호</th>
@@ -139,8 +139,24 @@
                             </tr>
                         </c:forEach>
                     </table>
-
                 </div>
+                <br>
+                <div id="comment-write" class="input-group mb-3 card">
+                    <div class="form-floating" style="text-align: left">
+                        &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
+                        <input type="text" id="commentWriter" class="form-control" placeholder="작성자">
+                    </div>
+                    <div class="form-floating" style="text-align: left">
+                        &nbsp;&nbsp;<strong for="commentContents">내용</strong>
+                        <textarea name="commentContents" id="commentContents" cols="10" rows="5"
+                                  placeholder="내용"></textarea>
+                    </div>
+                    <br>
+                    <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
+                </div>
+                <br>
+                <a href="javascript:history.back()">뒤로가기</a>
+
             </div>
         </section>
     </div>

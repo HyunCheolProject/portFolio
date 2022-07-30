@@ -101,7 +101,7 @@
                     <div data-group_code="1">
                         <div class="container mt-3">
 
-                            <table class="table">
+                            <table class="table" style="background-color: #d8bff7">
                                 <tr>
                                     <th>
                                         <table>

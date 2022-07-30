@@ -24,6 +24,19 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+    <style>
+        input[type=text] {
+            width: 400px;
+            margin: auto;
+        }
+        .submitType {
+            width: 150px;
+            margin: auto;
+        }
+        .searchType {
+            width: 200px;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -54,7 +67,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -68,7 +82,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>
@@ -93,21 +108,28 @@
 
             <section>
                 <header class="fb__main__header">
-                    <%--                <div class="fb__main__header__wrap">--%>
-                    <%--                    <h3 class="fb__title">이달의 특가</h3>--%>
-                    <%--                </div>--%>
-                    <nav class="fb__main__nav">
-                        <a href="#goodsWhatsNew" data-group_code="1"
-                           class="active devWhatsNewTab">쌀</a>
-                        <a href="#goodsWhatsNew" data-group_code="2"
-                           class=" devWhatsNewTab">육류</a>
-                        <a href="#goodsWhatsNew" data-group_code="3"
-                           class=" devWhatsNewTab">생선</a>
-                        <a href="#goodsWhatsNew" data-group_code="4"
-                           class=" devWhatsNewTab">채소</a>
-                        <a href="#goodsWhatsNew" data-group_code="5"
-                           class=" devWhatsNewTab">조미료</a>
-                    </nav>
+                    <form action="/product/search" method="get">
+                        <div class="input-group">
+                            <select class="searchType form-control" name="searchType" style="display: inline">
+                                <option value="productName">상품이름</option>
+                                <option value="productCategory">상품종류</option>
+                            </select>
+                            <input class="form-control" type="text" name="q" placeholder="검색어입력.." style="display: inline">
+                            <input class="form-control submitType" type="submit" value="검색" style="display: inline">
+                        </div>
+                    </form>
+<%--                    <nav class="fb__main__nav">--%>
+<%--                        <a href="#goodsWhatsNew" data-group_code="1"--%>
+<%--                           class="active devWhatsNewTab">쌀</a>--%>
+<%--                        <a href="#goodsWhatsNew" data-group_code="2"--%>
+<%--                           class=" devWhatsNewTab">육류</a>--%>
+<%--                        <a href="#goodsWhatsNew" data-group_code="3"--%>
+<%--                           class=" devWhatsNewTab">생선</a>--%>
+<%--                        <a href="#goodsWhatsNew" data-group_code="4"--%>
+<%--                           class=" devWhatsNewTab">채소</a>--%>
+<%--                        <a href="#goodsWhatsNew" data-group_code="5"--%>
+<%--                           class=" devWhatsNewTab">조미료</a>--%>
+<%--                    </nav>--%>
                 </header>
 
                 <div>
@@ -121,19 +143,22 @@
                                                 <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
                                                      alt="" height="250" width="250">
                                             </div>
+                                            <div>
+                                                <strong type="hidden">${product.productCategory}</strong>
+                                            </div>
                                             <div class="product-id-wrap">
                                                 <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
                                             </div>
                                             <div class="product-id-wrap">
-                                                    <strong>${product.productPrice}</strong>&nbsp;원
+                                                <strong>${product.productPrice}</strong>&nbsp;원
                                             </div>
-<%--                                            <div class="product-id-wrap">--%>
-<%--                                                <fmt:formatDate pattern="yyyy-MM-dd"--%>
-<%--                                                                value="${product.productCreatedDate}"></fmt:formatDate>--%>
-<%--                                            </div>--%>
-<%--                                            <div class="product-id-wrap">--%>
-<%--                                                    ${product.productHits}--%>
-<%--                                            </div>--%>
+                                                <%--                                            <div class="product-id-wrap">--%>
+                                                <%--                                                <fmt:formatDate pattern="yyyy-MM-dd"--%>
+                                                <%--                                                                value="${product.productCreatedDate}"></fmt:formatDate>--%>
+                                                <%--                                            </div>--%>
+                                                <%--                                            <div class="product-id-wrap">--%>
+                                                <%--                                                    ${product.productHits}--%>
+                                                <%--                                            </div>--%>
                                         </li>
                                     </c:forEach>
                                 </div>
