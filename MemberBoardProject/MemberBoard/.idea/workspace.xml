@@ -10,8 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="MemberBoard 수정">
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/productMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/productMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/pwCheck.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/pwCheck.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/save.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/board/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/productMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/productMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/pwCheck.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/pwCheck.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/save.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/board/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/productMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/mapper/productMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +198,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658381646153</updated>
       <workItem from="1658381647760" duration="65277000" />
-      <workItem from="1658819050176" duration="17436000" />
+      <workItem from="1658819050176" duration="19098000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658382402216</created>
