@@ -78,5 +78,24 @@ public class ProductController {
         return "redirect:/product/detail?id="+productDTO.getId();
     }
 
+    // 비밀번호 체크페이지
+    @GetMapping("/pwCheck")
+    public String pwCheck(@RequestParam Long id, Model model) {
+        ProductDTO productDTO = productService.findById(id);
+        model.addAttribute("product", productDTO);
+        return "product/pwCheck";
+    }
+
+    // 상품 삭제 처리
+    @GetMapping("/delete")
+    public String delete(@RequestParam Long id) {
+        productService.delete(id);
+        return "redirect:/product/findAll";
+    }
+
+
+
+
+
 
 }

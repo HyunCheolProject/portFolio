@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: khc_9
-  Date: 2022-07-27
-  Time: 오후 3:03
+  Date: 2022-07-30
+  Time: 오후 5:09
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -94,7 +94,7 @@
 
             <section>
                 <div class="container">
-                    <form action="/board/delete" method="post">
+                    <form action="/product/delete" method="post">
                         <label for="pwConfirm">비밀번호를 입력해주세요</label>
                         <input type="text" id="pwConfirm"><br>
                         <input type="button" value="삭제" onclick="pwCheck()">
@@ -158,12 +158,12 @@
 <script>
     const pwCheck = () => {
         const pwConfirm = document.getElementById("pwConfirm").value;
-        const pwDB = '${board.boardPw}';
+        const pwDB = '${product.productPw}';
         if (pwConfirm == pwDB) {
-            location.href = "/board/delete?id=${board.id}";
+            location.href = "/product/delete?id=${product.id}";
         } else {
             alert("비밀번호가 일치하지 않습니다.");
-            location.href = "/board/detail?id=${board.id}";
+            location.href = "/product/pwCheck?id=${product.id}";
         }
     }
 </script>

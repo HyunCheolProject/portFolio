@@ -39,4 +39,8 @@ public class ProductRepository {
     public void update(ProductDTO productDTO) {
         sqlSessionTemplate.update("Product.update", productDTO);
     }
+
+    public void delete(Long id) {
+        sqlSessionTemplate.delete("Product.delete", id);
+    }
 }

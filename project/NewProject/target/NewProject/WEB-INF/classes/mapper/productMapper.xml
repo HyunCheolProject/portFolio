@@ -30,6 +30,10 @@
         update products_table set productName=#{productName}, productContents=#{productContents} where id=#{id}
     </update>
 
+    <delete id="delete" parameterType="Long">
+        delete from products_table where id=#{id}
+    </delete>
+
 </mapper>
 
 

@@ -163,8 +163,8 @@
     const productUpdate = () => {
         location.href = "/product/update-form?id=${product.id}";
     }
-    const Delete = () => {
-        location.href = "/board/pwCheck?id=${board.id}";
+    const productDelete = () => {
+        location.href = "/product/pwCheck?id=${product.id}";
     }
 </script>
 </html>

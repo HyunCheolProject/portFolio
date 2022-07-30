@@ -51,4 +51,8 @@ public class ProductService {
     public void update(ProductDTO productDTO) {
         productRepository.update(productDTO);
     }
+
+    public void delete(Long id) {
+        productRepository.delete(id);
+    }
 }
