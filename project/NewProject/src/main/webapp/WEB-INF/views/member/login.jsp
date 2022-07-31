@@ -104,7 +104,7 @@
                 <div class="container mt-3">
                     <div class="py-5 text-center">
                         <form action="/member/login" method="post">
-                            아이디 <input type="text" name="memberId"><br>
+                            아이디 <input type="text" name="memberId" autofocus><br>
                             비밀번호 <input type="password" name="memberPw"><br>
                             <td><input type="submit" value="로그인"></td>
                         </form>

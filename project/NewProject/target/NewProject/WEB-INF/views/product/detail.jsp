@@ -105,52 +105,58 @@
                 <h2>상품</h2>
             </header>
 
-                <div class="container">
-                    <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
-                         alt="" height="300" width="300"><br>
-                    상품번호: ${product.id}<br>
-                    작성자: ${product.productWriter}<br>
-                    상품명: ${product.productName}<br>
-                    비밀번호: ${product.productPw}<br>
-                    내용: ${product.productContents}<br>
-                    작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${product.productCreatedDate}"></fmt:formatDate><br>
-                    조회수: ${product.productHits}<br>
+            <div class="container">
+                <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
+                     alt="" height="300" width="300"><br>
+                상품번호: ${product.id}<br>
+                작성자: ${product.productWriter}<br>
+                상품명: ${product.productName}<br>
+                비밀번호: ${product.productPw}<br>
+                내용: ${product.productContents}<br>
+                작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${product.productCreatedDate}"></fmt:formatDate><br>
+                조회수: ${product.productHits}<br>
 
-                    <c:if test="${sessionScope.memberId eq 'khc4572'}"><button class="button big" onclick="productUpdate()">수정</button></c:if>
-                    <c:if test="${sessionScope.memberId eq 'khc4572'}"><button class="button big" onclick="productDelete()">삭제</button></c:if>&nbsp;
-                    <br>
+                <c:if test="${sessionScope.memberId eq 'khc4572'}">
+                    <button class="button big" onclick="productUpdate()">수정</button>
+                </c:if>
+                <c:if test="${sessionScope.memberId eq 'khc4572'}">
+                    <button class="button big" onclick="productDelete()">삭제</button>
+                </c:if>&nbsp;
+                <br>
+            </div>
+            <input type="button" class="btn btn-primary" value="장바구니" onclick="cartSave()">
+            <br>
+
+            <div class="container mb-5">
+
+                <div class="input-group mb-3 card" id="review-list">
+                    <strong>후기</strong>
+                    <table class="table">
+                        <tr>
+                            <th>댓글번호</th>
+                            <th>작성자</th>
+                            <th>내용</th>
+                            <th>작성시간</th>
+                        </tr>
+                        <c:forEach items="${reviewList}" var="review">
+                            <tr>
+                                <td style="color: black"><b>${review.id}</b></td>
+                                <td style="color: black"><b>${review.reviewWriter}</b></td>
+                                <td style="color: black"><b>${review.reviewContents}</b></td>
+                                <td style="color: black"><strong><fmt:formatDate pattern="yyyy-MM-dd"
+                                                                                 value="${review.reviewCreatedDate}"></fmt:formatDate></strong>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
                 </div>
                 <br>
-
-                <div class="container mb-5">
-
-                    <div class="input-group mb-3 card" id="review-list">
-                        <strong>후기</strong>
-                        <table class="table">
-                            <tr>
-                                <th>댓글번호</th>
-                                <th>작성자</th>
-                                <th>내용</th>
-                                <th>작성시간</th>
-                            </tr>
-                            <c:forEach items="${reviewList}" var="review">
-                                <tr>
-                                    <td style="color: black"><b>${review.id}</b></td>
-                                    <td style="color: black"><b>${review.reviewWriter}</b></td>
-                                    <td style="color: black"><b>${review.reviewContents}</b></td>
-                                    <td style="color: black"><strong><fmt:formatDate pattern="yyyy-MM-dd"
-                                                                value="${review.reviewCreatedDate}"></fmt:formatDate></strong>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </table>
-                    </div>
-                    <br>
-                    <c:if test="${sessionScope.memberId != null}">
+                <c:if test="${sessionScope.memberId != null}">
                     <div id="review-write" class="input-group mb-3 card">
                         <div class="form-floating" style="text-align: left">
                             &nbsp;&nbsp;<strong for="reviewWriter">작성자</strong>
-                            <input type="text" id="reviewWriter" class="form-control" value="${sessionScope.memberId}" readonly>
+                            <input type="text" id="reviewWriter" class="form-control" value="${sessionScope.memberId}"
+                                   readonly>
                         </div>
                         <div class="form-floating" style="text-align: left">
                             &nbsp;&nbsp;<strong for="reviewContents">내용</strong>
@@ -160,12 +166,12 @@
                         <br>
                         <button id="review-write-btn" class="btn btn-primary">후기작성</button>
                     </div>
-                    </c:if>
-                    <br>
-                    <a href="javascript:history.back()">뒤로가기</a>
+                </c:if>
+                <br>
+                <a href="javascript:history.back()">뒤로가기</a>
 
-                </div>
-            </section>
+            </div>
+        </section>
     </div>
 
 </div>
@@ -217,7 +223,6 @@
 <script src="/resources/assets/js/util.js"></script>
 <script src="/resources/assets/js/main.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 
@@ -227,9 +232,34 @@
     const productUpdate = () => {
         location.href = "/product/update-form?id=${product.id}";
     }
+
     const productDelete = () => {
         location.href = "/product/pwCheck?id=${product.id}";
     }
+
+    const cartSave = () => {
+        const memberId = "${sessionScope.id}";
+        const productId = "${product.id}";
+
+        $.ajax({
+            type: "post",
+            url: "/cart/save",
+            data: {
+                "memberId": memberId,
+                "productId": productId,
+            },
+            dataType: "text",
+            success: function (result) {
+                console.log("ajax 실행");
+                if (result == "ok")  {
+                    alert("장바구니에 등록이 되었습니다.");
+                } else {
+                    alert("장바구니에 등록이 되지 않았습니다.");
+                }
+            }
+        });
+    }
+
     $("#review-write-btn").click(function () {
 
         const reviewWriter = document.getElementById("reviewWriter").value;
