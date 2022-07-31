@@ -7,5 +7,6 @@
         <typeAlias type="com.its.project.dto.BoardDTO" alias="board"></typeAlias>
         <typeAlias type="com.its.project.dto.CommentDTO" alias="comment"></typeAlias>
         <typeAlias type="com.its.project.dto.ProductDTO" alias="product"></typeAlias>
+        <typeAlias type="com.its.project.dto.ReviewDTO" alias="review"></typeAlias>
     </typeAliases>
 </configuration>

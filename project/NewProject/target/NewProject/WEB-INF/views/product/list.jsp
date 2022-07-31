@@ -139,7 +139,7 @@
                                                 <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
                                             </div>
                                             <div class="product-id-wrap">
-                                                <a href="/product/detail?page=${paging.page}&id=${product.id}"><strong>${product.productPrice}</strong>&nbsp;원</a>
+                                                <strong>${product.productPrice}</strong>&nbsp;원
                                             </div>
                                         </li>
                                     </c:forEach>

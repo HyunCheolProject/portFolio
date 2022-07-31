@@ -17,6 +17,25 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+    <style>
+        .card {
+            max-width: 800px;
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        input[type=text] {
+            width: 700px;
+            margin: auto;
+        }
+
+        textarea {
+            margin: auto;
+            width: 700px;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -86,11 +105,10 @@
                 <h2>상품</h2>
             </header>
 
-            <section>
                 <div class="container">
                     <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
                          alt="" height="300" width="300"><br>
-                    글번호: ${product.id}<br>
+                    상품번호: ${product.id}<br>
                     작성자: ${product.productWriter}<br>
                     상품명: ${product.productName}<br>
                     비밀번호: ${product.productPw}<br>
@@ -103,9 +121,51 @@
                     <br>
                 </div>
                 <br>
-                <a href="javascript:history.back()">뒤로가기</a>
+
+                <div class="container mb-5">
+
+                    <div class="input-group mb-3 card" id="review-list">
+                        <strong>후기</strong>
+                        <table class="table">
+                            <tr>
+                                <th>댓글번호</th>
+                                <th>작성자</th>
+                                <th>내용</th>
+                                <th>작성시간</th>
+                            </tr>
+                            <c:forEach items="${reviewList}" var="review">
+                                <tr>
+                                    <td style="color: black"><b>${review.id}</b></td>
+                                    <td style="color: black"><b>${review.reviewWriter}</b></td>
+                                    <td style="color: black"><b>${review.reviewContents}</b></td>
+                                    <td style="color: black"><strong><fmt:formatDate pattern="yyyy-MM-dd"
+                                                                value="${review.reviewCreatedDate}"></fmt:formatDate></strong>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                    </div>
+                    <br>
+                    <c:if test="${sessionScope.memberId != null}">
+                    <div id="review-write" class="input-group mb-3 card">
+                        <div class="form-floating" style="text-align: left">
+                            &nbsp;&nbsp;<strong for="reviewWriter">작성자</strong>
+                            <input type="text" id="reviewWriter" class="form-control" value="${sessionScope.memberId}" readonly>
+                        </div>
+                        <div class="form-floating" style="text-align: left">
+                            &nbsp;&nbsp;<strong for="reviewContents">내용</strong>
+                            <textarea name="reviewContents" id="reviewContents" cols="10" rows="5"
+                                      placeholder="내용"></textarea>
+                        </div>
+                        <br>
+                        <button id="review-write-btn" class="btn btn-primary">후기작성</button>
+                    </div>
+                    </c:if>
+                    <br>
+                    <a href="javascript:history.back()">뒤로가기</a>
+
+                </div>
             </section>
-        </section>
     </div>
 
 </div>
@@ -157,6 +217,10 @@
 <script src="/resources/assets/js/util.js"></script>
 <script src="/resources/assets/js/main.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+
 </body>
 
 <script>
@@ -166,5 +230,44 @@
     const productDelete = () => {
         location.href = "/product/pwCheck?id=${product.id}";
     }
+    $("#review-write-btn").click(function () {
+
+        const reviewWriter = document.getElementById("reviewWriter").value;
+        const reviewContents = $("#reviewContents").val();
+        const productId = '${product.id}';
+        $.ajax({
+            type: "post",
+            url: "/review/save",
+            data: {
+                "reviewWriter": reviewWriter,
+                "reviewContents": reviewContents,
+                "productId": productId
+            },
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+                let output = "<table class='table'>";
+                output += "<tr><th>댓글번호</th>";
+                output += "<th>작성자</th>";
+                output += "<th>내용</th>";
+                output += "<th>작성시간</th></tr>";
+                for (let i in result) {
+                    output += "<tr>";
+                    output += "<td>" + result[i].id + "</td>";
+                    output += "<td>" + result[i].reviewWriter + "</td>";
+                    output += "<td>" + result[i].reviewContents + "</td>";
+                    output += "<td>" + moment(result[i].reviewCreatedDate).format("YYYY-MM-DD") + "</td>";
+                    output += "</tr>";
+                }
+                output += "</table>";
+                document.getElementById('review-list').innerHTML = output;
+                document.getElementById('reviewWriter').value = '';
+                document.getElementById('reviewContents').value = '';
+            },
+            // error: function (result) {
+            //     alert("어디가 틀렸을까");
+            // }
+        });
+    });
 </script>
 </html>

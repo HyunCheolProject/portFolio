@@ -1,9 +1,9 @@
 package com.its.project.controller;
 
-import com.its.project.dto.BoardDTO;
-import com.its.project.dto.CommentDTO;
 import com.its.project.dto.ProductDTO;
+import com.its.project.dto.ReviewDTO;
 import com.its.project.service.ProductService;
+import com.its.project.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +18,9 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private ReviewService reviewService;
 
     // 상품등록 (사진첨부) 화면 요청
     @GetMapping("/insert-form")
@@ -49,8 +52,8 @@ public class ProductController {
         ProductDTO productDTO = productService.findById(id);
         model.addAttribute("product", productDTO);
         model.addAttribute("page", page);
-//        List<CommentDTO> commentList = commentService.findAll(id);
-//        model.addAttribute("commentList", commentList);
+        List<ReviewDTO> reviewList = reviewService.findAll(id);
+        model.addAttribute("reviewList", reviewList);
         return "product/detail";
     }
 
