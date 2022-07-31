@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="Review">
+    <insert id="save" parameterType="review">
+        insert into review_table(reviewWriter, reviewContents, reviewCreatedDate, productId)
+            values (#{reviewWriter}, #{reviewContents}, now(), #{productId})
+    </insert>
+    <select id="findAll" parameterType="Long" resultType="review">
+        select * from review_table where productId=#{productId} order by id desc
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
