@@ -10,5 +10,6 @@ public class ReviewDTO {
     private Long productId;
     private String reviewWriter;
     private String reviewContents;
+    private int rating;
     private Timestamp reviewCreatedDate;
 }

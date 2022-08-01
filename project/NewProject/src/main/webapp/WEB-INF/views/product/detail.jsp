@@ -17,9 +17,10 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+
     <style>
         .card {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto; /* Added */
             float: none; /* Added */
             margin-bottom: 10px; /* Added */
@@ -124,23 +125,25 @@
                 </c:if>&nbsp;
                 <br>
             </div>
+            <br>
             <input type="button" class="btn btn-primary" value="장바구니" onclick="cartSave()">
+            <br>
             <br>
 
             <div class="container mb-5">
+                        <strong>------------------------------ 후기 ------------------------------</strong>
+                    <br><br>
 
                 <div class="input-group mb-3 card" id="review-list">
-                    <strong>후기</strong>
                     <table class="table">
                         <tr>
-                            <th>댓글번호</th>
-                            <th>작성자</th>
-                            <th>내용</th>
-                            <th>작성시간</th>
+                            <th>최신순</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         <c:forEach items="${reviewList}" var="review">
                             <tr>
-                                <td style="color: black"><b>${review.id}</b></td>
                                 <td style="color: black"><b>${review.reviewWriter}</b></td>
                                 <td style="color: black"><b>${review.reviewContents}</b></td>
                                 <td style="color: black"><strong><fmt:formatDate pattern="yyyy-MM-dd"
@@ -152,15 +155,16 @@
                 </div>
                 <br>
                 <c:if test="${sessionScope.memberId != null}">
-                    <div id="review-write" class="input-group mb-3 card">
-                        <div class="form-floating" style="text-align: left">
-                            &nbsp;&nbsp;<strong for="reviewWriter">작성자</strong>
-                            <input type="text" id="reviewWriter" class="form-control" value="${sessionScope.memberId}"
+                    <div id="review-write" class="input-group mb-3 card" style="height: 300px">
+
+                        <div class="form-floating mb-3" style="text-align: left">
+                            &nbsp;&nbsp;&nbsp;<strong for="reviewWriter">작성자</strong>
+                            <input type="text" id="reviewWriter" class="form-control align-center" style="height: 50px; width: 250px;" value="${sessionScope.memberId}"
                                    readonly>
                         </div>
                         <div class="form-floating" style="text-align: left">
-                            &nbsp;&nbsp;<strong for="reviewContents">내용</strong>
-                            <textarea name="reviewContents" id="reviewContents" cols="10" rows="5"
+                            &nbsp;&nbsp;&nbsp;<strong for="reviewContents">내용</strong>
+                            <textarea name="reviewContents" id="reviewContents" style="height: 100px"
                                       placeholder="내용"></textarea>
                         </div>
                         <br>
@@ -215,13 +219,10 @@
 </div>
 
 <!-- Scripts -->
-<script src="/resources/assets/js/jquery.min.js"></script>
-<script src="/resources/assets/js/jquery.scrollex.min.js"></script>
-<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
 <script src="/resources/assets/js/browser.min.js"></script>
 <script src="/resources/assets/js/breakpoints.min.js"></script>
-<script src="/resources/assets/js/util.js"></script>
-<script src="/resources/assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
@@ -250,10 +251,9 @@
                 "productId": productId,
                 "cartAmount": cartAmount
             },
-            dataType: "text",
-            success: function (result) {
-                console.log("ajax 실행");
-                if (result == "ok")  {
+            dataType: "text",   // return 타입이 String 일때는 text, return 타입이 DTO, List<> 일때는 json
+            success: function (result) {    // result 는 return 값 그 자체 "ok" 라면 "ok" 그대로 가져옴
+                if (result == "ok") {
                     alert("장바구니에 등록이 되었습니다.");
                 } else {
                     alert("장바구니에 등록이 되지 않았습니다.");
@@ -279,21 +279,29 @@
             success: function (result) {
                 console.log(result);
                 let output = "<table class='table'>";
-                output += "<tr><th>댓글번호</th>";
-                output += "<th>작성자</th>";
-                output += "<th>내용</th>";
-                output += "<th>작성시간</th></tr>";
+                // output += "<tr><th>댓글번호</th>";
+                // output += "<th>작성자</th>";
+                // output += "<th>내용</th>";
+                // output += "<th>작성시간</th></tr>";
+                output += "<tr><th>최신순</th>";
+                output += "<th></th>";
+                output += "<th></th>";
+                output += "<th></th></tr>";
                 for (let i in result) {
+                    // output += "<tr>";
+                    // output += "<td>" + result[i].id + "</td>";
+                    // output += "<td>" + result[i].reviewWriter + "</td>";
+                    // output += "<td>" + result[i].reviewContents + "</td>";
+                    // output += "<td>" + moment(result[i].reviewCreatedDate).format("YYYY-MM-DD") + "</td>";
+                    // output += "</tr>";
                     output += "<tr>";
-                    output += "<td>" + result[i].id + "</td>";
-                    output += "<td>" + result[i].reviewWriter + "</td>";
-                    output += "<td>" + result[i].reviewContents + "</td>";
-                    output += "<td>" + moment(result[i].reviewCreatedDate).format("YYYY-MM-DD") + "</td>";
+                    output += "<td style='color: black'><b>" + result[i].reviewWriter + "</b></td>";
+                    output += "<td style='color: black'><b>" + result[i].reviewContents + "</b></td>";
+                    output += "<td style='color: black'><b>" + moment(result[i].reviewCreatedDate).format("YYYY-MM-DD") + "</b></td>";
                     output += "</tr>";
                 }
                 output += "</table>";
                 document.getElementById('review-list').innerHTML = output;
-                document.getElementById('reviewWriter').value = '';
                 document.getElementById('reviewContents').value = '';
             },
             // error: function (result) {

@@ -5,7 +5,7 @@
 
 <mapper namespace="Cart">
     <insert id="save" parameterType="cart">
-        insert into cart_table (memberId, productId,cartAmount) values (#{memberId}, #{productId}, 1)
+        insert into cart_table (memberId, productId,cartAmount) values (#{memberId}, #{productId}, #{cartAmount})
     </insert>
 
 </mapper>

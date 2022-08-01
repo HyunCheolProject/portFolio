@@ -53,6 +53,7 @@ public class MemberController {
             return "redirect:/";
         } else {
             return "member/login";
+            // member 라는 폴더안에 login.jsp 파일 띄워줘
         }
     }
 

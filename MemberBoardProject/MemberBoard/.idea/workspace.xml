@@ -10,22 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32ef533-8bed-4165-879f-b8d84ead004b" name="Changes" comment="MemberBoard 수정">
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/dto/CartDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/repository/CartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mapper/cartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/java/com/its/project/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/product/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/src/main/webapp/WEB-INF/views/product/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/CartController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/com/its/project/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/member/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/cartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/classes/mapper/cartMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/product/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/NewProject/WEB-INF/views/product/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/com/its/project/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project/NewProject/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/NewProject/target/classes/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
