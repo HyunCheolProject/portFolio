@@ -117,7 +117,7 @@
                                 <option value="productCategory">상품종류</option>
                             </select>
                             <input class="form-control" type="text" name="q" placeholder="검색어입력.."
-                                   style="display: inline">
+                                   style="display: inline" autofocus>
                             <input class="form-control submitType" type="submit" value="검색" style="display: inline">
                         </div>
                     </form>
@@ -189,13 +189,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="/resources/assets/js/jquery.min.js"></script>
-<script src="/resources/assets/js/jquery.scrollex.min.js"></script>
-<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
 <script src="/resources/assets/js/browser.min.js"></script>
 <script src="/resources/assets/js/breakpoints.min.js"></script>
-<script src="/resources/assets/js/util.js"></script>
-<script src="/resources/assets/js/main.js"></script>
 
 </body>
 

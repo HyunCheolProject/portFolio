@@ -113,7 +113,7 @@
                                                         <option value="boardWriter">작성자</option>
                                                         <option value="boardCategory">카테고리</option>
                                                     </select></td>
-                                                    <td><input type="text" name="q" placeholder="검색어입력.."></td>
+                                                    <td><input type="text" name="q" placeholder="검색어입력.." autofocus></td>
                                                     <td><input type="submit" value="검색"></td>
                                                     </th>
                                                 </form>
@@ -251,13 +251,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="/resources/js/jquery.min.js"></script>
-<script src="/resources/js/jquery.scrollex.min.js"></script>
-<script src="/resources/js/jquery.scrolly.min.js"></script>
-<script src="/resources/js/browser.min.js"></script>
-<script src="/resources/js/breakpoints.min.js"></script>
-<script src="/resources/js/util.js"></script>
-<script src="/resources/js/main.js"></script>
+<script src="/resources/assets/js/browser.min.js"></script>
+<script src="/resources/assets/js/breakpoints.min.js"></script>
 
 </body>
 <script>
