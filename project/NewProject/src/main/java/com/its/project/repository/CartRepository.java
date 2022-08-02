@@ -16,8 +16,16 @@ public class CartRepository {
         return sqlSessionTemplate.insert("Cart.save", cartDTO);
     }
 
-    public List<CartDTO> findAll() {
-        List<CartDTO> cartDTOList =  sqlSessionTemplate.selectList("Cart.findAll");
+    public List<CartDTO> findAll(Long memberId) {
+        List<CartDTO> cartDTOList =  sqlSessionTemplate.selectList("Cart.findAll", memberId);
         return cartDTOList;
+    }
+
+    public CartDTO findById(CartDTO cartDTO) {
+        return sqlSessionTemplate.selectOne("Cart.findById", cartDTO);
+    }
+
+    public int update(CartDTO cartDTO) {
+        return sqlSessionTemplate.update("Cart.update", cartDTO);
     }
 }

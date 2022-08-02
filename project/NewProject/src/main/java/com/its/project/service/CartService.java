@@ -21,7 +21,20 @@ public class CartService {
         }
     }
 
-    public List<CartDTO> findAll() {
-        return cartRepository.findAll();
+    public List<CartDTO> findAll(Long memberId) {
+        return cartRepository.findAll(memberId);
+    }
+
+    public CartDTO findById(CartDTO cartDTO) {
+        return cartRepository.findById(cartDTO);
+    }
+
+    public String update(CartDTO cartDTO) {
+        int result = cartRepository.update(cartDTO);
+        if (result > 0) {
+            return "ok";
+        } else {
+            return "no";
+        }
     }
 }

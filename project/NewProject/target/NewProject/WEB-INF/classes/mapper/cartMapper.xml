@@ -8,9 +8,17 @@
         insert into cart_table (memberId, productId, orderProduct, orderName, cartAmount) values (#{memberId}, #{productId}, #{orderProduct}, #{orderName}, #{cartAmount})
     </insert>
 
-    <select id="findAll" resultType="cart">
-        select * from cart_table
+    <select id="findAll" parameterType="Long" resultType="cart">
+        select * from cart_table where memberId=#{memberId}
     </select>
+
+    <select id="findById" parameterType="cart" resultType="cart">
+        select * from cart_table where memberId=#{memberId} and productId=#{productId}
+    </select>
+
+    <update id="update" parameterType="cart">
+        update cart_table set cartAmount=cartAmount+1 where memberId=#{memberId} and productId=#{productId}
+    </update>
 
 </mapper>
 

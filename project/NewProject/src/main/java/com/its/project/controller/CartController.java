@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -19,15 +20,21 @@ public class CartController {
     // 장바구니에 상품 담기
     @PostMapping("/save")
     public @ResponseBody String save(@ModelAttribute CartDTO cartDTO) {
-        return cartService.save(cartDTO);
+        CartDTO cartDTO1 = cartService.findById(cartDTO);
+        if (cartDTO1 == null) {
+            return cartService.save(cartDTO);
+        } else {
+            return cartService.update(cartDTO);
+        }
         // @ResponseBody 를 안쓰면
         // cartService.save(cartDTO).jsp 라는 파일 띄워줘
     }
 
     // 주문목록 출력
     @GetMapping("/findAll")
-    public String findAll(Model model) {
-        List<CartDTO> cartDTOList = cartService.findAll();
+    public String findAll(Model model, HttpSession session) {
+        Long memberId = (Long) session.getAttribute("id");
+        List<CartDTO> cartDTOList = cartService.findAll(memberId);
         model.addAttribute("cartList", cartDTOList);
         return "cart/orderList";
     }
