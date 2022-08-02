@@ -90,7 +90,7 @@
                 <div class="container">
                     <table>
                         <tr>
-                            <td style="color: black"><b>상품번호</b></td>
+                            <td style="color: black"><b>주문번호</b></td>
                             <td style="color: black"><b>주문자</b></td>
                             <td style="color: black"><b>상품이름</b></td>
                             <td style="color: black"><b>상품수량</b></td>
@@ -98,8 +98,8 @@
                     <c:forEach items="${cartList}" var="cart">
                         <tr>
                             <td style="color: black"><b>${cart.productId}</b></td>
-                            <td style="color: black"><b>${cart.orderName}</b></td>
-                            <td style="color: black"><b>${cart.orderProduct}</b></td>
+                            <td style="color: black"><b>${cart.cartName}</b></td>
+                            <td style="color: black"><b>${cart.cartProduct}</b></td>
                             <td style="color: black"><b>${cart.cartAmount}</b></td>
                         </tr>
                     </c:forEach>

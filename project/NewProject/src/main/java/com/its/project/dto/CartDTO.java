@@ -7,8 +7,8 @@ public class CartDTO {
     private Long id;
     private Long memberId;
     private Long productId;
-    private String orderProduct;
-    private String orderName;
+    private String cartProduct;
+    private String cartName;
     private int cartAmount;
 
 

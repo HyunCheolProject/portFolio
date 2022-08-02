@@ -5,7 +5,7 @@
 
 <mapper namespace="Cart">
     <insert id="save" parameterType="cart">
-        insert into cart_table (memberId, productId, orderProduct, orderName, cartAmount) values (#{memberId}, #{productId}, #{orderProduct}, #{orderName}, #{cartAmount})
+        insert into cart_table (memberId, productId, cartProduct, cartName, cartAmount) values (#{memberId}, #{productId}, #{cartProduct}, #{cartName}, #{cartAmount})
     </insert>
 
     <select id="findAll" parameterType="Long" resultType="cart">

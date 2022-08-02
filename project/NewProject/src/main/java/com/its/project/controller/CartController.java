@@ -30,7 +30,7 @@ public class CartController {
         // cartService.save(cartDTO).jsp 라는 파일 띄워줘
     }
 
-    // 주문목록 출력
+    // 장바구니 주문목록 출력
     @GetMapping("/findAll")
     public String findAll(Model model, HttpSession session) {
         Long memberId = (Long) session.getAttribute("id");

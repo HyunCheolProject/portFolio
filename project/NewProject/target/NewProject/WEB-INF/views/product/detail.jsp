@@ -248,8 +248,8 @@
     const cartSave = () => {
         const memberId = "${sessionScope.id}";
         const productId = "${product.id}";
-        const orderProduct = "${product.productName}";
-        const orderName = "${sessionScope.memberId}";
+        const cartProduct = "${product.productName}";
+        const cartName = "${sessionScope.memberId}";
         const cartAmount = 1;
 
         $.ajax({
@@ -258,8 +258,8 @@
             data: {
                 "memberId": memberId,
                 "productId": productId,
-                "orderProduct": orderProduct,
-                "orderName": orderName,
+                "cartProduct": cartProduct,
+                "cartName": cartName,
                 "cartAmount": cartAmount
             },
             dataType: "text",   // return 타입이 String 일때는 text, return 타입이 DTO, List<> 일때는 json

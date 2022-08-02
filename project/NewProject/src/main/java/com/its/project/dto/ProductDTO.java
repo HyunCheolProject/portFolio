@@ -22,4 +22,5 @@ public class ProductDTO {
     private MultipartFile productFile;
     private String productFileName;
     private String productCategory;
+
 }

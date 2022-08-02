@@ -62,8 +62,6 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/product/findAll">식재료</a></li>
                     <li><a href="/board/paging">고객센터</a></li>
-                    <li><a href="/cart/findAll">test</a></li>
-
                 </c:when>
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
@@ -78,8 +76,6 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/product/findAll">식재료</a></li>
                     <li><a href="/board/paging">고객센터</a></li>
-                    <li><a href="/cart/findAll">test</a></li>
-
                 </c:otherwise>
             </c:choose>
         </ul>
