@@ -222,6 +222,12 @@
 <!-- Scripts -->
 <script src="/resources/assets/js/browser.min.js"></script>
 <script src="/resources/assets/js/breakpoints.min.js"></script>
+<script src="/resources/assets/js/jquery.min.js"></script>
+<script src="/resources/assets/js/jquery.scrollex.min.js"></script>
+<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+<script src="/resources/assets/js/util.js"></script>
+<script src="/resources/assets/js/main.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
@@ -242,6 +248,8 @@
     const cartSave = () => {
         const memberId = "${sessionScope.id}";
         const productId = "${product.id}";
+        const orderProduct = "${product.productName}";
+        const orderName = "${sessionScope.memberId}";
         const cartAmount = 1;
 
         $.ajax({
@@ -250,6 +258,8 @@
             data: {
                 "memberId": memberId,
                 "productId": productId,
+                "orderProduct": orderProduct,
+                "orderName": orderName,
                 "cartAmount": cartAmount
             },
             dataType: "text",   // return 타입이 String 일때는 text, return 타입이 DTO, List<> 일때는 json

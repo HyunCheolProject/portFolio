@@ -5,6 +5,8 @@ import com.its.project.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CartService {
     @Autowired
@@ -17,5 +19,9 @@ public class CartService {
         } else {
             return "no";
         }
+    }
+
+    public List<CartDTO> findAll() {
+        return cartRepository.findAll();
     }
 }

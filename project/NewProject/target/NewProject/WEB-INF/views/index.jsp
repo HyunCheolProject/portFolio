@@ -44,6 +44,7 @@
                     <li><a href="/board/paging">고객센터</a></li>
                     <li><a href="/member/save-form" class="active">회원가입</a></li>
                     <li><a href="/member/login-form">로그인</a></li>
+                    <li><a href="/cart/findAll">test</a></li>
 
 
                 </c:when>
@@ -75,6 +76,8 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/product/findAll">식재료</a></li>
                     <li><a href="/board/paging">고객센터</a></li>
+                    <li><a href="/cart/findAll">test</a></li>
+
                 </c:otherwise>
             </c:choose>
         </ul>

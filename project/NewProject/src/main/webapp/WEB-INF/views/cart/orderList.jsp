@@ -1,15 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: khc_9
-  Date: 2022-07-27
-  Time: 오전 10:02
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: khc_9
-  Date: 2022-07-27
-  Time: 오전 10:02
+  Date: 2022-08-02
+  Time: 오전 10:21
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -24,15 +17,6 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
-    <style>
-        .container {
-            max-width: 600px;
-            float: none;
-            margin: 0 auto;
-            text-align: left;
-
-        }
-    </style>
 </head>
 <body class="is-preload">
 
@@ -44,7 +28,7 @@
         <span class="logo"><img src="\resources\images/logo.svg" alt=""/></span>
         <h1>쿸팡</h1>
         <p>식재료 주문은 쿸팡에서!<br/>
-            <a href="/product/findAll">지금 바로 구경하세요!</a></p>
+            <a href="https://twitter.com/ajlkn">지금 바로 구경하세요!</a></p>
     </header>
 
     <!-- Nav -->
@@ -63,7 +47,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -77,7 +62,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>
@@ -97,27 +83,31 @@
         <!-- First Section -->
         <section id="first" class="main special">
             <header class="major">
-                <h2>로그인</h2>
+                <h2>주문목록</h2>
             </header>
 
             <section>
-                <div class="container mt-3">
-                    <div class="py-5 text-center">
-                        <form action="/member/login" method="post">
-                            아이디 <input type="text" name="memberId" autofocus><br>
-                            비밀번호 <input type="password" name="memberPw"><br>
-                            <td><input type="submit" value="로그인"></td>
-                        </form>
-                        <a href="javascript:history.back()">뒤로가기</a>
-
-                    </div>
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td style="color: black"><b>상품번호</b></td>
+                            <td style="color: black"><b>주문자</b></td>
+                            <td style="color: black"><b>상품이름</b></td>
+                            <td style="color: black"><b>상품수량</b></td>
+                        </tr>
+                    <c:forEach items="${cartList}" var="cart">
+                        <tr>
+                            <td style="color: black"><b>${cart.productId}</b></td>
+                            <td style="color: black"><b>${cart.orderName}</b></td>
+                            <td style="color: black"><b>${cart.orderProduct}</b></td>
+                            <td style="color: black"><b>${cart.cartAmount}</b></td>
+                        </tr>
+                    </c:forEach>
+                    </table>
                 </div>
             </section>
         </section>
     </div>
-</div>
-</ul>
-</div>
 
 </div>
 </section>
@@ -160,11 +150,11 @@
 </div>
 
 <!-- Scripts -->
-<script src="/resources/assets/js/browser.min.js"></script>
-<script src="/resources/assets/js/breakpoints.min.js"></script>
 <script src="/resources/assets/js/jquery.min.js"></script>
 <script src="/resources/assets/js/jquery.scrollex.min.js"></script>
 <script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+<script src="/resources/assets/js/browser.min.js"></script>
+<script src="/resources/assets/js/breakpoints.min.js"></script>
 <script src="/resources/assets/js/util.js"></script>
 <script src="/resources/assets/js/main.js"></script>
 
