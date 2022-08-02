@@ -113,38 +113,45 @@
                 작성일자: <fmt:formatDate pattern="yyyy-MM-dd" value="${board.boardCreatedDate}"></fmt:formatDate><br>
                 조회수: ${board.boardHits}<br>
 
-                <c:if test="${sessionScope.memberId eq board.boardWriter}"><button class="button big" onclick="boardUpdate()">수정</button></c:if>&nbsp;
-                <c:if test="${sessionScope.memberId eq board.boardWriter or sessionScope.memberId == 'khc4572'}"><button class="button big" onclick="boardDelete()">삭제</button></c:if>&nbsp;
+                <c:if test="${sessionScope.memberId eq board.boardWriter}">
+                    <button class="button big" onclick="boardUpdate()">수정</button>
+                </c:if>&nbsp;
+                <c:if test="${sessionScope.memberId eq board.boardWriter or sessionScope.memberId == 'khc4572'}">
+                    <button class="button big" onclick="boardDelete()">삭제</button>
+                </c:if>&nbsp;
 
             </div>
             <br>
             <div class="container mb-5">
+                <strong>------------------------------ 답변 ------------------------------</strong>
+                <br><br>
 
                 <div class="input-group mb-3 card" id="comment-list">
                     <table class="table">
                         <tr>
-                            <th>댓글번호</th>
-                            <th>작성자</th>
-                            <th>내용</th>
-                            <th>작성시간</th>
+                            <th>최신순</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         <c:forEach items="${commentList}" var="comment">
                             <tr>
-                                <td><strong>${comment.id}</strong></td>
-                                <td><strong>${comment.commentWriter}</strong></td>
-                                <td><strong>${comment.commentContents}</strong></td>
-                                <td><strong><fmt:formatDate pattern="yyyy-MM-dd"
-                                                            value="${comment.commentCreatedDate}"></fmt:formatDate></strong>
+                                <td style="color: black"><b>${comment.commentWriter}</b></td>
+                                <td style="color: black"><b>${comment.commentContents}</b></td>
+                                <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd"
+                                                            value="${comment.commentCreatedDate}"></fmt:formatDate></b>
                                 </td>
                             </tr>
                         </c:forEach>
                     </table>
                 </div>
                 <br>
+                <c:if test="${sessionScope.memberId != null}">
                 <div id="comment-write" class="input-group mb-3 card">
                     <div class="form-floating" style="text-align: left">
                         &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
-                        <input type="text" id="commentWriter" class="form-control" placeholder="작성자">
+                        <input type="text" id="commentWriter" class="form-control" value="${sessionScope.memberId}"
+                               readonly>
                     </div>
                     <div class="form-floating" style="text-align: left">
                         &nbsp;&nbsp;<strong for="commentContents">내용</strong>
@@ -154,6 +161,7 @@
                     <br>
                     <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
                 </div>
+                </c:if>
                 <br>
                 <a href="javascript:history.back()">뒤로가기</a>
 
@@ -204,6 +212,11 @@
 <!-- Scripts -->
 <script src="/resources/assets/js/browser.min.js"></script>
 <script src="/resources/assets/js/breakpoints.min.js"></script>
+<script src="/resources/assets/js/jquery.min.js"></script>
+<script src="/resources/assets/js/jquery.scrollex.min.js"></script>
+<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+<script src="/resources/assets/js/util.js"></script>
+<script src="/resources/assets/js/main.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -236,21 +249,30 @@
             success: function (result) {
                 console.log(result);
                 let output = "<table class='table'>";
-                output += "<tr><th>댓글번호</th>";
-                output += "<th>작성자</th>";
-                output += "<th>내용</th>";
-                output += "<th>작성시간</th></tr>";
+                // output += "<tr><th>댓글번호</th>";
+                // output += "<th>작성자</th>";
+                // output += "<th>내용</th>";
+                // output += "<th>작성시간</th></tr>";
+                output += "<tr><th>최신순</th>";
+                output += "<th></th>";
+                output += "<th></th>";
+                output += "<th></th></tr>";
                 for (let i in result) {
+                    // output += "<tr>";
+                    // output += "<td>" + result[i].id + "</td>";
+                    // output += "<td>" + result[i].commentWriter + "</td>";
+                    // output += "<td>" + result[i].commentContents + "</td>";
+                    // output += "<td>" + moment(result[i].commentCreatedDate).format("YYYY-MM-DD") + "</td>";
+                    // output += "</tr>";
                     output += "<tr>";
-                    output += "<td>" + result[i].id + "</td>";
-                    output += "<td>" + result[i].commentWriter + "</td>";
-                    output += "<td>" + result[i].commentContents + "</td>";
-                    output += "<td>" + moment(result[i].commentCreatedDate).format("YYYY-MM-DD") + "</td>";
+                    output += "<td style='color: black'><b>" + result[i].commentWriter + "</b></td>";
+                    output += "<td style='color: black'><b>" + result[i].commentContents + "</b></td>";
+                    output += "<td style='color: black'><b>" + moment(result[i].commentCreatedDate).format("YYYY-MM-DD") + "</b></td>";
                     output += "</tr>";
                 }
                 output += "</table>";
                 document.getElementById('comment-list').innerHTML = output;
-                document.getElementById('commentWriter').value = '';
+                // document.getElementById('commentWriter').value = ''; 지우지 않으면 댓글 작성 후 다시 댓글을 쓸 때 작성자 값이 안 보임.
                 document.getElementById('commentContents').value = '';
             },
             // error: function (result) {

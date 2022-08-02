@@ -131,8 +131,8 @@
             <br>
 
             <div class="container mb-5">
-                        <strong>------------------------------ 후기 ------------------------------</strong>
-                    <br><br>
+                <strong>------------------------------ 후기 ------------------------------</strong>
+                <br><br>
 
                 <div class="input-group mb-3 card" id="review-list">
                     <table class="table">
@@ -146,8 +146,8 @@
                             <tr>
                                 <td style="color: black"><b>${review.reviewWriter}</b></td>
                                 <td style="color: black"><b>${review.reviewContents}</b></td>
-                                <td style="color: black"><strong><fmt:formatDate pattern="yyyy-MM-dd"
-                                                                                 value="${review.reviewCreatedDate}"></fmt:formatDate></strong>
+                                <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd"
+                                                                                 value="${review.reviewCreatedDate}"></fmt:formatDate></b>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -159,7 +159,8 @@
 
                         <div class="form-floating mb-3" style="text-align: left">
                             &nbsp;&nbsp;&nbsp;<strong for="reviewWriter">작성자</strong>
-                            <input type="text" id="reviewWriter" class="form-control align-center" style="height: 50px; width: 250px;" value="${sessionScope.memberId}"
+                            <input type="text" id="reviewWriter" class="form-control align-center"
+                                   style="height: 50px; width: 250px;" value="${sessionScope.memberId}"
                                    readonly>
                         </div>
                         <div class="form-floating" style="text-align: left">
