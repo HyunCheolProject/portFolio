@@ -37,4 +37,8 @@ public class CartService {
             return "no";
         }
     }
+
+    public void delete(Long id) {
+        cartRepository.delete(id);
+    }
 }

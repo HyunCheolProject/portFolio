@@ -20,6 +20,9 @@
         update cart_table set cartAmount=cartAmount+1 where memberId=#{memberId} and productId=#{productId}
     </update>
 
+    <delete id="delete" parameterType="Long">
+        delete from cart_table where id=#{id}
+    </delete>
 </mapper>
 
 

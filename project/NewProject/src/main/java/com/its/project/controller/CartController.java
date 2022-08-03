@@ -39,7 +39,13 @@ public class CartController {
         return "cart/cartList";
     }
 
-
+    // 장바구니 목록 삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam Long id) {
+        System.out.println("id = " + id);
+        cartService.delete(id);
+        return "redirect:/cart/findAll";
+    }
 
 
 

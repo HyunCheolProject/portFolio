@@ -28,4 +28,8 @@ public class CartRepository {
     public int update(CartDTO cartDTO) {
         return sqlSessionTemplate.update("Cart.update", cartDTO);
     }
+
+    public void delete(Long id) {
+        sqlSessionTemplate.delete("Cart.delete", id);
+    }
 }

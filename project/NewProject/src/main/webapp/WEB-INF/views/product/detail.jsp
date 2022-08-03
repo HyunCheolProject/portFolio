@@ -127,7 +127,9 @@
                 <br>
             </div>
             <br>
+
             <input type="button" class="btn btn-primary" value="장바구니" onclick="cartSave()">
+
             <br>
             <br>
 
@@ -148,7 +150,7 @@
                                 <td style="color: black"><b>${review.reviewWriter}</b></td>
                                 <td style="color: black"><b>${review.reviewContents}</b></td>
                                 <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd"
-                                                                                 value="${review.reviewCreatedDate}"></fmt:formatDate></b>
+                                                                            value="${review.reviewCreatedDate}"></fmt:formatDate></b>
                                 </td>
                             </tr>
                         </c:forEach>
