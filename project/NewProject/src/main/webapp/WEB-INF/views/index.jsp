@@ -102,7 +102,7 @@
                             <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
                         </div>
                         <div class="product-id-wrap">
-                            <strong>${product.productPrice}</strong>&nbsp;원
+                            <strong><fmt:formatNumber type="number" value="${product.productPrice}"/>원</strong>
                         </div>
                     </li>
                 </c:forEach>

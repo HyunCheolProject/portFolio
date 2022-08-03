@@ -8,15 +8,13 @@ import org.springframework.web.multipart.MultipartFile;
 import java.sql.Timestamp;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class ProductDTO {
     private Long id;
     private String productName;
     private String productWriter;
     private String productPw;
     private String productContents;
-    private String productPrice;
+    private int productPrice;
     private int productHits;
     private Timestamp productCreatedDate;
     private MultipartFile productFile;

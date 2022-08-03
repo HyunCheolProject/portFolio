@@ -36,7 +36,7 @@ public class CartController {
         Long memberId = (Long) session.getAttribute("id");
         List<CartDTO> cartDTOList = cartService.findAll(memberId);
         model.addAttribute("cartList", cartDTOList);
-        return "cart/orderList";
+        return "cart/cartList";
     }
 
 

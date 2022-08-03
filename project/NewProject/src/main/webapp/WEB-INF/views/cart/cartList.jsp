@@ -94,6 +94,8 @@
                             <td style="color: black"><b>주문자</b></td>
                             <td style="color: black"><b>상품이름</b></td>
                             <td style="color: black"><b>상품수량</b></td>
+                            <td style="color: black"><b>가격</b></td>
+                            <td style="color: black"><b>총 가격</b></td>
                         </tr>
                     <c:forEach items="${cartList}" var="cart">
                         <tr>
@@ -101,6 +103,8 @@
                             <td style="color: black"><b>${cart.cartName}</b></td>
                             <td style="color: black"><b>${cart.cartProduct}</b></td>
                             <td style="color: black"><b>${cart.cartAmount}</b></td>
+                            <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice}"/>&nbsp;원</b></td>
+                            <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b></td>
                         </tr>
                     </c:forEach>
                     </table>

@@ -8,8 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.sql.Timestamp;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class BoardDTO {
     private Long id;
     private String boardTitle;
