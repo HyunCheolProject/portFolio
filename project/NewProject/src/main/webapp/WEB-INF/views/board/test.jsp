@@ -120,7 +120,21 @@
                                     </tr>
                                     <tr>
                                         <td>연락처</td>
-                                        <td><input type="text"></td>
+                                        <td><select id="memberMobile2" style="width: 130px; display: inline" onchange="mobileNumber2()" name = "memberMobile">
+                                            <option value="KT">KT</option>
+                                            <option value="SKT">SKT</option>
+                                            <option value="LG">LG</option>
+                                        </select>&nbsp;&nbsp;&nbsp;
+                                            <select id="memberMobile3" style="width: 130px; display: inline" onchange="mobileNumber3()" name = "memberMobile">
+                                                <option value="010">010</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>&nbsp;&nbsp;&nbsp;
+                                            -&nbsp;&nbsp;&nbsp;
+                                            <input type="text" style="width: 280px; display: inline" onblur="mobileNumber()" id="memberMobile" name="memberMobile" class="from-control"  placeholder="휴대폰번호입력('-'포함)">
+                                        </td>
                                     </tr>
                                 </table>
                                 <div style="text-align: left">

@@ -20,8 +20,7 @@
     </noscript>
     <style>
         .container {
-            max-width: 600px;
-            float: none;
+            max-width: 650px;
             margin: 0 auto;
             text-align: left;
         }
@@ -29,7 +28,8 @@
             max-width: 800px;
             margin: 0 auto; /* Added */
             float: none; /* Added */
-            margin-bottom: 10px; /* Added */
+            margin-bottom: 20px; /* Added */
+            padding: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
@@ -122,7 +122,7 @@
                             <ul class="icons">
                                 <i id="emailIcon-result" class="bi bi-tags-fill"></i> Email<br><li><input class="from-control mb-2"  type="text" style="width: 160px" onblur="email()" id="memberEmail" name="memberEmail" placeholder="이메일"></li><li>@</li>
                                 <li><input class="from-control mb-2" type="text" style="width: 160px" onblur="email2()" id="memberEmail2" name="memberEmail" placeholder="이메일"></li>
-                                <li><select id="emailCk" onchange="ck()" style="width: 170px" name = "emailSelect">
+                                <li><select id="emailCk" onchange="ck()" style="width: 180px" name = "emailSelect">
                                     <option value="">직접입력</option>
                                     <option value="naver.com">naver.com</option>
                                     <option value="daum.net">daum.net</option>
@@ -143,7 +143,7 @@
                             <ul class="icons">
                                 <i id="mnIcon-result" class="bi bi-tags-fill"></i> 전화번호<br>
                                 <li>
-                                    <select id="memberMobile2" style="width: 100px" onchange="mobileNumber2()" name = "memberMobile">
+                                    <select id="memberMobile2" style="width: 130px" onchange="mobileNumber2()" name = "memberMobile">
                                         <option value="KT">KT</option>
                                         <option value="SKT">SKT</option>
                                         <option value="LG">LG</option>
@@ -158,7 +158,7 @@
                                         <option value="019">019</option>
                                     </select>
                                 </li>
-                                <li>-</li> <li><input type="text" style="width: 270px" onblur="mobileNumber()" size="90" id="memberMobile" name="memberMobile" class="from-control"  placeholder="휴대폰번호입력('-'포함)">
+                                <li>-</li> <li><input type="text" style="width: 280px" onblur="mobileNumber()" id="memberMobile" name="memberMobile" class="from-control"  placeholder="휴대폰번호입력('-'포함)">
                             </li>
                                 <p id="memberMobile-result"></p>
                             </ul>
