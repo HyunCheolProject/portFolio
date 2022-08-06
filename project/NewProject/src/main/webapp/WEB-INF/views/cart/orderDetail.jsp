@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: khc_9
-  Date: 2022-07-28
-  Time: 오전 9:12
+  Date: 2022-08-06
+  Time: 오후 2:18
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,16 +17,6 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
-    <style>
-        .card {
-            margin: 100px; /* Added */
-            float: none; /* Added */
-            margin-bottom: 10px; /* Added */
-            border: 100px;
-            padding: 30px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    </style>
 </head>
 <body class="is-preload">
 
@@ -97,60 +87,52 @@
             </header>
 
             <section>
-                <form action="/member/save" method="post" enctype="multipart/form-data">
-                    <div class="main; card">
-                        <div class="style-a">
-                            <div style="text-align: left">
-                                <strong>구매자정보</strong><br>
-                                <table style="color: black;">
-                                    <tr>
-                                        <td>이름</td>
-                                        <td><input type="text" style="width: 600px; display: inline"
-                                                   value="${sessionScope.memberId}">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>배송주소</td>
-                                        <td><input type="text" style="width: 300px; display: inline" placeholder="우편번호">&nbsp;&nbsp;&nbsp;
-                                            <input type="button" style="width: 200px; display: inline"
-                                                   value="우편번호찾기"><br><br>
-                                            <input type="text" style="width: 800px;" placeholder="주소"><br>
-                                            <input type="text" style="width: 465px; display: inline" placeholder="상세주소">&nbsp;&nbsp;&nbsp;
-                                            <input type="text" style="width: 320px; display: inline" placeholder="참고항목"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>연락처</td>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                </table>
-                                <div style="text-align: left">
-                                    <strong>결제정보</strong>
-                                </div>
-                                <table style="color: black">
-                                    <tr>
-                                        <td>상품명</td>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>수량</td>
-                                        <td><input type="text" style="width: 70px; display: inline">&nbsp;&nbsp;&nbsp;개</td>
-                                    </tr>
-                                    <tr>
-                                        <td>가격</td>
-                                        <td><input type="text" style="width: 200px; display: inline">&nbsp;&nbsp;&nbsp;원</td>
-                                    </tr>
-                                    <%--                                    <tr>--%>
-                                    <%--                                        <td>결제</td>--%>
-                                    <%--                                        <td><a href="" class="button">결제하기</a></td>--%>
-                                    <%--                                    </tr>--%>
-                                </table>
-                            </div>
-                            <a href="" class="button">결제하기</a>
-                        </div>
-                        <br>
-
+                <div class="container">
+                    <div style="text-align: left">
+                        <strong>구매자정보</strong><br>
                     </div>
-                </form>
+                    <table style="color: black">
+                        <tr>
+                            <td>이름</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>배송주소</td>
+                            <td><input type="text" style="width: 300px; display: inline" placeholder="우편번호">
+                                <input type="button" style="width: 200px; display: inline" value="우편번호찾기"><br>
+                                <input type="text" style="width: 800px;" placeholder="주소"><br>
+                                <input type="text" style="width: 354px;" placeholder="상세주소"><br>
+                                <input type="text" style="width: 320px;" placeholder="참고항목"></td>
+
+                        </tr>
+                        <tr>
+                            <td>연락처</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                    <div style="text-align: left">
+                        <strong>결제정보</strong>
+                    </div>
+                    <table style="color: black">
+                        <tr>
+                            <td>상품명</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>수량</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>가격</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>결제</td>
+                            <td><a href="" class="button">결제하기</a></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
             </section>
         </section>
     </div>

@@ -107,8 +107,9 @@
                             <td style="color: black"><b>${cart.cartAmount}</b></td>
                             <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice}"/>&nbsp;원</b></td>
                             <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b></td>
-                            <td style="color: black"><b><a href="/cart/delete?id=${cart.id}" class="button big">삭제2</a></b></td>
-                            <td style="color: black"><b><button onclick="pay">주문하기</button></b></td>
+                            <td style="color: black"><b><a href="/cart/delete?id=${cart.id}" class="button">삭제</a></b></td>
+<%--                            <td style="color: black"><b><button onclick="pay">주문하기</button></b></td>--%>
+                            <td style="color: black"><b><a href="/cart/orderDetail" class="button">주문하기</a></b></td>
 
                         </tr>
                     </c:forEach>

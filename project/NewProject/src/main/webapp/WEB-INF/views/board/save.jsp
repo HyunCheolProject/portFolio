@@ -17,6 +17,13 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+    <style>
+        .container {
+            max-width: 600px;
+            float: none;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
