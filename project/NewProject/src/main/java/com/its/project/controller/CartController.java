@@ -47,12 +47,7 @@ public class CartController {
         return "redirect:/cart/findAll";
     }
 
-    // 주문페이지 출력
 
-    @GetMapping("/orderDetail")
-    public String orderDetail() {
-        return "cart/orderDetail";
-    }
 
 
 

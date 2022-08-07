@@ -17,6 +17,16 @@
     <noscript>
         <link rel="stylesheet" href="\resources\assets\css/noscript.css"/>
     </noscript>
+    <style>
+        .card {
+            margin: 100px; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+            border: 100px;
+            padding: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -87,52 +97,79 @@
             </header>
 
             <section>
-                <div class="container">
-                    <div style="text-align: left">
-                        <strong>구매자정보</strong><br>
-                    </div>
-                    <table style="color: black">
-                        <tr>
-                            <td>이름</td>
-                            <td><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td>배송주소</td>
-                            <td><input type="text" style="width: 300px; display: inline" placeholder="우편번호">
-                                <input type="button" style="width: 200px; display: inline" value="우편번호찾기"><br>
-                                <input type="text" style="width: 800px;" placeholder="주소"><br>
-                                <input type="text" style="width: 354px;" placeholder="상세주소"><br>
-                                <input type="text" style="width: 320px;" placeholder="참고항목"></td>
+                <form action="/order/save" method="post">
+                    <div class="main; card">
+                        <div class="style-a">
+                            <div style="text-align: left">
+                                <strong>구매자정보</strong><br>
+                                <table style="color: black;">
+                                    <tr>
+                                        <td>이름</td>
+                                        <td><input type="text" name="orderName" style="width: 600px; display: inline"
+                                                   value="${sessionScope.memberId}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송주소</td>
+                                        <td><input type="text" name="orderAddress" style="width: 300px; display: inline" placeholder="우편번호">&nbsp;&nbsp;&nbsp;
+                                            <input type="button" style="width: 200px; display: inline"
+                                                   value="우편번호찾기"><br><br>
+                                            <input type="text" style="width: 800px;" placeholder="주소"><br>
+                                            <input type="text" style="width: 465px; display: inline" placeholder="상세주소">&nbsp;&nbsp;&nbsp;
+                                            <input type="text" style="width: 320px; display: inline" placeholder="참고항목"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>연락처</td>
+                                        <td><select style="width: 130px; display: inline" name = "orderMobile">
+                                            <option value="KT">KT</option>
+                                            <option value="SKT">SKT</option>
+                                            <option value="LG">LG</option>
+                                        </select>&nbsp;&nbsp;&nbsp;
+                                            <select style="width: 130px; display: inline" name = "orderMobile">
+                                                <option value="010">010</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>&nbsp;&nbsp;&nbsp;
+                                            -&nbsp;&nbsp;&nbsp;
+                                            <input type="text" style="width: 280px; display: inline" name="orderMobile" class="from-control"  placeholder="휴대폰번호입력('-'포함)">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div style="text-align: left">
+                                    <strong>결제정보</strong>
+                                </div>
+                                <table style="color: black">
+                                    <tr>
+                                        <td>상품번호</td>
+                                        <td><input type="text" name="cartId" value="${order.cartId}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품명</td>
+                                        <td><input type="text" name="orderProduct"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>수량</td>
+                                        <td><input type="text" name="orderAmount" style="width: 70px; display: inline">&nbsp;&nbsp;&nbsp;개</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가격</td>
+                                        <td><input type="text" name="orderPrice" style="width: 200px; display: inline">&nbsp;&nbsp;&nbsp;원</td>
+                                    </tr>
+                                    <%--                                    <tr>--%>
+                                    <%--                                        <td>결제</td>--%>
+                                    <%--                                        <td><a href="" class="button">결제하기</a></td>--%>
+                                    <%--                                    </tr>--%>
+                                </table>
+                            </div>
+                            <input type="submit" value="주문">
+<%--                            <a href="" class="button">결제하기</a>--%>
+                        </div>
+                        <br>
 
-                        </tr>
-                        <tr>
-                            <td>연락처</td>
-                            <td><input type="text"></td>
-                        </tr>
-                    </table>
-                    <div style="text-align: left">
-                        <strong>결제정보</strong>
                     </div>
-                    <table style="color: black">
-                        <tr>
-                            <td>상품명</td>
-                            <td><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td>수량</td>
-                            <td><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td>가격</td>
-                            <td><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td>결제</td>
-                            <td><a href="" class="button">결제하기</a></td>
-                        </tr>
-                    </table>
-                    <br>
-                </div>
+                </form>
             </section>
         </section>
     </div>

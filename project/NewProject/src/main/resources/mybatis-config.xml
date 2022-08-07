@@ -9,5 +9,6 @@
         <typeAlias type="com.its.project.dto.ProductDTO" alias="product"></typeAlias>
         <typeAlias type="com.its.project.dto.ReviewDTO" alias="review"></typeAlias>
         <typeAlias type="com.its.project.dto.CartDTO" alias="cart"></typeAlias>
+        <typeAlias type="com.its.project.dto.OrderDTO" alias="order"></typeAlias>
     </typeAliases>
 </configuration>

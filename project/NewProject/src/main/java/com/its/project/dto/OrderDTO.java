@@ -13,7 +13,7 @@ public class OrderDTO {
     private Long cartId;
     private String orderProduct;
     private int orderAmount;
-    private String orderPrice;
+    private int orderPrice;
     private String orderState;
     private Timestamp orderCreatedDate;
 
