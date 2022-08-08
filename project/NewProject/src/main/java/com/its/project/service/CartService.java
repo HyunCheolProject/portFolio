@@ -25,6 +25,7 @@ public class CartService {
         return cartRepository.findAll(memberId);
     }
 
+    // 장바구니 상품 담기
     public CartDTO findByProductId(CartDTO cartDTO) {
         return cartRepository.findByProductId(cartDTO);
     }
@@ -42,6 +43,7 @@ public class CartService {
         cartRepository.delete(id);
     }
 
+    // orderDetail 회원정보 불러오기
     public CartDTO findById(Long id) {
         return cartRepository.findById(id);
     }

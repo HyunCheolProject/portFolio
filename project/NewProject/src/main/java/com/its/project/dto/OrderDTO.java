@@ -8,10 +8,11 @@ import java.sql.Timestamp;
 public class OrderDTO {
     private Long id;
     private String orderName;
-    private String orderAddress;
-    private String orderAddress2;
-    private String orderAddress3;
-    private String orderAddress4;
+    private String postcode;
+    private String address;
+    private String detailAddress;
+    private String extraAddress;
+    private String requests;
     private String orderMobile;
     private Long cartId;
     private String orderProduct;

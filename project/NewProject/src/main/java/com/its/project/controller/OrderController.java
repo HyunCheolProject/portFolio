@@ -29,11 +29,15 @@ public class OrderController {
     }
 
     // 주문페이지 작성
+//    @PostMapping("/save")
+//    public String save(@ModelAttribute OrderDTO orderDTO) {
+//        System.out.println("orderDTO = " + orderDTO);
+//        orderService.save(orderDTO);
+//        return "order/list";
+//    }
+
     @PostMapping("/save")
-    public String save(@ModelAttribute OrderDTO orderDTO, CartDTO cartDTO) {
-        System.out.println("orderDTO = " + orderDTO);
-        cartService.findAll(cartDTO.getMemberId());
-        orderService.save(orderDTO);
+    public String save() {
         return "order/list";
     }
 

@@ -5,8 +5,8 @@
 
 <mapper namespace="Order">
     <insert id="save" parameterType="order">
-        insert into order_table (orderName, orderAddress, orderMobile, orderProduct, orderAmount, orderPrice, orderCreatedDate, cartId)
-        values (#{orderName}, #{orderAddress}, #{orderMobile}, #{orderProduct}, #{orderAmount}, #{orderPrice}, now(), #{cartId})
+        insert into order_table (orderName, postcode, address, detailAddress, extraAddress, requests, orderMobile, orderProduct, orderAmount, orderPrice, cartId)
+        values (#{orderName}, #{postcode}, #{address}, #{detailAddress}, #{extraAddress}, #{requests}, #{orderMobile}, #{orderProduct}, #{orderAmount}, #{orderPrice}, #{cartId})
     </insert>
 
 <!--    <select id="findAll" parameterType="Long" resultType="order">-->
