@@ -21,8 +21,8 @@ public class CartRepository {
         return cartDTOList;
     }
 
-    public CartDTO findById(CartDTO cartDTO) {
-        return sqlSessionTemplate.selectOne("Cart.findById", cartDTO);
+    public CartDTO findByProductId(CartDTO cartDTO) {
+        return sqlSessionTemplate.selectOne("Cart.findByProductId", cartDTO);
     }
 
     public int update(CartDTO cartDTO) {
@@ -31,5 +31,9 @@ public class CartRepository {
 
     public void delete(Long id) {
         sqlSessionTemplate.delete("Cart.delete", id);
+    }
+
+    public CartDTO findById(Long id) {
+        return sqlSessionTemplate.selectOne("Cart.findById", id);
     }
 }

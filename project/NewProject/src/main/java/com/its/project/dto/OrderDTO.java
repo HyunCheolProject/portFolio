@@ -9,12 +9,15 @@ public class OrderDTO {
     private Long id;
     private String orderName;
     private String orderAddress;
+    private String orderAddress2;
+    private String orderAddress3;
+    private String orderAddress4;
     private String orderMobile;
     private Long cartId;
     private String orderProduct;
     private int orderAmount;
     private int orderPrice;
-    private String orderState;
+    private String orderStatus;
     private Timestamp orderCreatedDate;
 
     private ProductDTO productDTO;

@@ -25,8 +25,8 @@ public class CartService {
         return cartRepository.findAll(memberId);
     }
 
-    public CartDTO findById(CartDTO cartDTO) {
-        return cartRepository.findById(cartDTO);
+    public CartDTO findByProductId(CartDTO cartDTO) {
+        return cartRepository.findByProductId(cartDTO);
     }
 
     public String update(CartDTO cartDTO) {
@@ -40,5 +40,9 @@ public class CartService {
 
     public void delete(Long id) {
         cartRepository.delete(id);
+    }
+
+    public CartDTO findById(Long id) {
+        return cartRepository.findById(id);
     }
 }

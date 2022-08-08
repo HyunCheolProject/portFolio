@@ -20,7 +20,7 @@ public class CartController {
     // 장바구니에 상품 담기
     @PostMapping("/save")
     public @ResponseBody String save(@ModelAttribute CartDTO cartDTO) {
-        CartDTO cartDTO1 = cartService.findById(cartDTO);
+        CartDTO cartDTO1 = cartService.findByProductId(cartDTO);
         if (cartDTO1 == null) {
             return cartService.save(cartDTO);
         } else {

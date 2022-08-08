@@ -143,19 +143,19 @@
                                 <table style="color: black">
                                     <tr>
                                         <td>상품번호</td>
-                                        <td><input type="text" name="cartId" value="${order.cartId}"></td>
+                                        <td><input type="text" name="cartId" value="${cart.productId}"></td>
                                     </tr>
                                     <tr>
                                         <td>상품명</td>
-                                        <td><input type="text" name="orderProduct"></td>
+                                        <td><input type="text" name="orderProduct" value="${cart.cartProduct}"></td>
                                     </tr>
                                     <tr>
                                         <td>수량</td>
-                                        <td><input type="text" name="orderAmount" style="width: 70px; display: inline">&nbsp;&nbsp;&nbsp;개</td>
+                                        <td><input type="text" name="orderAmount" value="${cart.cartAmount}" style="width: 70px; display: inline">&nbsp;&nbsp;&nbsp;개</td>
                                     </tr>
                                     <tr>
                                         <td>가격</td>
-                                        <td><input type="text" name="orderPrice" style="width: 200px; display: inline">&nbsp;&nbsp;&nbsp;원</td>
+                                        <td><input type="text" name="orderPrice" value="${cart.cartPrice * cart.cartAmount}" style="width: 200px; display: inline">&nbsp;&nbsp;&nbsp;원</td>
                                     </tr>
                                     <%--                                    <tr>--%>
                                     <%--                                        <td>결제</td>--%>

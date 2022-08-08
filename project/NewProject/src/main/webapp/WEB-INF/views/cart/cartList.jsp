@@ -115,7 +115,7 @@
                             <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b></td>
                             <td style="color: black"><b><a href="/cart/delete?id=${cart.id}">삭제</a></b></td>
 <%--                            <td style="color: black"><b><button onclick="pay">주문하기</button></b></td>--%>
-                            <td style="color: black"><b><a href="/order/orderDetail">주문하기</a></b></td>
+                            <td style="color: black"><b><a href="/order/orderDetail?id=${cart.id}">주문하기</a></b></td>
 
                         </tr>
                     </c:forEach>

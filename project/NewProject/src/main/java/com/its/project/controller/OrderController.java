@@ -7,10 +7,7 @@ import com.its.project.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -25,7 +22,9 @@ public class OrderController {
 
     // 주문페이지 출력
     @GetMapping("/orderDetail")
-    public String orderDetail() {
+    public String orderDetail(@RequestParam Long id,Model model) {
+        CartDTO cartDTO = cartService.findById(id);
+        model.addAttribute("cart", cartDTO);
         return "order/orderDetail";
     }
 
