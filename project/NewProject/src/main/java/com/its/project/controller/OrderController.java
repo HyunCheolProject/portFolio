@@ -37,7 +37,7 @@ public class OrderController {
     }
 
     // 배송조회 페이지 출력
-    @GetMapping("/findAll")
+    @GetMapping("/list")
     public String findAll(Model model, HttpSession session) {
         String memberId = (String) session.getAttribute("memberId");
 //        List<OrderDTO> orderDTOList = orderService.findAll(cartId);
@@ -47,5 +47,20 @@ public class OrderController {
         return "order/list";
     }
 
+    // 배송준비중 버튼
+//    @GetMapping("/updateReady")
+//    public String updateReady(@RequestParam Long id, Model model, @ModelAttribute OrderDTO orderDTO) {
+//        OrderDTO orderDTO1 = orderService.findById(id);
+//        model.addAttribute("readyUpdate", orderDTO1);
+//        orderService.update(orderDTO);
+//        return "redirect:/order/list?id"=orderDTO.getId();
+//    }
+
+    // 배송중 버튼
+    @PostMapping("/update")
+    public String update(@ModelAttribute OrderDTO orderDTO) {
+        orderService.update(orderDTO);
+        return "redirect:/order/list";
+    }
 
 }

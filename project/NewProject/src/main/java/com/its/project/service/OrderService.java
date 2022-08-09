@@ -27,4 +27,8 @@ public class OrderService {
     public List<OrderDTO> findAll(String memberId) {
         return orderRepository.findAll(memberId);
     }
+
+    public void update(OrderDTO orderDTO) {
+        orderRepository.update(orderDTO);
+    }
 }

@@ -21,6 +21,10 @@
         select * from order_table where orderName=#{orderName}
     </select>
 
+    <update id="update" parameterType="order">
+        update order_table set orderStatus=#{orderStatus} where id=#{id}
+    </update>
+
 </mapper>
 
 

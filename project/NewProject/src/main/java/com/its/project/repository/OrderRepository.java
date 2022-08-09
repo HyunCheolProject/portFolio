@@ -29,4 +29,8 @@ public class OrderRepository {
     public List<OrderDTO> findAll(String memberId) {
         return sqlSessionTemplate.selectList("Order.findAll", memberId);
     }
+
+    public void update(OrderDTO orderDTO) {
+        sqlSessionTemplate.update("Order.update", orderDTO);
+    }
 }
