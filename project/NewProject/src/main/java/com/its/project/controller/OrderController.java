@@ -28,14 +28,6 @@ public class OrderController {
         return "order/orderDetail";
     }
 
-    // 주문페이지 작성
-//    @PostMapping("/save")
-//    public String save(@ModelAttribute OrderDTO orderDTO) {
-//        System.out.println("orderDTO = " + orderDTO);
-//        orderService.save(orderDTO);
-//        return "order/list";
-//    }
-
     @PostMapping("/save")
     public String save(@ModelAttribute OrderDTO orderDTO, @RequestParam Long cartId) {
         System.out.println("orderDTO = " + orderDTO);
@@ -44,10 +36,12 @@ public class OrderController {
         return "order/list";
     }
 
-//    @PostMapping("/save")
-//    public String save() {
-//        return "order/list";
-//    }
+    // 배송조회 페이지 출력
+    @GetMapping("/list-form")
+    public String list() {
+        return "order/list";
+    }
+
 
     // 주문조회목록
     @GetMapping("/detail")

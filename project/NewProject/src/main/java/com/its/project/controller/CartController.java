@@ -36,7 +36,7 @@ public class CartController {
         Long memberId = (Long) session.getAttribute("id");
         List<CartDTO> cartDTOList = cartService.findAll(memberId);
         model.addAttribute("cartList", cartDTOList);
-        return "cart/cartList";
+        return "cart/list";
     }
 
     // 장바구니 목록 삭제
