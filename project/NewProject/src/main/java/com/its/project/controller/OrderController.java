@@ -29,17 +29,17 @@ public class OrderController {
     }
 
     // 주문페이지 작성
-//    @PostMapping("/save")
-//    public String save(@ModelAttribute OrderDTO orderDTO) {
-//        System.out.println("orderDTO = " + orderDTO);
-//        orderService.save(orderDTO);
-//        return "order/list";
-//    }
-
     @PostMapping("/save")
-    public String save() {
+    public String save(@ModelAttribute OrderDTO orderDTO) {
+        System.out.println("orderDTO = " + orderDTO);
+        orderService.save(orderDTO);
         return "order/list";
     }
+
+//    @PostMapping("/save")
+//    public String save() {
+//        return "order/list";
+//    }
 
     // 주문조회목록
     @GetMapping("/detail")

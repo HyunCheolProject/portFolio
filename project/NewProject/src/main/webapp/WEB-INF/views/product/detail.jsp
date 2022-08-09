@@ -129,8 +129,6 @@
             <br>
 
             <input type="button" class="btn btn-primary" value="장바구니" onclick="cartSave()">
-            <a href="/order/orderDetail" class="button">주문하기</a>
-
 
             <br>
             <br>

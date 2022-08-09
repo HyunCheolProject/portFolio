@@ -14,7 +14,7 @@ public class OrderDTO {
     private String extraAddress;
     private String requests;
     private String orderMobile;
-    private Long cartId;
+//    private Long cartId;
     private String orderProduct;
     private int orderAmount;
     private int orderPrice;

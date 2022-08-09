@@ -97,7 +97,7 @@
             </header>
 
             <section>
-                <form action="/order/save" name="blah" method="post">
+                <form action="/order/save" name="orderForm" method="post">
                     <div class="main; card">
                         <div class="style-a">
                             <div style="text-align: left">
@@ -132,7 +132,8 @@
                                             <input type="text" name="requests" id="requests1Result"
                                                    style="width: 350px; display: inline" onblur="requests1()"
                                                    placeholder="요청사항">
-                                            <select name="requests" id="requests2Result" style="width: 350px; display: inline"
+                                            <select id="requests2Result"
+                                                    style="width: 350px; display: inline"
                                                     onblur="requests2()">
                                                 <option value="배송 시 전화바랍니다.">배송 시 전화바랍니다.</option>
                                                 <option value="문 앞에 놓아주세요.">문 앞에 놓아주세요.</option>
@@ -166,7 +167,7 @@
                                 <table style="color: black">
                                     <tr>
                                         <td>상품번호</td>
-                                        <td><input type="text" name="cartId" value="${cart.productId}" readonly></td>
+                                        <%--                                        <td><input type="text" name="cartId" value="${cart.productId}" readonly></td>--%>
                                     </tr>
                                     <tr>
                                         <td>상품명</td>
@@ -182,19 +183,20 @@
                                     <tr>
                                         <td>가격</td>
                                         <td><input type="text" name="orderPrice"
-                                                   value="<fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>"
-                                                   style="width: 200px; display: inline" readonly>&nbsp;&nbsp;&nbsp;원
+                                                   value="${cart.cartPrice * cart.cartAmount}"
+                                        <%--                                                   value="<fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>"--%>
+                                                   style="width: 200px; display: inline" readonly>
+                                            &nbsp;&nbsp;&nbsp;원
                                         </td>
                                         <%--                                        <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b></td>--%>
 
                                     </tr>
-                                    <%--                                    <tr>--%>
-                                    <%--                                        <td>결제</td>--%>
-                                    <%--                                        <td><a href="" class="button">결제하기</a></td>--%>
-                                    <%--                                    </tr>--%>
+
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="pay('${cart.cartPrice * cart.cartAmount}')">결제하기</button>
+                            <button type="button" class="btn btn-primary"
+                                    onclick="pay('${cart.cartPrice * cart.cartAmount}')">결제하기
+                            </button>
                             <%--                            <a href="" class="button">결제하기</a>--%>
                         </div>
                         <br>
@@ -255,7 +257,7 @@
 <script src="/resources/assets/js/main.js"></script>
 
 <%--결제기능--%>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <%--주소 api--%>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -338,12 +340,11 @@
         }, function (rsp) {
             if (rsp.success) {
                 var msg = '결제가 완료되었습니다.';
-                // location.href = '/';
-                blah.submit();
+                alert(msg);
+                orderForm.submit();
             } else {
                 var msg = '결제에 실패하였습니다.';
-                rsp.error_msg;
-
+                alert(msg);
             }
         });
     }
