@@ -17,6 +17,10 @@
         select * from order_table where id=#{id};
     </select>
 
+    <select id="findAll" parameterType="String" resultType="order">
+        select * from order_table where orderName=#{orderName}
+    </select>
+
 </mapper>
 
 

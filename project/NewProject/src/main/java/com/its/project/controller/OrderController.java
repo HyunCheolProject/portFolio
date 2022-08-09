@@ -37,20 +37,14 @@ public class OrderController {
     }
 
     // 배송조회 페이지 출력
-    @GetMapping("/list-form")
-    public String list() {
-        return "order/list";
-    }
-
-
-    // 주문조회목록
-    @GetMapping("/detail")
+    @GetMapping("/findAll")
     public String findAll(Model model, HttpSession session) {
-        Long id = (Long) session.getAttribute("id");
+        String memberId = (String) session.getAttribute("memberId");
 //        List<OrderDTO> orderDTOList = orderService.findAll(cartId);
-        OrderDTO orderDTO = orderService.findById(id);
-        model.addAttribute("order", orderDTO);
-        return "order/orderDetail";
+        List<OrderDTO> orderDTOList = orderService.findAll(memberId);
+        System.out.println("orderDTOList = " + orderDTOList);
+        model.addAttribute("orderList", orderDTOList);
+        return "order/list";
     }
 
 

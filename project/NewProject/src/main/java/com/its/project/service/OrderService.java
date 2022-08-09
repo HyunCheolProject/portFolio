@@ -23,4 +23,8 @@ public class OrderService {
     public OrderDTO findById(Long id) {
         return orderRepository.findById(id);
     }
+
+    public List<OrderDTO> findAll(String memberId) {
+        return orderRepository.findAll(memberId);
+    }
 }

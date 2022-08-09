@@ -98,7 +98,7 @@
                         <tr class="align-center">
                             <td style="color: black"><b>주문번호</b></td>
                             <td style="color: black"><b>주문자</b></td>
-                            <td style="color: black"><b>상품이름</b></td>
+                            <td style="color: black"><b>상품명</b></td>
                             <td style="color: black"><b>상품수량</b></td>
                             <td style="color: black"><b>가격</b></td>
                             <td style="color: black"><b>총 가격</b></td>

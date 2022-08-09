@@ -25,4 +25,8 @@ public class OrderRepository {
     public OrderDTO findById(Long id) {
         return sqlSessionTemplate.selectOne("Order.findById", id);
     }
+
+    public List<OrderDTO> findAll(String memberId) {
+        return sqlSessionTemplate.selectList("Order.findAll", memberId);
+    }
 }

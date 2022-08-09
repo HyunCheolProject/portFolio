@@ -88,20 +88,28 @@
 
             <section>
                 <div class="container">
-                    <h2>상세페이지</h2>
-                    글번호: ${product.id}<br>
-                    작성자: ${product.productWriter}<br>
-                    비밀번호: ${product.productPw}<br>
-                    내용: ${product.productContents}<br>
-                    작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${product.productCreatedDate}"></fmt:formatDate><br>
-                    조회수: ${product.productHits}<br>
-                    <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
-                         alt="" height="100" width="100"><br>
-
-                    <button onclick="boardUpdate()">수정</button>
-                    <button onclick="boardDelete()">삭제</button>
-                    <button onblur="paging()">페이징목록</button>
-                    <br>
+                    <table>
+                        <tr class="align-center">
+                            <td style="color: black"><b>주문번호</b></td>
+                            <td style="color: black"><b>주문자</b></td>
+                            <td style="color: black"><b>상품명</b></td>
+                            <td style="color: black"><b>상품수량</b></td>
+                            <td style="color: black"><b>전화번호</b></td>
+                            <td style="color: black"><b>배송상태</b></td>
+                            <td style="color: black"><b>주문일시</b></td>
+                        </tr>
+                        <c:forEach items="${orderList}" var="order">
+                        <tr>
+                            <td style="color: black"><b>${order.id}</b></td>
+                            <td style="color: black"><b>${order.orderName}</b></td>
+                            <td style="color: black"><b>${order.orderProduct}</b></td>
+                            <td style="color: black"><b>${order.orderAmount}</b></td>
+                            <td style="color: black"><b>${order.orderMobile}</b></td>
+                            <td style="color: black"><b>${order.orderStatus}</b></td>
+                            <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss" value="${order.orderCreatedDate}"></fmt:formatDate></b></td>
+                        </tr>
+                        </c:forEach>
+                    </table>
                 </div>
             </section>
         </section>
