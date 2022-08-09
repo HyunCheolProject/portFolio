@@ -29,10 +29,18 @@ public class OrderController {
     }
 
     // 주문페이지 작성
+//    @PostMapping("/save")
+//    public String save(@ModelAttribute OrderDTO orderDTO) {
+//        System.out.println("orderDTO = " + orderDTO);
+//        orderService.save(orderDTO);
+//        return "order/list";
+//    }
+
     @PostMapping("/save")
-    public String save(@ModelAttribute OrderDTO orderDTO) {
+    public String save(@ModelAttribute OrderDTO orderDTO, @RequestParam Long cartId) {
         System.out.println("orderDTO = " + orderDTO);
         orderService.save(orderDTO);
+        cartService.delete(cartId);
         return "order/list";
     }
 

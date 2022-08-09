@@ -164,11 +164,9 @@
                                 <div style="text-align: left">
                                     <strong>결제정보</strong>
                                 </div>
+
                                 <table style="color: black">
-                                    <tr>
-                                        <td>상품번호</td>
-                                        <%--                                        <td><input type="text" name="cartId" value="${cart.productId}" readonly></td>--%>
-                                    </tr>
+                                    <input type="hidden" name="cartId" value="${cart.id}">
                                     <tr>
                                         <td>상품명</td>
                                         <td><input type="text" name="orderProduct" value="${cart.cartProduct}" readonly>
