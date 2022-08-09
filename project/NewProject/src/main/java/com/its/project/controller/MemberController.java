@@ -100,7 +100,7 @@ public class MemberController {
     public String deleteForm(@RequestParam("id") Long id) {
         boolean deleteResult = memberService.deleteForm(id);
         if (deleteResult) {
-            return "index";
+            return "redirect:/member/logout-form";
         } else {
             return "delete-fail";
         }

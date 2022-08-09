@@ -122,6 +122,8 @@
                     </table>
                 </div>
             </section>
+            <a href="javascript:history.back()">뒤로가기</a>
+
         </section>
     </div>
 
