@@ -56,7 +56,7 @@ public class OrderController {
 //        return "redirect:/order/list?id"=orderDTO.getId();
 //    }
 
-    // 배송중 버튼
+    // 배송상태 변경
     @PostMapping("/update")
     public String update(@ModelAttribute OrderDTO orderDTO) {
         orderService.update(orderDTO);
