@@ -28,4 +28,8 @@ public class OrderService {
     public void update(OrderDTO orderDTO) {
         orderRepository.update(orderDTO);
     }
+
+    public void delete(Long id) {
+        orderRepository.delete(id);
+    }
 }

@@ -54,4 +54,12 @@ public class OrderController {
         return "redirect:/order/list";
     }
 
+    // 배송목록 삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam Long id) {
+        orderService.delete(id);
+        return "redirect:/order/list";
+    }
+
+
 }

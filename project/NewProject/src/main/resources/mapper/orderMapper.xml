@@ -25,6 +25,10 @@
         update order_table set orderStatus=#{orderStatus} where id=#{id}
     </update>
 
+    <delete id="delete" parameterType="Long">
+        delete from order_table where id=#{id}
+    </delete>
+
 </mapper>
 
 

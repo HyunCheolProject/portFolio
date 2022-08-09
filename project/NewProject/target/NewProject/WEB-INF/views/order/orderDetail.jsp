@@ -134,7 +134,7 @@
                                                    placeholder="요청사항">
                                             <select id="requests2Result"
                                                     style="width: 350px; display: inline"
-                                                    onblur="requests2()">
+                                                    onchange="requests2()">
                                                 <option value="배송 시 전화바랍니다.">배송 시 전화바랍니다.</option>
                                                 <option value="문 앞에 놓아주세요.">문 앞에 놓아주세요.</option>
                                                 <option value="경비실에 맡겨주세요.">경비실에 맡겨주세요.</option>

@@ -29,4 +29,8 @@ public class OrderRepository {
     public void update(OrderDTO orderDTO) {
         sqlSessionTemplate.update("Order.update", orderDTO);
     }
+
+    public void delete(Long id) {
+        sqlSessionTemplate.delete("Order.delete", id);
+    }
 }

@@ -96,9 +96,10 @@
                             <td style="color: black"><b>상품명</b></td>
                             <td style="color: black"><b>상품</b></td>
                             <td style="color: black"><b>배송상태</b></td>
-                            <td style="color: black"><b></b></td>
+
                             <td style="color: black"><b></b></td>
                             <td style="color: black"><b>주문일시</b></td>
+                            <td style="color: black"><b>삭제</b></td>
                         </tr>
                         <c:forEach items="${orderList}" var="order">
                             <form action="/order/update" method="post">
@@ -108,24 +109,29 @@
                                     <td style="color: black"><b>${order.orderName}</b></td>
                                     <td style="color: black"><b>${order.orderProduct}</b></td>
                                     <td style="color: black"><b>${order.orderAmount}</b></td>
-                                    <td style="color: black"><b><input type="text" onblur="statusUpdate1()"
-                                                                       style="width: 220px" name="orderStatus"
+                                    <td style="color: black"><b><input type="text" class="align-center"
+                                                                       onblur="statusUpdate1()"
+                                                                       style="width: 170px" name="orderStatus"
                                                                        id="statusResult1"
                                                                        value="${order.orderStatus}"></b></td>
 
-                                    <td style="color: black"><b><select id="statusResult2"
-                                                                        onchange="statusUpdate2()" style="width: 220px">
+                                    <td style="color: black"><b><select class="align-center" id="statusResult2"
+                                                                        onchange="statusUpdate2()" style="width: 210px">
                                         <option value="주문접수">주문접수</option>
                                         <option value="배송준비중">배송준비중</option>
                                         <option value="배송중">배송중</option>
-                                    </select></b></td>
-                                    <td style="color: black"><b>
-                                        <button>수정</button>
+                                    </select><br>
+                                        <button type="submit">수정</button>
                                     </b></td>
+                                        <%--                                    <td style="color: black"><b>--%>
+                                        <%--                                        <button>수정</button>--%>
+                                        <%--                                    </b></td>--%>
+
 
                                     <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
                                                                                 value="${order.orderCreatedDate}"></fmt:formatDate></b>
                                     </td>
+                                    <td style="color: black"><b><a href="/order/delete?id=${order.id}">삭제</a></b></td>
                                 </tr>
                             </form>
                         </c:forEach>
@@ -199,12 +205,6 @@
     //         }
     //     })
     // }
-    const orderReady = (id) => {
-        location.href = "/order/updateReady?id=" + id;
-    }
-    const orderStart = (id) => {
-        location.href = "/order/updateStart?id=" + id;
-    }
 
     function statusUpdate1() {
         const statusUpdate1 = document.getElementById("statusResult1").value;
