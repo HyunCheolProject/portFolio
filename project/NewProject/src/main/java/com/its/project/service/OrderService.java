@@ -16,9 +16,6 @@ public class OrderService {
         orderRepository.save(orderDTO);
     }
 
-//    public List<OrderDTO> findAll(Long cartId) {
-//        return orderRepository.findAll(cartId);
-//    }
 
     public OrderDTO findById(Long id) {
         return orderRepository.findById(id);

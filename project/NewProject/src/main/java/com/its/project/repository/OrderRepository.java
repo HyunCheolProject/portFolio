@@ -17,10 +17,6 @@ public class OrderRepository {
         sqlSessionTemplate.insert("Order.save", orderDTO);
     }
 
-//    public List<OrderDTO> findAll(Long cartId) {
-//        List<OrderDTO> orderDTOList = sqlSessionTemplate.selectList("Order.findAll", cartId);
-//        return orderDTOList;
-//    }
 
     public OrderDTO findById(Long id) {
         return sqlSessionTemplate.selectOne("Order.findById", id);

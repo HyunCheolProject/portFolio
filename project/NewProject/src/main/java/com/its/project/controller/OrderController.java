@@ -47,15 +47,6 @@ public class OrderController {
         return "order/list";
     }
 
-    // 배송준비중 버튼
-//    @GetMapping("/updateReady")
-//    public String updateReady(@RequestParam Long id, Model model, @ModelAttribute OrderDTO orderDTO) {
-//        OrderDTO orderDTO1 = orderService.findById(id);
-//        model.addAttribute("readyUpdate", orderDTO1);
-//        orderService.update(orderDTO);
-//        return "redirect:/order/list?id"=orderDTO.getId();
-//    }
-
     // 배송상태 변경
     @PostMapping("/update")
     public String update(@ModelAttribute OrderDTO orderDTO) {
