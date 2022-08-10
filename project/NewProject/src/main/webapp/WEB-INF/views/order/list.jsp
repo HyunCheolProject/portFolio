@@ -100,10 +100,13 @@
                             <td style="color: black"><b>상품명</b></td>
                             <td style="color: black"><b>상품</b></td>
                             <td style="color: black"><b>배송상태</b></td>
-
-                            <td style="color: black"><b></b></td>
+                            <c:if test="${sessionScope.memberId == 'khc4572'}">
+                                <td style="color: black"><b></b></td>
+                            </c:if>
                             <td style="color: black"><b>주문일시</b></td>
-                            <td style="color: black"><b>삭제</b></td>
+                            <c:if test="${sessionScope.memberId == 'khc4572'}">
+                                <td style="color: black"><b>삭제</b></td>
+                            </c:if>
                         </tr>
                         <c:forEach items="${orderList}" var="order">
                             <form action="/order/update" method="post">
@@ -113,17 +116,21 @@
                                     <td style="color: black"><b>${order.orderName}</b></td>
                                     <td style="color: black"><b>${order.orderProduct}</b></td>
                                     <td style="color: black"><b>${order.orderAmount}</b></td>
-                                    <td style="color: black" class="align-center"><b id="statusResult1">${order.orderStatus}</b></td>
-
-                                    <td style="color: black"><b><select name="orderStatus" class="align-center" id="statusResult2"
-                                                                        onchange="statusUpdate2()" style="width: 210px">
-                                        <option value="주문접수">주문접수</option>
-                                        <option value="배송준비중">배송준비중</option>
-                                        <option value="배송중">배송중</option>
-                                        <option value="배송완료">배송완료</option>
-                                    </select><br>
-                                        <button type="submit">수정</button>
-                                    </b></td>
+                                    <td style="color: black" class="align-center"><b
+                                            id="statusResult1">${order.orderStatus}</b></td>
+                                    <c:if test="${sessionScope.memberId == 'khc4572'}">
+                                        <td style="color: black"><b><select name="orderStatus" class="align-center"
+                                                                            id="statusResult2"
+                                                                            onchange="statusUpdate2()"
+                                                                            style="width: 210px">
+                                            <option value="주문접수">주문접수</option>
+                                            <option value="배송준비중">배송준비중</option>
+                                            <option value="배송중">배송중</option>
+                                            <option value="배송완료">배송완료</option>
+                                        </select><br>
+                                            <button type="submit">수정</button>
+                                        </b></td>
+                                    </c:if>
                                         <%--                                    <td style="color: black"><b>--%>
                                         <%--                                        <button>수정</button>--%>
                                         <%--                                    </b></td>--%>
@@ -132,7 +139,10 @@
                                     <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
                                                                                 value="${order.orderCreatedDate}"></fmt:formatDate></b>
                                     </td>
-                                    <td style="color: black"><b><a href="/order/delete?id=${order.id}">삭제</a></b></td>
+                                    <c:if test="${sessionScope.memberId == 'khc4572'}">
+                                        <td style="color: black"><b><a href="/order/delete?id=${order.id}">삭제</a></b>
+                                        </td>
+                                    </c:if>
                                 </tr>
                             </form>
                         </c:forEach>
