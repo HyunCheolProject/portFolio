@@ -10,7 +10,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <title>index.jsp</title>
+    <title>list.jsp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
     <link rel="stylesheet" href="\resources\assets\css/main.css"/>
@@ -88,6 +88,10 @@
 
         <!-- First Section -->
         <section id="first" class="main special">
+            <a href="/member/detail">내 정보</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/cart/findAll">장바구니</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/order/list">배송조회</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.back()">뒤로가기</a><br><br>
             <header class="major">
                 <h2>주문목록</h2>
             </header>
@@ -106,7 +110,7 @@
                             <td style="color: black"><b>주문</b></td>
                         </tr>
                     <c:forEach items="${cartList}" var="cart">
-                        <tr>
+                        <tr class="align-center">
                             <td style="color: black"><b>${cart.productId}</b></td>
                             <td style="color: black"><b>${cart.cartName}</b></td>
                             <td style="color: black"><b>${cart.cartProduct}</b></td>
@@ -122,7 +126,6 @@
                     </table>
                 </div>
             </section>
-            <a href="javascript:history.back()">뒤로가기</a>
 
         </section>
     </div>

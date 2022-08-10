@@ -82,6 +82,10 @@
 
         <!-- First Section -->
         <section id="first" class="main special">
+            <a href="/member/detail">내 정보</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/cart/findAll">장바구니</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/order/list">배송조회</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.back()">뒤로가기</a><br><br>
             <header class="major">
                 <h2>배송조회</h2>
             </header>
@@ -109,17 +113,14 @@
                                     <td style="color: black"><b>${order.orderName}</b></td>
                                     <td style="color: black"><b>${order.orderProduct}</b></td>
                                     <td style="color: black"><b>${order.orderAmount}</b></td>
-                                    <td style="color: black"><b><input type="text" class="align-center"
-                                                                       onblur="statusUpdate1()"
-                                                                       style="width: 170px" name="orderStatus"
-                                                                       id="statusResult1"
-                                                                       value="${order.orderStatus}" readonly></b></td>
+                                    <td style="color: black" class="align-center"><b id="statusResult1">${order.orderStatus}</b></td>
 
-                                    <td style="color: black"><b><select class="align-center" id="statusResult2"
+                                    <td style="color: black"><b><select name="orderStatus" class="align-center" id="statusResult2"
                                                                         onchange="statusUpdate2()" style="width: 210px">
                                         <option value="주문접수">주문접수</option>
                                         <option value="배송준비중">배송준비중</option>
                                         <option value="배송중">배송중</option>
+                                        <option value="배송완료">배송완료</option>
                                     </select><br>
                                         <button type="submit">수정</button>
                                     </b></td>
@@ -209,14 +210,10 @@
     //     })
     // }
 
-    function statusUpdate1() {
-        const statusUpdate1 = document.getElementById("statusResult1").value;
-    }
-
     function statusUpdate2() {
         const statusUpdate2 = document.getElementById("statusResult2").value;
         const statusUpdate1 = document.getElementById("statusResult1");
-        statusUpdate1.value = statusUpdate2;
+        statusUpdate1.innerHTML = statusUpdate2;
     }
 </script>
 </html>

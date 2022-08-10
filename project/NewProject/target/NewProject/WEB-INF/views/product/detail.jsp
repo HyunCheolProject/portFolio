@@ -128,7 +128,7 @@
             </div>
             <br>
 
-            <input type="button" class="btn btn-primary" value="장바구니" onclick="cartSave()">
+            <input type="button" class="btn btn-primary" value="장바구니 담기" onclick="cartSave()">
 
             <br>
             <br>
@@ -157,7 +157,7 @@
                     </table>
                 </div>
                 <br>
-                <c:if test="${sessionScope.memberId != null}">
+                <c:if test="${sessionScope.memberId != null && order != null}">
                     <div id="review-write" class="input-group mb-3 card" style="height: 300px">
 
                         <div class="form-floating mb-3" style="text-align: left">
@@ -325,5 +325,16 @@
             // }
         });
     });
+
+    const reviewsWrite = (page, id) => {
+        const orderCheck = '${order}';
+        const loginMemberId = '${sessionScope.memberId}';
+        if (orderCheck != '' || loginMemberId) {
+            location.href = "/product/detail?page=" + page + "&id" + id;
+        } else {
+            alert("결제 후에 작성 가능합니다.")
+        }
+    }
+
 </script>
 </html>

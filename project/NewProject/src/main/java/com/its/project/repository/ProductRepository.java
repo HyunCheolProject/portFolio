@@ -1,5 +1,6 @@
 package com.its.project.repository;
 
+import com.its.project.dto.OrderDTO;
 import com.its.project.dto.ProductDTO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +47,9 @@ public class ProductRepository {
 
     public List<ProductDTO> popular() {
         return sqlSessionTemplate.selectList("Product.popular");
+    }
+
+    public List<OrderDTO> orderFindById(String memberId) {
+        return sqlSessionTemplate.selectList("Product.orderFindById", memberId);
     }
 }

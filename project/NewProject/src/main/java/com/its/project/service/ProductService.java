@@ -1,6 +1,7 @@
 package com.its.project.service;
 
 import com.its.project.dto.BoardDTO;
+import com.its.project.dto.OrderDTO;
 import com.its.project.dto.ProductDTO;
 import com.its.project.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,5 +59,9 @@ public class ProductService {
 
     public List<ProductDTO> popular() {
         return productRepository.popular();
+    }
+
+    public List<OrderDTO> orderFindById(String memberId) {
+        return productRepository.orderFindById(memberId);
     }
 }

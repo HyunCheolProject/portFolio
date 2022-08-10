@@ -80,6 +80,11 @@
 
         <!-- First Section -->
         <section id="first" class="main special">
+            <a href="/member/detail">내 정보</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/cart/findAll">장바구니</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/order/list">배송조회</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.back()">뒤로가기</a><br><br>
+
             <header class="major">
                 <h2>정보</h2>
             </header>
@@ -95,7 +100,6 @@
                 <button onclick="deleteForm(${member.id})">탈퇴</button>
             </section>
             <br>
-            <a href="javascript:history.back()">뒤로가기</a>
 
         </section>
     </div>

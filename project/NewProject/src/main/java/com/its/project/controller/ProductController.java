@@ -1,5 +1,6 @@
 package com.its.project.controller;
 
+import com.its.project.dto.OrderDTO;
 import com.its.project.dto.ProductDTO;
 import com.its.project.dto.ReviewDTO;
 import com.its.project.service.ProductService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -48,10 +50,15 @@ public class ProductController {
     @GetMapping("/detail")
     public String findById(@RequestParam Long id, Model model,
                            @RequestParam(value = "page", required = false,
-                                   defaultValue = "1") int page) {
+                                   defaultValue = "1") int page, HttpSession session) {
+        List <OrderDTO> orderDTOList = new ArrayList<>();
         ProductDTO productDTO = productService.findById(id);
         model.addAttribute("product", productDTO);
         model.addAttribute("page", page);
+        // 결제 한 회원만 후기 작성 가능
+        String memberId = (String) session.getAttribute("memberId");
+        orderDTOList = productService.orderFindById(memberId);
+        model.addAttribute("order", orderDTOList);
         List<ReviewDTO> reviewList = reviewService.findAll(id);
         model.addAttribute("reviewList", reviewList);
         return "product/detail";

@@ -38,6 +38,9 @@
         select * from product_table order by productHits desc limit 0, 3
     </select>
 
+    <select id="orderFindById" parameterType="String" resultType="order">
+        select * from order_table where orderName=#{orderName}
+    </select>
 </mapper>
 
 

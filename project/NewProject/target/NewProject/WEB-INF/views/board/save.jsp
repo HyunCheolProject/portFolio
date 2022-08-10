@@ -96,12 +96,12 @@
             <section>
                 <div class="container">
 
-                    <form action="/board/save" method="post" enctype="multipart/form-data">
+                    <form action="/board/save" name="boardSaveForm" method="post" enctype="multipart/form-data">
                         제목: <input type="text" name="boardTitle"><br>
                         작성자: <input type="text" name="boardWriter" value="${sessionScope.memberId}" readonly><br>
-                        비밀번호: <input type="password" name="boardPw"><br>
+                        비밀번호: <input type="password" id="boardPw" name="boardPw"><br>
                         내용: <textarea name="boardContents" id="" cols="10" rows="5"></textarea><br>
-                        <input type="submit" value="작성">
+                        <input type="button" onclick="boardPwCheck()" value="작성">
                     </form>
                     <a href="javascript:history.back()">뒤로가기</a>
                 </div>
@@ -159,5 +159,19 @@
 <script src="/resources/assets/js/main.js"></script>
 
 </body>
+
+<script>
+    const boardPwCheck = () => {
+        const pw1 = document.getElementById("boardPw").value;
+        console.log(pw1);
+
+        if (pw1 != "") {
+            alert("이프통과")
+            document.boardSaveForm.submit();
+        } else {
+            alert("비밀번호를 입력해주세요");
+        }
+    }
+</script>
 
 </html>
