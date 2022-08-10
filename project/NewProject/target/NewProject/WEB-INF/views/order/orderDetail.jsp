@@ -195,7 +195,6 @@
                             <button type="button" class="btn btn-primary"
                                     onclick="pay('${cart.cartPrice * cart.cartAmount}')">결제하기
                             </button>
-                            <%--                            <a href="" class="button">결제하기</a>--%>
                         </div>
                         <br>
 

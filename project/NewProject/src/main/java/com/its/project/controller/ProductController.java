@@ -51,13 +51,12 @@ public class ProductController {
     public String findById(@RequestParam Long id, Model model,
                            @RequestParam(value = "page", required = false,
                                    defaultValue = "1") int page, HttpSession session) {
-        List<OrderDTO> orderDTOList = new ArrayList<>();
         ProductDTO productDTO = productService.findById(id);
         model.addAttribute("product", productDTO);
         model.addAttribute("page", page);
         // 결제 한 회원만 후기 작성 가능
         String memberId = (String) session.getAttribute("memberId");
-        orderDTOList = productService.orderFindById(memberId);
+        List<OrderDTO> orderDTOList = productService.orderFindById(memberId);
         model.addAttribute("order", orderDTOList);
         List<ReviewDTO> reviewList = reviewService.findAll(id);
         model.addAttribute("reviewList", reviewList);

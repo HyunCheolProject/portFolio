@@ -23,8 +23,8 @@ public class BoardService {
         boardRepository.save(boardDTO);
     }
 
-    private static final int PAGE_LIMIT = 5;
-    private static final int BLOCK_LIMIT = 5;
+    private static final int PAGE_LIMIT = 5;    // 한 페이지에 보여줄 개수
+    private static final int BLOCK_LIMIT = 5;   // 페이지 이동 번호 개수
 
     public List<BoardDTO> pagingList(int page) {
         int pagingStart = (page - 1) * PAGE_LIMIT;

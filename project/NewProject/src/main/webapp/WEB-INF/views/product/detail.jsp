@@ -157,7 +157,7 @@
                     </table>
                 </div>
                 <br>
-                <c:if test="${sessionScope.memberId != null && order != null}">
+                <c:if test="${sessionScope.memberId != null && order.size() != 0}">
                     <div id="review-write" class="input-group mb-3 card" style="height: 300px">
 
                         <div class="form-floating mb-3" style="text-align: left">
@@ -245,7 +245,7 @@
     }
 
     const productDelete = () => {
-        location.href = "/product/pwCheck?id=${product.id}";
+        location.href = "/product/delete?id=${product.id}";
     }
 
     const cartSave = () => {

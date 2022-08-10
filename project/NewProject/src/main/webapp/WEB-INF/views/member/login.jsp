@@ -5,13 +5,6 @@
   Time: 오전 10:02
   To change this template use File | Settings | File Templates.
 --%>
-<%--
-  Created by IntelliJ IDEA.
-  User: khc_9
-  Date: 2022-07-27
-  Time: 오전 10:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -111,7 +104,6 @@
                             <td><input type="submit" value="로그인"></td>
                         </form>
                         <a href="javascript:history.back()">뒤로가기</a>
-
                     </div>
                 </div>
             </section>

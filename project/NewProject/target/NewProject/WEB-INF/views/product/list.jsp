@@ -1,13 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
   User: khc_9
-  Date: 2022-07-29
-  Time: 오전 10:09
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: khc_9
   Date: 2022-07-28
   Time: 오전 9:12
   To change this template use File | Settings | File Templates.
@@ -139,7 +132,8 @@
                                                 <a href="/product/detail?page=${paging.page}&id=${product.id}">${product.productName}</a>
                                             </div>
                                             <div class="product-id-wrap">
-                                                <strong><fmt:formatNumber type="number" value="${product.productPrice}"/>원</strong>
+                                                <strong><fmt:formatNumber type="number"
+                                                                          value="${product.productPrice}"/>원</strong>
                                             </div>
                                         </li>
                                     </c:forEach>

@@ -25,14 +25,17 @@
             margin-bottom: 10px; /* Added */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
         input[type=text] {
             width: 700px;
             margin: auto;
         }
+
         input[type=password] {
             width: 700px;
             margin: auto;
         }
+
         textarea {
             margin: auto;
             width: 700px;
@@ -112,11 +115,13 @@
                     <form action="/board/update" method="post" id="updateForm">
                         <br>
                         <div style="text-align: left">
-                        &nbsp;&nbsp;글번호 <input type="text" name="id" value="${boardUpdate.id}" readonly><br>
-                        &nbsp;&nbsp;제목 <input type="text" name="boardTitle" value="${boardUpdate.boardTitle}"><br>
-                        &nbsp;&nbsp;작성자 <input type="text" name="boardWriter" value="${boardUpdate.boardWriter}" readonly><br>
-                        &nbsp;&nbsp;비밀번호 <input type="password" name="boardPw" id="pwConfirm" value="${boardUpdate.boardPw}"><br>
-                        &nbsp;&nbsp;내용 <textarea name="boardContents" cols="40" rows="10">${boardUpdate.boardContents}</textarea><br>
+                            &nbsp;&nbsp;글번호 <input type="text" name="id" value="${boardUpdate.id}" readonly><br>
+                            &nbsp;&nbsp;제목 <input type="text" name="boardTitle" value="${boardUpdate.boardTitle}"><br>
+                            &nbsp;&nbsp;작성자 <input type="text" name="boardWriter" value="${boardUpdate.boardWriter}"
+                                                   readonly><br>
+                            &nbsp;&nbsp;비밀번호 <input type="password" name="boardPw" id="pwConfirm"><br>
+                            &nbsp;&nbsp;내용 <textarea name="boardContents" cols="40"
+                                                     rows="10">${boardUpdate.boardContents}</textarea><br>
                         </div>
                         <input type="button" onclick="boardUpdated()" value="수정">
                     </form>
@@ -183,7 +188,7 @@
     const boardUpdated = () => {
         const pwConfirm = document.getElementById("pwConfirm").value;
         const pwDB = '${boardUpdate.boardPw}';
-        if ( pwConfirm == pwDB) {
+        if (pwConfirm == pwDB) {
             updateForm.submit();
         } else {
             alert("비밀번호가 일치하지 않습니다.");

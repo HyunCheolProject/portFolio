@@ -25,10 +25,12 @@
             margin-bottom: 10px; /* Added */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
         input[type=text] {
             width: 700px;
             margin: auto;
         }
+
         input[type=password] {
             width: 700px;
             margin: auto;
@@ -64,7 +66,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -78,7 +81,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>
@@ -106,13 +110,19 @@
                     <form action="/member/update" method="post">
                         <br>
                         <div style="text-align: left">
-                        &nbsp;&nbsp;회원번호 <input type="text" name="id" value="${updateMember.id}" readonly><br>
-                        &nbsp;&nbsp;아이디 <input type="text" name="memberId" value="${updateMember.memberId}" readonly><br>
-                        &nbsp;&nbsp;비밀번호 <input type="password" name="memberPw" value="${updateMember.memberPw}"><br>
-                        &nbsp;&nbsp;이름 <input type="text" name="memberName" value="${updateMember.memberName}" readonly><br>
-                        &nbsp;&nbsp;나이 <input type="text" name="memberAge" value="${updateMember.memberAge}" readonly><br>
-                        &nbsp;&nbsp;이메일 <input type="text" name="memberEmail" value="${updateMember.memberEmail}"><br>
-                        &nbsp;&nbsp;전화번호 <input type="text" name="memberMobile" value="${updateMember.memberMobile}"><br>
+                            &nbsp;&nbsp;회원번호 <input type="text" name="id" value="${updateMember.id}" readonly><br>
+                            &nbsp;&nbsp;아이디 <input type="text" name="memberId" value="${updateMember.memberId}"
+                                                   readonly><br>
+                            &nbsp;&nbsp;비밀번호 <input type="password" name="memberPw"
+                                                    value="${updateMember.memberPw}"><br>
+                            &nbsp;&nbsp;이름 <input type="text" name="memberName" value="${updateMember.memberName}"
+                                                  readonly><br>
+                            &nbsp;&nbsp;나이 <input type="text" name="memberAge" value="${updateMember.memberAge}"
+                                                  readonly><br>
+                            &nbsp;&nbsp;이메일 <input type="text" name="memberEmail"
+                                                   value="${updateMember.memberEmail}"><br>
+                            &nbsp;&nbsp;전화번호 <input type="text" name="memberMobile"
+                                                    value="${updateMember.memberMobile}"><br>
                         </div>
                         <input type="submit" value="수정">
                     </form>

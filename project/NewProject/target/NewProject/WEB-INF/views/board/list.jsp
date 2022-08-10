@@ -5,13 +5,6 @@
   Time: 오전 9:12
   To change this template use File | Settings | File Templates.
 --%>
-<%--
-  Created by IntelliJ IDEA.
-  User: khc_9
-  Date: 2022-07-28
-  Time: 오전 9:12
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -100,8 +93,6 @@
                 <div>
                     <div data-group_code="1">
                         <div class="container mt-3">
-
-<%--                            <table class="table" style="background-color: #d8bff7">--%>
                             <table class="table" style="background-color: #f7f7f7">
                                 <tr>
                                     <th>
@@ -113,7 +104,8 @@
                                                         <option value="boardTitle">제목</option>
                                                         <option value="boardWriter">작성자</option>
                                                     </select></td>
-                                                    <td><input type="text" name="q" placeholder="검색어입력.." autofocus></td>
+                                                    <td><input type="text" name="q" placeholder="검색어입력.." autofocus>
+                                                    </td>
                                                     <td><input type="submit" value="검색"></td>
                                                     </th>
                                                 </form>

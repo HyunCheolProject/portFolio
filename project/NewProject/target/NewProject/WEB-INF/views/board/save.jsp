@@ -163,10 +163,8 @@
 <script>
     const boardPwCheck = () => {
         const pw1 = document.getElementById("boardPw").value;
-        console.log(pw1);
 
         if (pw1 != "") {
-            alert("이프통과")
             document.boardSaveForm.submit();
         } else {
             alert("비밀번호를 입력해주세요");

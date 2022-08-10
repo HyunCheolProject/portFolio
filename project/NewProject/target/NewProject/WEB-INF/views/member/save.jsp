@@ -24,6 +24,7 @@
             margin: 0 auto;
             text-align: left;
         }
+
         .card {
             max-width: 800px;
             margin: 0 auto; /* Added */
@@ -63,7 +64,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -77,7 +79,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>
@@ -93,7 +96,7 @@
 
     <!-- Main -->
 
-        <!-- First Section -->
+    <!-- First Section -->
     <div id="main">
         <section id="first" class="main special">
             <header class="major">
@@ -109,67 +112,87 @@
                     <div class="card align-middle" style="width:45rem; border-radius:20px;">
                         <div class="container" style="color: #6f6d74;">
                             <div class="py-5 ">
-                        <form action="/member/save" method="post">
-                            <i id="idIcon-result" class="bi bi-tags-fill"></i>아이디<br><input class="form-control mb-2" type="text" onblur="memberIdCheck()" id="memberId" name="memberId" placeholder="ID를 만들어주세요 띄어쓰기 없이 영/숫자 6-10자">
-                            <span id="dup-check-result"></span>
-                            <p id="memberId-result"></p>
-                            <i id="pwIcon-result" class="bi bi-tags-fill"></i> 비밀번호<br><input class="form-control mb-2" type="password" onblur="pw()" id="memberPw" name="memberPw" placeholder="비밀번호 입력 8-15자의 영문 대소문자, 숫자, 특수문자(-_!#$) 조합">
-                            <p id="pw-result"></p>
-                            <i id="pw2Icon-result" class="bi bi-tags-fill"></i> 비밀번호 확인<br><input class="form-control mb-2" type="password" onblur="pw2()" id="memberPw2" name="memberPw2"  placeholder="위의 비밀번호를 다시 입력해주세요.">
-                            <p id="memberPw2-result"></p>
-                            <i id="nameIcon-result" class="bi bi-tags-fill"></i> 이름<br><input class="form-control mb-2" type="text" onblur="userName()" id="memberName"  name="memberName" placeholder="이름">
-                            <p id="memberName-result"></p>
-                            <ul class="icons">
-                                <i id="emailIcon-result" class="bi bi-tags-fill"></i> Email<br><li><input class="from-control mb-2"  type="text" style="width: 160px" onblur="email()" id="memberEmail" name="memberEmail" placeholder="이메일"></li><li>@</li>
-                                <li><input class="from-control mb-2" type="text" style="width: 160px" onblur="email2()" id="memberEmail2" name="memberEmail" placeholder="이메일"></li>
-                                <li><select id="emailCk" onchange="ck()" style="width: 180px" name = "emailSelect">
-                                    <option value="">직접입력</option>
-                                    <option value="naver.com">naver.com</option>
-                                    <option value="daum.net">daum.net</option>
-                                    <option value="hotmail.com">hotmail.com</option>
-                                    <option value="nate.com">nate.com</option>
-                                    <option value="yahoo.com">yahoo.com</option>
-                                    <option value="paran.com">paran.com</option>
-                                    <option value="empas.com">empas.com</option>
-                                    <option value="dreamwiz.com">dreamwiz.com</option>
-                                    <option value="freechal.com">freechal.com</option>
-                                    <option value="lycos.co.kr">lycos.co.kr</option>
-                                    <option value="korea.com">korea.com</option>
-                                    <option value="gmail.com">gmail.com</option>
-                                    <option value="hanmir.com">hanmir.com</option>
-                                </select></li>
-                                <p id="memberEmail-result"></p>
-                            </ul>
-                            <ul class="icons">
-                                <i id="mnIcon-result" class="bi bi-tags-fill"></i> 전화번호<br>
-                                <li>
-                                    <select id="memberMobile2" style="width: 130px" onchange="mobileNumber2()" name = "memberMobile">
-                                        <option value="KT">KT</option>
-                                        <option value="SKT">SKT</option>
-                                        <option value="LG">LG</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <select id="memberMobile3" style="width: 130px" onchange="mobileNumber3()" name = "memberMobile">
-                                        <option value="010">010</option>
-                                        <option value="016">016</option>
-                                        <option value="017">017</option>
-                                        <option value="018">018</option>
-                                        <option value="019">019</option>
-                                    </select>
-                                </li>
-                                <li>-</li> <li><input type="text" style="width: 280px" onblur="mobileNumber()" id="memberMobile" name="memberMobile" class="from-control"  placeholder="휴대폰번호입력('-'포함)">
-                            </li>
-                                <p id="memberMobile-result"></p>
-                            </ul>
+                                <form action="/member/save" method="post">
+                                    <i id="idIcon-result" class="bi bi-tags-fill"></i>아이디<br><input
+                                        class="form-control mb-2" type="text" onblur="memberIdCheck()" id="memberId"
+                                        name="memberId" placeholder="ID를 만들어주세요 띄어쓰기 없이 영/숫자 6-10자">
+                                    <span id="dup-check-result"></span>
+                                    <p id="memberId-result"></p>
+                                    <i id="pwIcon-result" class="bi bi-tags-fill"></i> 비밀번호<br><input
+                                        class="form-control mb-2" type="password" onblur="pw()" id="memberPw"
+                                        name="memberPw" placeholder="비밀번호 입력 8-15자의 영문 대소문자, 숫자, 특수문자(-_!#$) 조합">
+                                    <p id="pw-result"></p>
+                                    <i id="pw2Icon-result" class="bi bi-tags-fill"></i> 비밀번호 확인<br><input
+                                        class="form-control mb-2" type="password" onblur="pw2()" id="memberPw2"
+                                        name="memberPw2" placeholder="위의 비밀번호를 다시 입력해주세요.">
+                                    <p id="memberPw2-result"></p>
+                                    <i id="nameIcon-result" class="bi bi-tags-fill"></i> 이름<br><input
+                                        class="form-control mb-2" type="text" onblur="userName()" id="memberName"
+                                        name="memberName" placeholder="이름">
+                                    <p id="memberName-result"></p>
+                                    <ul class="icons">
+                                        <i id="emailIcon-result" class="bi bi-tags-fill"></i> Email<br>
+                                        <li><input class="from-control mb-2" type="text" style="width: 160px"
+                                                   onblur="email()" id="memberEmail" name="memberEmail"
+                                                   placeholder="이메일"></li>
+                                        <li>@</li>
+                                        <li><input class="from-control mb-2" type="text" style="width: 160px"
+                                                   onblur="email2()" id="memberEmail2" name="memberEmail"
+                                                   placeholder="이메일"></li>
+                                        <li><select id="emailCk" onchange="ck()" style="width: 180px"
+                                                    name="emailSelect">
+                                            <option value="">직접입력</option>
+                                            <option value="naver.com">naver.com</option>
+                                            <option value="daum.net">daum.net</option>
+                                            <option value="hotmail.com">hotmail.com</option>
+                                            <option value="nate.com">nate.com</option>
+                                            <option value="yahoo.com">yahoo.com</option>
+                                            <option value="paran.com">paran.com</option>
+                                            <option value="empas.com">empas.com</option>
+                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                            <option value="freechal.com">freechal.com</option>
+                                            <option value="lycos.co.kr">lycos.co.kr</option>
+                                            <option value="korea.com">korea.com</option>
+                                            <option value="gmail.com">gmail.com</option>
+                                            <option value="hanmir.com">hanmir.com</option>
+                                        </select></li>
+                                        <p id="memberEmail-result"></p>
+                                    </ul>
+                                    <ul class="icons">
+                                        <i id="mnIcon-result" class="bi bi-tags-fill"></i> 전화번호<br>
+                                        <li>
+                                            <select id="memberMobile2" style="width: 130px" onchange="mobileNumber2()"
+                                                    name="memberMobile">
+                                                <option value="KT">KT</option>
+                                                <option value="SKT">SKT</option>
+                                                <option value="LG">LG</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select id="memberMobile3" style="width: 130px" onchange="mobileNumber3()"
+                                                    name="memberMobile">
+                                                <option value="010">010</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </li>
+                                        <li>-</li>
+                                        <li><input type="text" style="width: 280px" onblur="mobileNumber()"
+                                                   id="memberMobile" name="memberMobile" class="from-control"
+                                                   placeholder="휴대폰번호입력('-'포함)">
+                                        </li>
+                                        <p id="memberMobile-result"></p>
+                                    </ul>
 
-                            <a href="/"  class="button big">처음으로</a> &nbsp;
-                            <input class="btn btn-primary" type="submit" value="가입">
-                        </form>
-                        <a href="javascript:history.back()">뒤로가기</a>
+                                    <a href="/" class="button big">처음으로</a> &nbsp;
+                                    <input class="btn btn-primary" type="submit" value="가입">
+                                </form>
+                                <a href="javascript:history.back()">뒤로가기</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
         </section>
@@ -269,7 +292,7 @@
         const pwResult = document.getElementById("pw-result");
         const pwIconResult = document.getElementById("pwIcon-result");
 
-        if(memberPw.match(exp)) {
+        if (memberPw.match(exp)) {
             pwResult.innerHTML = "사용 가능합니다."
             pwResult.style.color = "#2183d3";
             pwIconResult.style.color = "#2183d3";
@@ -285,27 +308,28 @@
         const memberPw = document.getElementById("memberPw").value;
         const pw2Result = document.getElementById("memberPw2-result");
         const pw2IconResult = document.getElementById("pw2Icon-result")
-        if(memberPw2.length == 0){
+        if (memberPw2.length == 0) {
             pw2Result.innerHTML = "일치하지않습니다.";
             pw2Result.style.color = "red";
             pw2IconResult.style.color = "red";
-        }else if(memberPw == memberPw2){
+        } else if (memberPw == memberPw2) {
             pw2Result.innerHTML = "일치합니다.";
             pw2Result.style.color = "#2183d3";
             pw2IconResult.style.color = "#2183d3";
 
-        }else {
+        } else {
             pw2Result.innerHTML = "비밀번호가 일치하지않습니다.";
             pw2Result.style.color = "red";
-            pw2IconResult.style.color="red";
+            pw2IconResult.style.color = "red";
         }
     }
+
     function userName() {
         const memberName = document.getElementById("memberName").value;
         const unResult = document.getElementById("memberName-result");
         const nameIcon = document.getElementById("nameIcon-result");
 
-        if(memberName.length == 0) {
+        if (memberName.length == 0) {
             unResult.innerHTML = "필수 정보입니다.";
             unResult.style.color = "red";
             nameIcon.style.color = "red";
@@ -315,12 +339,13 @@
             nameIcon.style.color = "#2183d3";
         }
     }
+
     function email() {
         const memberEmail = document.getElementById("memberEmail").value;
         const memberEmail2 = document.getElementById("memberEmail2").value;
         const emailResult = document.getElementById("memberEmail-result");
         const emailIconResult = document.getElementById("emailIcon-result");
-        if(memberEmail.length == 0 ) {
+        if (memberEmail.length == 0) {
             emailResult.innerHTML = "이메일 주소를 다시 확인해주세요.";
             emailResult.style.color = "red";
             emailIconResult.style.color = "red";
@@ -333,7 +358,7 @@
         const memberEmail2 = document.getElementById("memberEmail2").value;
         const emailResult = document.getElementById("memberEmail-result");
         const emailIconResult = document.getElementById("emailIcon-result");
-        if(memberEmail2.length == 0) {
+        if (memberEmail2.length == 0) {
             emailResult.innerHTML = "이메일 주소를 다시 확인해주세요.";
             emailResult.style.color = "red";
             emailIconResult.style.color = "red";
@@ -350,7 +375,7 @@
         const emailResult = document.getElementById("memberEmail-result");
         const emailIconResult = document.getElementById("emailIcon-result");
         memberEmail2.value = emailCk;
-        if(emailCk == 0){
+        if (emailCk == 0) {
 
         } else {
             emailResult.innerHTML = "사용가능합니다.";
@@ -366,7 +391,7 @@
         const exp = /^(?=.*\d)(?=.*-)[\d-]{8,9}$/;
         const mNResult = document.getElementById("memberMobile-result");
         const mNIcon = document.getElementById("mnIcon-result")
-        if(memberMobile.match(exp)) {
+        if (memberMobile.match(exp)) {
             mNResult.innerHTML = "사용 가능합니다."
             mNResult.style.color = "#2183d3";
             mNIcon.style.color = "#2183d3";
