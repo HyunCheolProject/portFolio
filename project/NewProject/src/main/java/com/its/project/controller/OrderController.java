@@ -61,5 +61,11 @@ public class OrderController {
         return "redirect:/order/list";
     }
 
+    // 주문목록 출력 (관리자)
+    @GetMapping("/orderAdmin-form")
+    public String orderAdminForm() {
+        return "order/orderAdmin";
+    }
+
 
 }
