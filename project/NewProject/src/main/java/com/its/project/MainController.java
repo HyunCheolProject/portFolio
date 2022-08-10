@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MainController {
     private final ProductService productService;
+
     @GetMapping("/")
     public String index(Model model) {
         List<ProductDTO> productDTOList = productService.popular();

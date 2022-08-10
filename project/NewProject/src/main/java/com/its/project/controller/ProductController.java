@@ -51,7 +51,7 @@ public class ProductController {
     public String findById(@RequestParam Long id, Model model,
                            @RequestParam(value = "page", required = false,
                                    defaultValue = "1") int page, HttpSession session) {
-        List <OrderDTO> orderDTOList = new ArrayList<>();
+        List<OrderDTO> orderDTOList = new ArrayList<>();
         ProductDTO productDTO = productService.findById(id);
         model.addAttribute("product", productDTO);
         model.addAttribute("page", page);
@@ -77,7 +77,7 @@ public class ProductController {
     @GetMapping("/update-form")
     public String updateForm(@RequestParam Long id, Model model) {
         ProductDTO productDTO = productService.findById(id);
-        model.addAttribute("productUpdate",productDTO);
+        model.addAttribute("productUpdate", productDTO);
         return "product/update";
     }
 
@@ -85,7 +85,7 @@ public class ProductController {
     @PostMapping("/update")
     public String update(@ModelAttribute ProductDTO productDTO) {
         productService.update(productDTO);
-        return "redirect:/product/detail?id="+productDTO.getId();
+        return "redirect:/product/detail?id=" + productDTO.getId();
     }
 
     // 비밀번호 체크페이지
@@ -102,10 +102,6 @@ public class ProductController {
         productService.delete(id);
         return "redirect:/product/findAll";
     }
-
-
-
-
 
 
 }

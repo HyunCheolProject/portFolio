@@ -17,7 +17,7 @@ public class CartRepository {
     }
 
     public List<CartDTO> findAll(Long memberId) {
-        List<CartDTO> cartDTOList =  sqlSessionTemplate.selectList("Cart.findAll", memberId);
+        List<CartDTO> cartDTOList = sqlSessionTemplate.selectList("Cart.findAll", memberId);
         return cartDTOList;
     }
 

@@ -139,7 +139,7 @@
                                 <td style="color: black"><b>${comment.commentWriter}</b></td>
                                 <td style="color: black"><b>${comment.commentContents}</b></td>
                                 <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd"
-                                                            value="${comment.commentCreatedDate}"></fmt:formatDate></b>
+                                                                            value="${comment.commentCreatedDate}"></fmt:formatDate></b>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -147,20 +147,20 @@
                 </div>
                 <br>
                 <c:if test="${sessionScope.memberId != null}">
-                <div id="comment-write" class="input-group mb-3 card">
-                    <div class="form-floating" style="text-align: left">
-                        &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
-                        <input type="text" id="commentWriter" class="form-control" value="${sessionScope.memberId}"
-                               readonly>
+                    <div id="comment-write" class="input-group mb-3 card">
+                        <div class="form-floating" style="text-align: left">
+                            &nbsp;&nbsp;<strong for="commentWriter">작성자</strong>
+                            <input type="text" id="commentWriter" class="form-control" value="${sessionScope.memberId}"
+                                   readonly>
+                        </div>
+                        <div class="form-floating" style="text-align: left">
+                            &nbsp;&nbsp;<strong for="commentContents">내용</strong>
+                            <textarea name="commentContents" id="commentContents" cols="10" rows="5"
+                                      placeholder="내용"></textarea>
+                        </div>
+                        <br>
+                        <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
                     </div>
-                    <div class="form-floating" style="text-align: left">
-                        &nbsp;&nbsp;<strong for="commentContents">내용</strong>
-                        <textarea name="commentContents" id="commentContents" cols="10" rows="5"
-                                  placeholder="내용"></textarea>
-                    </div>
-                    <br>
-                    <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
-                </div>
                 </c:if>
                 <br>
                 <a href="javascript:history.back()">뒤로가기</a>

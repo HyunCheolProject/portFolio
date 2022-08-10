@@ -63,7 +63,8 @@
                 <c:when test="${sessionScope.memberId == 'khc4572'}">
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/admin-form">관리자페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
@@ -77,7 +78,8 @@
                 <c:otherwise>
                                 <span class="glyphicon glyphicon-heart-empty" style="color: white;"
                                       aria-hidden="true"></span>
-                    <span id="login_log" style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
+                    <span id="login_log"
+                          style="border-bottom: 1px solid white;">${sessionScope.memberId} 님, 환영합니다.</span>
                     <li><a href="/member/myPage">마이페이지</a></li>
                     <li><a href="/member/logout-form">로그아웃</a></li>
                     <br>

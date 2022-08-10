@@ -13,7 +13,7 @@ public class CartService {
     private CartRepository cartRepository;
 
     public String save(CartDTO cartDTO) {
-        int result =  cartRepository.save(cartDTO);
+        int result = cartRepository.save(cartDTO);
         if (result > 0) {
             return "ok";
         } else {

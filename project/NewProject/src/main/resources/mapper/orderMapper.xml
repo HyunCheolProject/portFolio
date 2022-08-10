@@ -5,28 +5,35 @@
 
 <mapper namespace="Order">
     <insert id="save" parameterType="order">
-        insert into order_table (orderName, postcode, address, detailAddress, extraAddress, requests, orderMobile, orderProduct, orderAmount, orderPrice)
-        values (#{orderName}, #{postcode}, #{address}, #{detailAddress}, #{extraAddress}, #{requests}, #{orderMobile}, #{orderProduct}, #{orderAmount}, #{orderPrice})
+        insert into order_table (orderName, postcode, address, detailAddress, extraAddress, requests, orderMobile,
+                                 orderProduct, orderAmount, orderPrice)
+        values (#{orderName}, #{postcode}, #{address}, #{detailAddress}, #{extraAddress}, #{requests}, #{orderMobile},
+                #{orderProduct}, #{orderAmount}, #{orderPrice})
     </insert>
 
-<!--    <select id="findAll" parameterType="Long" resultType="order">-->
-<!--        select * from order_table where cartId=#{cartId}-->
-<!--    </select>-->
 
     <select id="findById" parameterType="Long" resultType="order">
-        select * from order_table where id=#{id};
+        select *
+        from order_table
+        where id = #{id};
     </select>
 
     <select id="findAll" parameterType="String" resultType="order">
-        select * from order_table where orderName=#{orderName}
+        select *
+        from order_table
+        where orderName = #{orderName}
     </select>
 
     <update id="update" parameterType="order">
-        update order_table set orderStatus=#{orderStatus} where id=#{id}
+        update order_table
+        set orderStatus=#{orderStatus}
+        where id = #{id}
     </update>
 
     <delete id="delete" parameterType="Long">
-        delete from order_table where id=#{id}
+        delete
+        from order_table
+        where id = #{id}
     </delete>
 
 </mapper>

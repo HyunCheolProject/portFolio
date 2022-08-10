@@ -70,7 +70,7 @@ public class BoardController {
     @GetMapping("/update-form")
     public String updateForm(@RequestParam Long id, Model model) {
         BoardDTO boardDTO = boardService.findById(id);
-        model.addAttribute("boardUpdate",boardDTO);
+        model.addAttribute("boardUpdate", boardDTO);
         return "board/update";
     }
 
@@ -78,7 +78,7 @@ public class BoardController {
     @PostMapping("/update")
     public String update(@ModelAttribute BoardDTO boardDTO) {
         boardService.update(boardDTO);
-        return "redirect:/board/detail?id="+boardDTO.getId();
+        return "redirect:/board/detail?id=" + boardDTO.getId();
     }
 
     // 비밀번호 체크페이지
@@ -95,19 +95,6 @@ public class BoardController {
         boardService.delete(id);
         return "redirect:/board/paging";
     }
-
-
-    // test
-    @GetMapping("/test")
-    public String test() {
-        return "board/test";
-    }
-
-    @GetMapping("/test-form")
-    public String testForm() {
-        return "board/testForm";
-    }
-
 
 
 }

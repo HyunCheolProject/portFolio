@@ -27,7 +27,7 @@ public class BoardService {
     private static final int BLOCK_LIMIT = 5;
 
     public List<BoardDTO> pagingList(int page) {
-        int pagingStart = (page-1) * PAGE_LIMIT;
+        int pagingStart = (page - 1) * PAGE_LIMIT;
         Map<String, Integer> pagingParam = new HashMap<>();
         pagingParam.put("start", pagingStart);
         pagingParam.put("limit", PAGE_LIMIT);
@@ -37,10 +37,10 @@ public class BoardService {
 
     public PageDTO paging(int page) {
         int boardCount = boardRepository.boardCount();
-        int maxPage = (int)(Math.ceil((double)boardCount / PAGE_LIMIT));
-        int startPage = (((int)(Math.ceil((double)page / BLOCK_LIMIT))) - 1) * BLOCK_LIMIT + 1;
+        int maxPage = (int) (Math.ceil((double) boardCount / PAGE_LIMIT));
+        int startPage = (((int) (Math.ceil((double) page / BLOCK_LIMIT))) - 1) * BLOCK_LIMIT + 1;
         int endPage = startPage + BLOCK_LIMIT - 1;
-        if(endPage > maxPage)
+        if (endPage > maxPage)
             endPage = maxPage;
         PageDTO paging = new PageDTO();
         paging.setPage(page);
