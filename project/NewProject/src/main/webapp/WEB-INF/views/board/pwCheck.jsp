@@ -96,7 +96,7 @@
                 <div class="container">
                     <form action="/board/delete" method="post">
                         <label for="pwConfirm">비밀번호를 입력해주세요</label>
-                        <input type="text" id="pwConfirm"><br>
+                        <input type="text" id="pwConfirm" autofocus><br>
                         <input type="button" value="삭제" onclick="pwCheck()">
                     </form>
                     <a href="javascript:history.back()">뒤로가기</a>

@@ -113,7 +113,7 @@
                                                                        onblur="statusUpdate1()"
                                                                        style="width: 170px" name="orderStatus"
                                                                        id="statusResult1"
-                                                                       value="${order.orderStatus}"></b></td>
+                                                                       value="${order.orderStatus}" readonly></b></td>
 
                                     <td style="color: black"><b><select class="align-center" id="statusResult2"
                                                                         onchange="statusUpdate2()" style="width: 210px">

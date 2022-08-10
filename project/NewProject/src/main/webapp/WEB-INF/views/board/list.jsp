@@ -112,7 +112,6 @@
                                                     <td><select name="searchType">
                                                         <option value="boardTitle">제목</option>
                                                         <option value="boardWriter">작성자</option>
-                                                        <option value="boardCategory">카테고리</option>
                                                     </select></td>
                                                     <td><input type="text" name="q" placeholder="검색어입력.." autofocus></td>
                                                     <td><input type="submit" value="검색"></td>
@@ -129,6 +128,7 @@
                                                 <th>제목</th>
                                                 <th>작성자</th>
                                                 <th>작성일자</th>
+                                                <th></th>
                                                 <th>조회수</th>
                                             </tr>
 
@@ -143,6 +143,7 @@
                                                     <td><strong><fmt:formatDate pattern="yyyy-MM-dd"
                                                                                 value="${board.boardCreatedDate}"></fmt:formatDate></strong>
                                                     </td>
+                                                    <td></td>
                                                     <td><strong>${board.boardHits}</strong></td>
                                                 </tr>
                                             </c:forEach>

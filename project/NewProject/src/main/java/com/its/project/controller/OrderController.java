@@ -33,7 +33,7 @@ public class OrderController {
         System.out.println("orderDTO = " + orderDTO);
         orderService.save(orderDTO);
         cartService.delete(cartId);
-        return "order/list";
+        return "redirect:/order/list";
     }
 
     // 배송조회 페이지 출력
