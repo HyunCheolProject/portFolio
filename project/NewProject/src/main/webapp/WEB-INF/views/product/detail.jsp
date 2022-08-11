@@ -109,7 +109,7 @@
             <div class="container">
                 <img src="${pageContext.request.contextPath}/upload/${product.productFileName}"
                      alt="" height="300" width="300"><br>
-<%--                상품번호: ${product.id}<br>--%>
+                <%--                상품번호: ${product.id}<br>--%>
                 작성자: ${product.productWriter}<br>
                 상품명: ${product.productName}<br>
                 가격: <strong><fmt:formatNumber type="number" value="${product.productPrice}"/>원</strong><br>

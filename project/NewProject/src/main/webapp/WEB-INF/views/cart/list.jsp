@@ -109,19 +109,22 @@
                             <td style="color: black"><b>삭제</b></td>
                             <td style="color: black"><b>주문</b></td>
                         </tr>
-                    <c:forEach items="${cartList}" var="cart">
-                        <tr class="align-center">
-                            <td style="color: black"><b>${cart.productId}</b></td>
-                            <td style="color: black"><b>${cart.cartName}</b></td>
-                            <td style="color: black"><b>${cart.cartProduct}</b></td>
-                            <td style="color: black"><b>${cart.cartAmount}</b></td>
-                            <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice}"/>&nbsp;원</b></td>
-                            <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b></td>
-                            <td style="color: black"><b><a href="/cart/delete?id=${cart.id}">삭제</a></b></td>
-                            <td style="color: black"><b><a href="/order/orderDetail?id=${cart.id}">주문하기</a></b></td>
+                        <c:forEach items="${cartList}" var="cart">
+                            <tr class="align-center">
+                                <td style="color: black"><b>${cart.productId}</b></td>
+                                <td style="color: black"><b>${cart.cartName}</b></td>
+                                <td style="color: black"><b>${cart.cartProduct}</b></td>
+                                <td style="color: black"><b>${cart.cartAmount}</b></td>
+                                <td style="color: black"><b><fmt:formatNumber type="number" value="${cart.cartPrice}"/>&nbsp;원</b>
+                                </td>
+                                <td style="color: black"><b><fmt:formatNumber type="number"
+                                                                              value="${cart.cartPrice * cart.cartAmount}"/>&nbsp;원</b>
+                                </td>
+                                <td style="color: black"><b><a href="/cart/delete?id=${cart.id}">삭제</a></b></td>
+                                <td style="color: black"><b><a href="/order/orderDetail?id=${cart.id}">주문하기</a></b></td>
 
-                        </tr>
-                    </c:forEach>
+                            </tr>
+                        </c:forEach>
                     </table>
                 </div>
             </section>
