@@ -103,15 +103,14 @@
                             <input type="hidden" name="productId" value="${productList.id}">
                             작성자 <input type="text" name="productWriter" value="${sessionScope.memberId}" readonly><br>
                             상품명 <input type="text" name="productName" autofocus><br>
-<%--                            카테고리 <input type="text" name="productCategory"><br>--%>
                             카테고리 <select name="productCategory" id="">
-                                <option value="쌀">쌀</option>
-                                <option value="육류">육류</option>
-                                <option value="조미료">조미료</option>
-                                <option value="과일">과일</option>
-                                <option value="채소">채소</option>
-                                <option value="수산물">수산물</option>
-                            </select><br>
+                            <option value="쌀">쌀</option>
+                            <option value="육류">육류</option>
+                            <option value="조미료">조미료</option>
+                            <option value="과일">과일</option>
+                            <option value="채소">채소</option>
+                            <option value="수산물">수산물</option>
+                        </select><br>
                             가격 <input type="text" name="productPrice"><br>
                             내용 <textarea name="productContents" id=""
                                          style="height: 200px; width: 600px;"></textarea><br>
