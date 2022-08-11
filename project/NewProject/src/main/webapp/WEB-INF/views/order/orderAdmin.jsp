@@ -98,7 +98,7 @@
                             <td></td>
                             <td style="color: black"><b>주문자</b></td>
                             <td style="color: black"><b>상품명</b></td>
-                            <td style="color: black"><b>상품</b></td>
+                            <td style="color: black"><b>수량</b></td>
                             <td style="color: black"><b>배송상태</b></td>
                             <c:if test="${sessionScope.memberId == 'khc4572'}">
                                 <td style="color: black"><b></b></td>
@@ -131,11 +131,6 @@
                                             <button type="submit">수정</button>
                                         </b></td>
                                     </c:if>
-                                        <%--                                    <td style="color: black"><b>--%>
-                                        <%--                                        <button>수정</button>--%>
-                                        <%--                                    </b></td>--%>
-
-
                                     <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
                                                                                 value="${orderAdmin.orderCreatedDate}"></fmt:formatDate></b>
                                     </td>

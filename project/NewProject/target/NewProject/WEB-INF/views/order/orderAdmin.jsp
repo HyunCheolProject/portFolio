@@ -84,7 +84,7 @@
         <section id="first" class="main special">
             <a href="/member/detail">내 정보</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="/cart/findAll">장바구니</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/order/list">배송조회</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/order/adminFindAll">주문목록</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="javascript:history.back()">뒤로가기</a><br><br>
             <header class="major">
                 <h2>주문목록</h2>
@@ -98,7 +98,7 @@
                             <td></td>
                             <td style="color: black"><b>주문자</b></td>
                             <td style="color: black"><b>상품명</b></td>
-                            <td style="color: black"><b>상품</b></td>
+                            <td style="color: black"><b>수량</b></td>
                             <td style="color: black"><b>배송상태</b></td>
                             <c:if test="${sessionScope.memberId == 'khc4572'}">
                                 <td style="color: black"><b></b></td>
