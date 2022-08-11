@@ -33,4 +33,8 @@ public class OrderRepository {
     public void delete(Long id) {
         sqlSessionTemplate.delete("Order.delete", id);
     }
+
+    public List<OrderDTO> adminFindAll() {
+        return sqlSessionTemplate.selectList("Order.adminFindAll");
+    }
 }

@@ -84,10 +84,10 @@
         <section id="first" class="main special">
             <a href="/member/detail">내 정보</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="/cart/findAll">장바구니</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/order/list">배송조회</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/order/adminFindAll">주문목록</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="javascript:history.back()">뒤로가기</a><br><br>
             <header class="major">
-                <h2>배송조회</h2>
+                <h2>주문목록</h2>
             </header>
 
             <section>
@@ -108,16 +108,16 @@
                                 <td style="color: black"><b>삭제</b></td>
                             </c:if>
                         </tr>
-                        <c:forEach items="${orderList}" var="order">
+                        <c:forEach items="${orderAdminList}" var="orderAdmin">
                             <form action="/order/update" method="post">
                                 <tr class="align-center">
-                                    <td style="color: black"><b><input type="hidden" name="id" value="${order.id}"></b>
+                                    <td style="color: black"><b><input type="hidden" name="id" value="${orderAdmin.id}"></b>
                                     </td>
-                                    <td style="color: black"><b>${order.orderName}</b></td>
-                                    <td style="color: black"><b>${order.orderProduct}</b></td>
-                                    <td style="color: black"><b>${order.orderAmount}</b></td>
+                                    <td style="color: black"><b>${orderAdmin.orderName}</b></td>
+                                    <td style="color: black"><b>${orderAdmin.orderProduct}</b></td>
+                                    <td style="color: black"><b>${orderAdmin.orderAmount}</b></td>
                                     <td style="color: black" class="align-center"><b
-                                            id="statusResult1">${order.orderStatus}</b></td>
+                                            id="statusResult1">${orderAdmin.orderStatus}</b></td>
                                     <c:if test="${sessionScope.memberId == 'khc4572'}">
                                         <td style="color: black"><b><select name="orderStatus" class="align-center"
                                                                             id="statusResult2"
@@ -137,10 +137,10 @@
 
 
                                     <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
-                                                                                value="${order.orderCreatedDate}"></fmt:formatDate></b>
+                                                                                value="${orderAdmin.orderCreatedDate}"></fmt:formatDate></b>
                                     </td>
                                     <c:if test="${sessionScope.memberId == 'khc4572'}">
-                                        <td style="color: black"><b><a href="/order/delete?id=${order.id}">삭제</a></b>
+                                        <td style="color: black"><b><a href="/order/delete?id=${orderAdmin.id}">삭제</a></b>
                                         </td>
                                     </c:if>
                                 </tr>

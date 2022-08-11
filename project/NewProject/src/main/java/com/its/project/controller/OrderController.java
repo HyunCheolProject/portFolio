@@ -51,7 +51,7 @@ public class OrderController {
     @PostMapping("/update")
     public String update(@ModelAttribute OrderDTO orderDTO) {
         orderService.update(orderDTO);
-        return "redirect:/order/list";
+        return "redirect:/order/adminFindAll";
     }
 
     // 배송목록 삭제
@@ -61,11 +61,22 @@ public class OrderController {
         return "redirect:/order/list";
     }
 
-    // 주문목록 출력 (관리자)
+    // 주문목록 화면 요청 (관리자)
     @GetMapping("/orderAdmin-form")
     public String orderAdminForm() {
         return "order/orderAdmin";
     }
+
+    // 관리자 주문목록 출력
+    @GetMapping("/adminFindAll")
+    public String adminFindAll(Model model) {
+        List<OrderDTO> orderAdminList = orderService.adminFindAll();
+        model.addAttribute("orderAdminList", orderAdminList);
+        return "order/orderAdmin";
+    }
+
+
+
 
 
 }

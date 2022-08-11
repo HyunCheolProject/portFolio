@@ -32,4 +32,8 @@ public class OrderService {
     public void delete(Long id) {
         orderRepository.delete(id);
     }
+
+    public List<OrderDTO> adminFindAll() {
+        return orderRepository.adminFindAll();
+    }
 }

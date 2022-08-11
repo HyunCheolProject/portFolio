@@ -36,6 +36,11 @@
         where id = #{id}
     </delete>
 
+    <select id="adminFindAll" resultType="order">
+        select *
+        from order_table
+    </select>
+
 </mapper>
 
 
