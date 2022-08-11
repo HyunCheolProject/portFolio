@@ -63,7 +63,10 @@ public class ProductController {
         model.addAttribute("page", page);
         // 결제 한 회원만 후기 작성 가능
         String memberId = (String) session.getAttribute("memberId");
-        List<OrderDTO> orderDTOList = productService.orderFindById(memberId);
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.setProductId(id);
+        orderDTO.setOrderName(memberId);
+        List<OrderDTO> orderDTOList = productService.orderFindById(orderDTO);
         model.addAttribute("order", orderDTOList);
         List<ReviewDTO> reviewList = reviewService.findAll(id);
         model.addAttribute("reviewList", reviewList);
@@ -89,7 +92,7 @@ public class ProductController {
 
     // 상품 수정처리
     @PostMapping("/update")
-    public String update(@ModelAttribute ProductDTO productDTO) {
+    public String update(@ModelAttribute ProductDTO productDTO) throws IOException {
         productService.update(productDTO);
         return "redirect:/product/detail?id=" + productDTO.getId();
     }

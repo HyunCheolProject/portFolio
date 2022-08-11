@@ -49,7 +49,7 @@ public class ProductRepository {
         return sqlSessionTemplate.selectList("Product.popular");
     }
 
-    public List<OrderDTO> orderFindById(String memberId) {
-        return sqlSessionTemplate.selectList("Product.orderFindById", memberId);
+    public List<OrderDTO> orderFindById(OrderDTO orderDTO) {
+        return sqlSessionTemplate.selectList("Product.orderFindById", orderDTO);
     }
 }

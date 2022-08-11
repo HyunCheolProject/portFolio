@@ -49,7 +49,15 @@ public class ProductService {
         return searchList;
     }
 
-    public void update(ProductDTO productDTO) {
+    public void update(ProductDTO productDTO) throws IOException {
+        MultipartFile productFile = productDTO.getProductFile();
+        String productFileName = productFile.getOriginalFilename();
+        productFileName = System.currentTimeMillis() + "-" + productFileName;
+        productDTO.setProductFileName(productFileName);
+        String savePath = "C:\\KHC_development\\git_portFolio\\project\\NewProject\\src\\main\\webapp\\resources\\files\\" + productFileName;
+        if (!productFile.isEmpty()) {
+            productFile.transferTo(new File(savePath));
+        }
         productRepository.update(productDTO);
     }
 
@@ -61,7 +69,7 @@ public class ProductService {
         return productRepository.popular();
     }
 
-    public List<OrderDTO> orderFindById(String memberId) {
-        return productRepository.orderFindById(memberId);
+    public List<OrderDTO> orderFindById(OrderDTO orderDTO) {
+        return productRepository.orderFindById(orderDTO);
     }
 }

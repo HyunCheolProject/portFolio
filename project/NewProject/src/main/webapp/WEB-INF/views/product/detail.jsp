@@ -113,7 +113,6 @@
                 작성자: ${product.productWriter}<br>
                 상품명: ${product.productName}<br>
                 가격: <strong><fmt:formatNumber type="number" value="${product.productPrice}"/>원</strong><br>
-                비밀번호: ${product.productPw}<br>
                 내용: ${product.productContents}<br>
                 작성일자:<fmt:formatDate pattern="yyyy-MM-dd" value="${product.productCreatedDate}"></fmt:formatDate><br>
                 조회수: ${product.productHits}<br>

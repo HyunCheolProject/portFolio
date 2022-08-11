@@ -88,7 +88,7 @@
 
             <section>
                 <div class="input-group mb-3 card">
-                    <form action="/product/update" method="post" id="updateForm">
+                    <form action="/product/update" method="post" name="updateForm" enctype="multipart/form-data">
                         <br>
                         <div style="text-align: left">
                             &nbsp;&nbsp;상품번호 <input type="text" name="id" value="${productUpdate.id}" readonly><br>
@@ -99,12 +99,13 @@
                             &nbsp;&nbsp;작성자 <input type="text" name="productWriter"
                                                    value="${productUpdate.productWriter}" readonly><br>
                             &nbsp;&nbsp;비밀번호 <input type="password" name="productPw" id="pwConfirm"
-                                                    value="${productUpdate.productPw}"><br>
+                        ><br>
                             &nbsp;&nbsp;내용 <textarea name="productContents" cols="40"
                                                      rows="10">${productUpdate.productContents}</textarea><br>
                             첨부파일 <input type="file" name="productFile" ${productUpdate.productFile}><br>
                         </div>
-                        <input type="submit" value="수정">
+                        <%--                        <input type="submit" value="수정">--%>
+                        <input type="button" onclick="productUpdated()" value="수정">
                     </form>
                     &nbsp;
                 </div>
