@@ -101,12 +101,12 @@
                     <div class="card">
                         <form action="/product/insert" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="productId" value="${productList.id}">
+                            작성자 <input type="text" name="productWriter" value="${sessionScope.memberId}" readonly><br>
                             상품명 <input type="text" name="productName" autofocus><br>
                             카테고리 <input type="text" name="productCategory"><br>
-                            작성자 <input type="text" name="productWriter" value="${sessionScope.memberId}" readonly><br>
+                            가격 <input type="text" name="productPrice"><br>
                             내용 <textarea name="productContents" id=""
                                          style="height: 200px; width: 600px;"></textarea><br>
-                            가격 <input type="text" name="productPrice"><br>
                             첨부파일 <input type="file" name="productFile"><br>
                             <input type="submit" value="작성">
                         </form>
