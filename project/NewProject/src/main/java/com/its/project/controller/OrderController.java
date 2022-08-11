@@ -54,11 +54,17 @@ public class OrderController {
         return "redirect:/order/adminFindAll";
     }
 
-    // 배송목록 삭제
+    // 주문목록 삭제
     @GetMapping("/delete")
     public String delete(@RequestParam Long id) {
         orderService.delete(id);
-        return "redirect:/order/list";
+        return "redirect:/order/adminFindAll";
+//        boolean deleteResult = orderService.delete(id);
+//        if (deleteResult) {
+//            return "redirect:/order/list";
+//        } else {
+//            return "delete-fail";
+//        }
     }
 
     // 주문목록 화면 요청 (관리자)

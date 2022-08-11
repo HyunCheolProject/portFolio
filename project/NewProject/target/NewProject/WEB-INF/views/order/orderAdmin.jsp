@@ -111,6 +111,7 @@
                         <c:forEach items="${orderAdminList}" var="orderAdmin">
                             <form action="/order/update" method="post">
                                 <tr class="align-center">
+                                    <td style="color: black"><b><input type="hidden" name="id" value="${orderAdmin.productId}"></b>
                                     <td style="color: black"><b><input type="hidden" name="id" value="${orderAdmin.id}"></b>
                                     </td>
                                     <td style="color: black"><b>${orderAdmin.orderName}</b></td>
@@ -131,11 +132,6 @@
                                             <button type="submit">수정</button>
                                         </b></td>
                                     </c:if>
-                                        <%--                                    <td style="color: black"><b>--%>
-                                        <%--                                        <button>수정</button>--%>
-                                        <%--                                    </b></td>--%>
-
-
                                     <td style="color: black"><b><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
                                                                                 value="${orderAdmin.orderCreatedDate}"></fmt:formatDate></b>
                                     </td>

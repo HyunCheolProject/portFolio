@@ -1,5 +1,6 @@
 package com.its.project.controller;
 
+import com.its.project.dto.CartDTO;
 import com.its.project.dto.OrderDTO;
 import com.its.project.dto.ProductDTO;
 import com.its.project.dto.ReviewDTO;
@@ -25,15 +26,21 @@ public class ProductController {
     private ReviewService reviewService;
 
     // 상품등록 (사진첨부) 화면 요청
+//    @GetMapping("/insert-form")
+//    public String insertForm() {
+//        return "product/insert";
+//    }
     @GetMapping("/insert-form")
-    public String insertForm() {
+    public String insertForm(HttpSession session, Model model) {
+        Long productId = (Long) session.getAttribute("id");
+        ProductDTO productDTOList = productService.findById(productId);
+        model.addAttribute("productList", productDTOList);
         return "product/insert";
     }
 
     // 상품등록 (사진첨부) 처리
     @PostMapping("/insert")
-    public String insert(@ModelAttribute ProductDTO productDTO) throws IOException {
-        System.out.println("productDTO = " + productDTO);
+    public String insert(@ModelAttribute ProductDTO productDTO, HttpSession session, Model model) throws IOException {
         productService.insert(productDTO);
         return "redirect:/product/findAll";
     }

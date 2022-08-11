@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 @Data
 public class OrderDTO {
     private Long id;
+    private Long productId;
     private String orderName;
     private String postcode;
     private String address;

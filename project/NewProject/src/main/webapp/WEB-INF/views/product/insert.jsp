@@ -100,6 +100,7 @@
                 <div>
                     <div class="card">
                         <form action="/product/insert" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="productId" value="${productList.id}">
                             상품명 <input type="text" name="productName" autofocus><br>
                             카테고리 <input type="text" name="productCategory"><br>
                             작성자 <input type="text" name="productWriter" value="${sessionScope.memberId}" readonly><br>

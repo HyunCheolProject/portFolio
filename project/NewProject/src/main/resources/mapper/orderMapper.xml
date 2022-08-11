@@ -5,9 +5,9 @@
 
 <mapper namespace="Order">
     <insert id="save" parameterType="order">
-        insert into order_table (orderName, postcode, address, detailAddress, extraAddress, requests, orderMobile,
+        insert into order_table (productId, orderName, postcode, address, detailAddress, extraAddress, requests, orderMobile,
                                  orderProduct, orderAmount, orderPrice)
-        values (#{orderName}, #{postcode}, #{address}, #{detailAddress}, #{extraAddress}, #{requests}, #{orderMobile},
+        values (#{productId}, #{orderName}, #{postcode}, #{address}, #{detailAddress}, #{extraAddress}, #{requests}, #{orderMobile},
                 #{orderProduct}, #{orderAmount}, #{orderPrice})
     </insert>
 

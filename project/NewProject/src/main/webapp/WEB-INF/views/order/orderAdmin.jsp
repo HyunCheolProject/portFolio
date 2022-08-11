@@ -111,6 +111,7 @@
                         <c:forEach items="${orderAdminList}" var="orderAdmin">
                             <form action="/order/update" method="post">
                                 <tr class="align-center">
+                                    <td style="color: black"><b><input type="hidden" name="id" value="${orderAdmin.productId}"></b>
                                     <td style="color: black"><b><input type="hidden" name="id" value="${orderAdmin.id}"></b>
                                     </td>
                                     <td style="color: black"><b>${orderAdmin.orderName}</b></td>

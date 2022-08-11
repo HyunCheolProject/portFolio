@@ -167,6 +167,7 @@
 
                                 <table style="color: black">
                                     <input type="hidden" name="cartId" value="${cart.id}">
+                                    <input type="hidden" name="productId" value="${cart.productId}">
                                     <tr>
                                         <td>상품명</td>
                                         <td><input type="text" name="orderProduct" value="${cart.cartProduct}" readonly>
