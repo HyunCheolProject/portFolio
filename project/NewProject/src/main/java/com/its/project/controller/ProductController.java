@@ -1,6 +1,5 @@
 package com.its.project.controller;
 
-import com.its.project.dto.CartDTO;
 import com.its.project.dto.OrderDTO;
 import com.its.project.dto.ProductDTO;
 import com.its.project.dto.ReviewDTO;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,11 +23,8 @@ public class ProductController {
     @Autowired
     private ReviewService reviewService;
 
-    // 상품등록 (사진첨부) 화면 요청
-//    @GetMapping("/insert-form")
-//    public String insertForm() {
-//        return "product/insert";
-//    }
+
+    // 상품등록 화면
     @GetMapping("/insert-form")
     public String insertForm(HttpSession session, Model model) {
         Long productId = (Long) session.getAttribute("id");

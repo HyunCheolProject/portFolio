@@ -20,20 +20,22 @@ public class OrderController {
     @Autowired
     private CartService cartService;
 
-    // 주문페이지 출력
-    @GetMapping("/orderDetail")
-    public String orderDetail(@RequestParam Long id, Model model) {
-        CartDTO cartDTO = cartService.findById(id);
-        model.addAttribute("cart", cartDTO);
-        return "order/orderDetail";
-    }
 
+    // 주문한사람 등록
     @PostMapping("/save")
     public String save(@ModelAttribute OrderDTO orderDTO, @RequestParam Long cartId) {
         System.out.println("orderDTO = " + orderDTO);
         orderService.save(orderDTO);
         cartService.delete(cartId);
         return "redirect:/order/list";
+    }
+
+    // 주문페이지 출력
+    @GetMapping("/orderDetail")
+    public String orderDetail(@RequestParam Long id, Model model) {
+        CartDTO cartDTO = cartService.findById(id);
+        model.addAttribute("cart", cartDTO);
+        return "order/orderDetail";
     }
 
     // 배송조회 페이지 출력

@@ -9,10 +9,7 @@
         values (#{reviewWriter}, #{reviewContents}, now(), #{productId})
     </insert>
     <select id="findAll" parameterType="Long" resultType="review">
-        select *
-        from review_table
-        where productId = #{productId}
-        order by id desc
+        select * from review_table where productId = #{productId} order by id desc
     </select>
 
 

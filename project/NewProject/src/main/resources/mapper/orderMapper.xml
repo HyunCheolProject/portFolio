@@ -13,32 +13,23 @@
 
 
     <select id="findById" parameterType="Long" resultType="order">
-        select *
-        from order_table
-        where id = #{id};
+        select * from order_table where id = #{id};
     </select>
 
     <select id="findAll" parameterType="String" resultType="order">
-        select *
-        from order_table
-        where orderName = #{orderName}
+        select * from order_table where orderName = #{orderName}
     </select>
 
     <update id="update" parameterType="order">
-        update order_table
-        set orderStatus=#{orderStatus}
-        where id = #{id}
+        update order_table set orderStatus=#{orderStatus} where id = #{id}
     </update>
 
     <delete id="delete" parameterType="Long">
-        delete
-        from order_table
-        where id = #{id}
+        delete from order_table where id = #{id}
     </delete>
 
     <select id="adminFindAll" resultType="order">
-        select *
-        from order_table
+        select * from order_table
     </select>
 
 </mapper>

@@ -10,47 +10,31 @@
     </insert>
 
     <select id="login" parameterType="member" resultType="member">
-        select *
-        from member_table
-        where memberId = #{memberId}
-          and memberPw = #{memberPw}
+        select * from member_table where memberId = #{memberId} and memberPw = #{memberPw}
     </select>
 
     <select id="memberIdCheck" parameterType="String" resultType="String">
-        select *
-        from member_table
-        where memberId = #{memberId}
+        select * from member_table where memberId = #{memberId}
     </select>
 
     <select id="findById" parameterType="Long" resultType="member">
-        select *
-        from member_table
-        where id = #{id}
+        select * from member_table where id = #{id}
     </select>
 
     <update id="update" parameterType="member">
-        update member_table
-        set memberPw=#{memberPw},
-            memberEmail=#{memberEmail},
-            memberMobile=#{memberMobile}
-        where id = #{id}
+        update member_table set memberPw=#{memberPw}, memberEmail=#{memberEmail}, memberMobile=#{memberMobile} where id = #{id}
     </update>
 
     <delete id="deleteForm" parameterType="Long">
-        delete
-        from member_table
-        where id = #{id}
+        delete from member_table where id = #{id}
     </delete>
 
     <select id="findAll" resultType="member">
-        select *
-        from member_table
+        select * from member_table
     </select>
 
     <delete id="delete" parameterType="Long">
-        delete
-        from member_table
-        where id = #{id}
+        delete from member_table where id = #{id}
     </delete>
 
 </mapper>

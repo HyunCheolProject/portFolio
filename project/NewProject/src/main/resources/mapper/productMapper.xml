@@ -12,56 +12,35 @@
     </insert>
 
     <select id="findAll" resultType="product">
-        select *
-        from product_table
-        order by id desc
+        select * from product_table order by id desc
     </select>
 
     <select id="findById" parameterType="Long" resultType="product">
-        select *
-        from product_table
-        where id = #{id}
+        select * from product_table where id = #{id}
     </select>
 
     <select id="updateHits" parameterType="Long">
-        update product_table
-        set productHits=productHits + 1
-        where id = #{id}
+        update product_table set productHits=productHits + 1 where id = #{id}
     </select>
 
     <select id="search" parameterType="java.util.HashMap" resultType="product">
-        select *
-        from product_table
-        where ${type}
-                  like concat('%', #{q}, '%')
-        order by id desc;
+        select * from product_table where ${type} like concat('%', #{q}, '%') order by id desc;
     </select>
 
     <update id="update" parameterType="product">
-        update product_table
-        set productName=#{productName},
-            productContents=#{productContents},
-            productPrice=#{productPrice},
-            productFileName=#{productFileName}
-        where id = #{id}
+        update product_table set productName=#{productName}, productContents=#{productContents}, productPrice=#{productPrice}, productFileName=#{productFileName} where id = #{id}
     </update>
 
     <delete id="delete" parameterType="Long">
-        delete
-        from product_table
-        where id = #{id}
+        delete from product_table where id = #{id}
     </delete>
 
     <select id="popular" resultType="product">
-        select *
-        from product_table
-        order by productHits desc limit 0, 3
+        select * from product_table order by productHits desc limit 0, 3
     </select>
 
     <select id="orderFindById" parameterType="order" resultType="order">
-        select *
-        from order_table
-        where orderName = #{orderName} and productId =#{productId}
+        select * from order_table where orderName = #{orderName} and productId =#{productId}
     </select>
 </mapper>
 

@@ -10,35 +10,23 @@
     </insert>
 
     <select id="findAll" parameterType="Long" resultType="cart">
-        select *
-        from cart_table
-        where memberId = #{memberId}
+        select * from cart_table where memberId = #{memberId}
     </select>
 
     <select id="findByProductId" parameterType="cart" resultType="cart">
-        select *
-        from cart_table
-        where memberId = #{memberId}
-          and productId = #{productId}
+        select * from cart_table where memberId = #{memberId} and productId = #{productId}
     </select>
 
     <update id="update" parameterType="cart">
-        update cart_table
-        set cartAmount=cartAmount + 1
-        where memberId = #{memberId}
-          and productId = #{productId}
+        update cart_table set cartAmount=cartAmount + 1 where memberId = #{memberId} and productId = #{productId}
     </update>
 
     <delete id="delete" parameterType="Long">
-        delete
-        from cart_table
-        where id = #{id}
+        delete from cart_table where id = #{id}
     </delete>
 
     <select id="findById" parameterType="Long" resultType="cart">
-        select *
-        from cart_table
-        where id = #{id}
+        select * from cart_table where id = #{id}
     </select>
 </mapper>
 
